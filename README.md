@@ -1,11 +1,11 @@
 # This project's tech stack
-Svelte - JS Compiler
-SvelteKit - Meta Framework for Svelte
-TailwindCSS - CSS Framework
-? - Headless CMS
-Firestore - No-SQL Database
-Vercel - Hosting / Deployment Platform
-Cypress - End-to-End Testing Framework
+Svelte - JS Compiler  
+SvelteKit - Meta Framework for Svelte  
+TailwindCSS - CSS Framework  
+? - Headless CMS  
+Firestore - No-SQL Database  
+Vercel - Hosting / Deployment Platform  
+Cypress - End-to-End Testing Framework  
 
 # create-svelte
 
