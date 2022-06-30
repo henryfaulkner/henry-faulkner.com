@@ -4,7 +4,6 @@
     const projects = await res.json();
 
     if (res.ok) {
-      console.log(projects);
       return {
         props: {
           projects,
@@ -22,7 +21,11 @@
 </script>
 
 <script>
+  import ProjectCard from "../components/ProjectCard.svelte";
   export let projects;
 </script>
 
-<p>{projects[0].title}</p>
+{#each projects as project, i}
+  <ProjectCard {project} />
+  <br />
+{/each}
