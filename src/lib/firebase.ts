@@ -1,15 +1,13 @@
 import { initializeApp, getApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import dotenv from "dotenv";
-dotenv.config();
 
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE_APIKEY,
-  authDomain: process.env.FIREBASE_AUTHDOMAIN,
-  projectId: process.env.FIREBASE_PROJECTID,
-  storageBucket: process.env.FIREBASE_STORAGEBUCKET,
-  messagingSenderId: process.env.FIREBASE_MESSAGINGSENDERID,
-  appId: process.env.FIREBASE_APPID,
+  apiKey: "AIzaSyAGXxeddwfauD2jsLN9sClKlW7gcl76kxY",
+  authDomain: "henryfaulkner-xyz.firebaseapp.com",
+  projectId: "henryfaulkner-xyz",
+  storageBucket: "henryfaulkner-xyz.appspot.com",
+  messagingSenderId: "585447646787",
+  appId: "1:585447646787:web:b59f311eebc320d87316f6",
 };
 
 function createFirebaseApp(firebaseConfig) {
