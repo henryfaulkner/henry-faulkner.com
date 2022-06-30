@@ -24,7 +24,8 @@
 	},
 	"dependencies": {
 		"cypress": "^10.3.0",
-		"daisyui": "^2.17.0"
+		"daisyui": "^2.17.0",
+		"firebase": "^9.8.4"
 	},
 	"type": "module"
 }
