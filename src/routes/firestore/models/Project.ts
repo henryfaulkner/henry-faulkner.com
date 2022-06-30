@@ -2,13 +2,17 @@ import type IFirebaseDocument from "./IFirebaseDocument";
 
 class Project implements IFirebaseDocument {
   public DocumentID: string;
-  public BracketName: string;
-  public GroupID: string;
+  public title: string;
+  public description: string;
+  public liveLink: string;
+  public repoLink: string;
 
   public constructor(json) {
     if (json["DocumentID"]) this.DocumentID = json["DocumentID"];
-    if (json["BracketName"]) this.BracketName = json["BracketName"];
-    if (json["GroupID"]) this.GroupID = json["GroupID"];
+    if (json["title"]) this.title = json["title"];
+    if (json["description"]) this.description = json["description"];
+    if (json["liveLink"]) this.liveLink = json["liveLink"];
+    if (json["repoLink"]) this.repoLink = json["repoLink"];
   }
 
   get GetDocumentID(): string {
