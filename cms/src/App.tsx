@@ -52,6 +52,7 @@ type Project = {
   description: string;
   liveLink: string;
   repoLink: string;
+  image: string;
 }
 
 const productSchema = buildSchema<Product>({
@@ -224,6 +225,17 @@ const projectSchema = buildSchema<Project>({
         title: "Repository Link",
         dataType: "string"
     },
+    image: buildProperty({ // The `buildProperty` method is an utility function used for type checking
+        title: "Image",
+        dataType: "string",
+        config: {
+            storageMeta: {
+                mediaType: "image",
+                storagePath: "images",
+                acceptedFiles: ["image/*"]
+            }
+        }
+    }),
   }
 });
 

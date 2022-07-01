@@ -1,5 +1,10 @@
 import { initializeApp, getApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
+import {
+  getStorage,
+  ref,
+  getDownloadURL,
+} from 'firebase/storage';
 
 const firebaseConfig = {
   apiKey: "AIzaSyAGXxeddwfauD2jsLN9sClKlW7gcl76kxY",
@@ -23,6 +28,8 @@ const firebaseApp = createFirebaseApp(firebaseConfig);
 // Firestore exports
 export const firestore = getFirestore(firebaseApp);
 
+export const storageAccount = getStorage(firebaseApp);
+
 /// Helper functions
 
 /**`
@@ -34,4 +41,18 @@ export function postToJSON(doc) {
   return {
     ...data
   };
+}
+
+/**
+ * Get Url for image in storage.
+ * @param  {string} filePath
+ * @returns {string} url
+ */
+export async function getImageUrl(filePath: string) {
+  try {
+    const imageRef = ref(storageAccount, filePath);
+    return await getDownloadURL(imageRef);
+  } catch(exception) {
+    return "";
+  }
 }

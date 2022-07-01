@@ -6,6 +6,7 @@ class Project implements IFirebaseDocument {
   public description: string;
   public liveLink: string;
   public repoLink: string;
+  public image: string;
 
   public constructor(json) {
     if (json["DocumentID"]) this.DocumentID = json["DocumentID"];
@@ -13,6 +14,7 @@ class Project implements IFirebaseDocument {
     if (json["description"]) this.description = json["description"];
     if (json["liveLink"]) this.liveLink = json["liveLink"];
     if (json["repoLink"]) this.repoLink = json["repoLink"];
+    if (json["image"]) this.image = json["image"];
   }
 
   get GetDocumentID(): string {

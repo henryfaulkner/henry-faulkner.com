@@ -25,7 +25,16 @@
   export let projects;
 </script>
 
-{#each projects as project, i}
-  <ProjectCard {project} />
-  <br />
-{/each}
+<div id="projects" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
+  {#each projects as project, i}
+    <ProjectCard {project} />
+  {/each}
+</div>
+
+<style>
+  #projects {
+    border: lightgreen 1px dashed;
+    height: 550px;
+    background-color: black;
+  }
+</style>

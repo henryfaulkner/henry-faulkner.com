@@ -1,6 +1,5 @@
 import { collection, getDocs } from "firebase/firestore";
 import { firestore, postToJSON } from "../../../lib/firebase";
-import { getFirestore } from "firebase/firestore";
 
 import Project from "../models/Project";
 import * as collectionConstants from "../CollectionConstants";
@@ -15,9 +14,9 @@ export async function get() {
     let response: Project[] = [];
     data.forEach((doc) => {
         response.push(
-        new Project(
-            postToJSON(doc)
-        )
+            new Project(
+                postToJSON(doc)
+            )
         );
     });
 
