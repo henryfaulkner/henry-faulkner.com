@@ -56,7 +56,6 @@
     padding: 15px 15px;
     margin: 20px;
     position: relative;
-    z-index: 1;
   }
 
   .card:hover,
@@ -72,7 +71,8 @@
     bottom: 0;
     left: 0;
     background-image: var(--imageUrl);
-    z-index: 2;
+    background-size: cover;
+    background-position: center center;
   }
 
   .card:hover::before {
