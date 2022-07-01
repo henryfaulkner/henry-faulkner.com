@@ -1,4 +1,5 @@
 <script context="module">
+  import { getImageUrl } from "$lib/firebase";
   export async function load({ fetch }) {
     const res = await fetch("/firestore/endpoints/projects.json");
     const projects = await res.json();
@@ -27,7 +28,9 @@
 
 <div id="projects" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
   {#each projects as project, i}
-    <ProjectCard {project} />
+    {#await getImageUrl(project.image) then imageUrl}
+      <ProjectCard {project} {imageUrl} />
+    {/await}
   {/each}
 </div>
 

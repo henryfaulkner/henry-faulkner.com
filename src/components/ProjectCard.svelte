@@ -3,6 +3,7 @@
   import CardDropdown from "./CardDropdown.svelte";
   import { getImageUrl } from "../lib/firebase";
   export let project;
+  export let imageUrl;
 
   const linkObjects = [
     {
@@ -14,31 +15,48 @@
       link: project.repoLink,
     },
   ];
+
+  let hideDescription = true;
 </script>
 
-{#await getImageUrl(project.image) then value}
-  <div class="card" style="background-image: url({value});">
-    <CardDropdown {linkObjects} />
-    <br />
-    <a href={project.liveLink} class="anchor">
-      <div class="card-content">
-        <div class="base">
-          <p>{project.title}</p>
-        </div>
+<div
+  class="card"
+  style="--imageUrl: url({imageUrl});"
+  on:mouseenter={() => {
+    console.log("enter");
+    hideDescription = false;
+  }}
+  on:mouseleave={() => {
+    console.log("leave");
+    hideDescription = true;
+  }}
+>
+  <CardDropdown {linkObjects} />
+  <br />
+  <a href={project.liveLink} class="anchor">
+    <div class="card-content">
+      <div class="base">
+        <p>{project.title}</p>
+      </div>
+      {#if !hideDescription}
         <div class="full">
           <p>{project.description}</p>
         </div>
-      </div>
-    </a>
-  </div>
-{/await}
+      {/if}
+    </div>
+  </a>
+</div>
 
 <style>
   .card {
     color: hsl(var(--er));
+    font-weight: bold;
+    transition: opacity 1s ease;
 
     padding: 15px 15px;
     margin: 20px;
+    position: relative;
+    z-index: 1;
   }
 
   .card:hover,
@@ -46,13 +64,30 @@
     outline: auto;
   }
 
+  .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: var(--imageUrl);
+    z-index: 2;
+  }
+
+  .card:hover::before {
+    opacity: 30%;
+  }
+
   .anchor {
     position: absolute;
     bottom: 0px;
-    border: red 1px solid;
+    /* border: red 1px solid; */
+    padding-right: 10px;
   }
 
   .card-content {
+    position: relative;
     z-index: 10;
     transition-property: transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
