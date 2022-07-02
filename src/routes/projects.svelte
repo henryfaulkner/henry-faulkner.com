@@ -24,9 +24,11 @@
 <script>
   import ProjectCard from "../components/ProjectCard.svelte";
   export let projects;
+  import Header from "../components/structure/Header.svelte";
 </script>
 
-<div id="projects" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
+<Header />
+<div id="projects" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
   {#each projects as project, i}
     {#await getImageUrl(project.image) then imageUrl}
       <ProjectCard {project} {imageUrl} />
@@ -36,8 +38,7 @@
 
 <style>
   #projects {
-    border: lightgreen 1px dashed;
-    height: 550px;
+    height: auto;
     background-color: black;
   }
 </style>
