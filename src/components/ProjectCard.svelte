@@ -1,7 +1,6 @@
 <script>
-  import Anchor from "./Anchor.svelte";
   import CardDropdown from "./CardDropdown.svelte";
-  import { getImageUrl } from "../lib/firebase";
+
   export let project;
   export let imageUrl;
 
@@ -23,11 +22,9 @@
   class="card"
   style="--imageUrl: url({imageUrl});"
   on:mouseenter={() => {
-    console.log("enter");
     hideDescription = false;
   }}
   on:mouseleave={() => {
-    console.log("leave");
     hideDescription = true;
   }}
 >
@@ -39,7 +36,7 @@
       </div>
       {#if !hideDescription}
         <div class="full">
-          <p>{project.description}</p>
+          <p>{project.short_description}</p>
         </div>
       {/if}
     </div>

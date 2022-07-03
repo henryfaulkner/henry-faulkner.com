@@ -49,6 +49,7 @@ type Product = {
 
 type Project = {
   title: string;
+  short_description: string;
   description: string;
   liveLink: string;
   repoLink: string;
@@ -212,9 +213,13 @@ const projectSchema = buildSchema<Project>({
         validation: { required: true },
         dataType: "string"
     },
+    short_description: {
+        title: "Short Description",
+        validation: { required: true },
+        dataType: "string"
+    },
     description: {
         title: "Description",
-        validation: { required: true },
         dataType: "string"
     },
     liveLink: {
