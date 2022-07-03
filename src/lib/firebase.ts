@@ -39,6 +39,7 @@ export const storageAccount = getStorage(firebaseApp);
 export function postToJSON(doc) {
   const data = doc.data();
   return {
+    DocumentID: doc.id,
     ...data
   };
 }
