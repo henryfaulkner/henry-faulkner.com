@@ -27,5 +27,13 @@
   export let project;
 </script>
 
+<h1>
+  ** NOTE: I'd like to give the ProjectCard the option to go here or directly to
+  the project's Live Site.
+  <br />I haven't decided on the implementation yet.
+  <br />This page will serve as a more in-depth description or presentation of a
+  project.
+  <br />Ex: A description and gallary for the ML Art project.
+</h1>
 <h1>{project.title}</h1>
 <h2>{project.short_description}</h2>
