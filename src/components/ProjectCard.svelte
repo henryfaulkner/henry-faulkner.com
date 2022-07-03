@@ -32,7 +32,6 @@
   }}
 >
   <CardDropdown {linkObjects} />
-  <br />
   <a href={project.liveLink} class="anchor">
     <div class="card-content">
       <div class="base">
@@ -93,6 +92,7 @@
     transition-property: transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 0.5s;
+    margin-top: 100%;
   }
 
   .base {

@@ -3,7 +3,7 @@
 </script>
 
 <div class="dropdown dropdown-end">
-  <label tabindex="0" class="btn m-1">Links</label>
+  <label for={undefined} tabindex="0" class="btn m-1">Links</label>
   <ul
     tabindex="0"
     class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
