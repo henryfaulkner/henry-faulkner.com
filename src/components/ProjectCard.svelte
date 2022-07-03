@@ -86,10 +86,21 @@
   .card-content {
     position: relative;
     z-index: 10;
-    transition-property: transform;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 0.5s;
     margin-top: 100%;
+  }
+
+  .card:hover .card-content {
+    animation-name: up;
+    animation-duration: 1s;
+  }
+
+  @keyframes up {
+    0% {
+      bottom: -40px;
+    }
+    100% {
+      bottom: 0px;
+    }
   }
 
   .base {
