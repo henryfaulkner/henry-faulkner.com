@@ -28,7 +28,7 @@
 </script>
 
 <Header />
-<div id="projects" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<div id="projects">
   {#each projects as project, i}
     {#await getImageUrl(project.featured_image) then imageUrl}
       <ProjectCard {project} {imageUrl} />
@@ -39,6 +39,8 @@
 <style>
   #projects {
     height: auto;
+    min-height: 800px;
     background-color: black;
+    @apply grid sm:grid-cols-2 lg:grid-cols-3 gap-6;
   }
 </style>

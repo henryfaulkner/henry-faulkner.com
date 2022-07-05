@@ -1,4 +1,5 @@
 <script>
+  import TitleDescription from "../components/TitleDescription.svelte";
 </script>
 
 <div class="container">
@@ -7,4 +8,5 @@
     Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation
   </p>
   <input type="checkbox" class="toggle" />
+  <TitleDescription title="cum" description="fuck me" />
 </div>

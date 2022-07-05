@@ -55,8 +55,8 @@ type Project = {
   repoLink: string;
   featured_image: string;
   featured_video: string;
-  Gallery_images: string[];
-  Gallery_videos: string[];
+  gallery_images: string[];
+  gallery_videos: string[];
 }
 
 const productSchema = buildSchema<Product>({
@@ -256,7 +256,7 @@ const projectSchema = buildSchema<Project>({
             }
         }
     },
-    Gallery_images: {
+    gallery_images: {
         dataType: "array",
         title: "Gallery Images",
         description: "Gallery of Images",
@@ -271,7 +271,7 @@ const projectSchema = buildSchema<Project>({
             }
         }
     },
-    Gallery_videos: {
+    gallery_videos: {
         dataType: "array",
         title: "Gallery Videos",
         description: "Gallery of Videos",
