@@ -23,6 +23,7 @@
 </script>
 
 <script>
+  import Footer from "../../components/structure/Footer.svelte";
   import Gallery from "../../components/Gallery.svelte";
   import Header from "../../components/structure/Header.svelte";
   import TitleDescription from "../../components/TitleDescription.svelte";
@@ -55,6 +56,7 @@
     <br />Ex: A description and gallary for the ML Art project.
   </h1>
 </div>
+<Footer />
 
 <style>
   #project {

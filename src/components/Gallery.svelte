@@ -5,7 +5,7 @@
 </script>
 
 <div id="Gallery">
-  {#each gallery_images as image, i}
+  {#each gallery_images ?? [] as image, i}
     {#await getStorageUrl(image) then imageUrl}
       <div class="card image-full">
         <figure>
@@ -15,7 +15,7 @@
     {/await}
   {/each}
 
-  {#each gallery_videos as image, i}
+  {#each gallery_videos ?? [] as image, i}
     {#await getStorageUrl(image) then imageUrl}
       <div class="card">
         <figure>
