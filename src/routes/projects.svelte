@@ -1,5 +1,5 @@
 <script context="module">
-  import { getImageUrl } from "$lib/firebase";
+  import { getStorageUrl } from "$lib/firebase";
   export async function load({ fetch }) {
     const res = await fetch("/firestore/endpoints/projects.json");
     const projects = await res.json();
@@ -28,9 +28,9 @@
 </script>
 
 <Header />
-<div id="projects" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<div id="projects">
   {#each projects as project, i}
-    {#await getImageUrl(project.featured_image) then imageUrl}
+    {#await getStorageUrl(project.featured_image) then imageUrl}
       <ProjectCard {project} {imageUrl} />
     {/await}
   {/each}
@@ -39,6 +39,8 @@
 <style>
   #projects {
     height: auto;
+    min-height: 800px;
     background-color: black;
+    @apply grid sm:grid-cols-2 lg:grid-cols-3 gap-6;
   }
 </style>

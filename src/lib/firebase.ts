@@ -45,11 +45,11 @@ export function postToJSON(doc) {
 }
 
 /**
- * Get Url for image in storage.
+ * Get Url for item in storage.
  * @param  {string} filePath
  * @returns {string} url
  */
-export async function getImageUrl(filePath: string) {
+export async function getStorageUrl(filePath: string) {
   try {
     const imageRef = ref(storageAccount, filePath);
     return await getDownloadURL(imageRef);
