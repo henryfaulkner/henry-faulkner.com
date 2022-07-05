@@ -5,6 +5,7 @@ import {
   ref,
   getDownloadURL,
 } from 'firebase/storage';
+import { getAnalytics, isSupported } from "firebase/analytics";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAGXxeddwfauD2jsLN9sClKlW7gcl76kxY",
@@ -27,8 +28,8 @@ const firebaseApp = createFirebaseApp(firebaseConfig);
 
 // Firestore exports
 export const firestore = getFirestore(firebaseApp);
-
 export const storageAccount = getStorage(firebaseApp);
+export const analytics = isSupported().then(yes => yes ? getAnalytics(firebaseApp) : null);
 
 /// Helper functions
 

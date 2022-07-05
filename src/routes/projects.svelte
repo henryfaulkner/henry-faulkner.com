@@ -22,6 +22,7 @@
 </script>
 
 <script>
+  import Footer from "../components/structure/Footer.svelte";
   import ProjectCard from "../components/ProjectCard.svelte";
   export let projects;
   import Header from "../components/structure/Header.svelte";
@@ -35,6 +36,7 @@
     {/await}
   {/each}
 </div>
+<Footer />
 
 <style>
   #projects {
