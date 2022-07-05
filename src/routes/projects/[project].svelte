@@ -1,5 +1,4 @@
 <script context="module">
-  import { getImageUrl } from "$lib/firebase";
   export async function load({ params, fetch }) {
     const res = await fetch(
       `/firestore/endpoints/projects/${params.project}.json`

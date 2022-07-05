@@ -1,5 +1,5 @@
 <script context="module">
-  import { getImageUrl } from "$lib/firebase";
+  import { getStorageUrl } from "$lib/firebase";
   export async function load({ fetch }) {
     const res = await fetch("/firestore/endpoints/projects.json");
     const projects = await res.json();
@@ -30,7 +30,7 @@
 <Header />
 <div id="projects">
   {#each projects as project, i}
-    {#await getImageUrl(project.featured_image) then imageUrl}
+    {#await getStorageUrl(project.featured_image) then imageUrl}
       <ProjectCard {project} {imageUrl} />
     {/await}
   {/each}
