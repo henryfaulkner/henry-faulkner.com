@@ -30,7 +30,7 @@
 <Header />
 <div id="projects" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
   {#each projects as project, i}
-    {#await getImageUrl(project.image) then imageUrl}
+    {#await getImageUrl(project.featured_image) then imageUrl}
       <ProjectCard {project} {imageUrl} />
     {/await}
   {/each}

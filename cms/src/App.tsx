@@ -53,7 +53,10 @@ type Project = {
   description: string;
   liveLink: string;
   repoLink: string;
-  image: string;
+  featured_image: string;
+  featured_video: string;
+  gallary_images: string[];
+  gallary_videos: string[];
 }
 
 const productSchema = buildSchema<Product>({
@@ -230,8 +233,8 @@ const projectSchema = buildSchema<Project>({
         title: "Repository Link",
         dataType: "string"
     },
-    image: buildProperty({ // The `buildProperty` method is an utility function used for type checking
-        title: "Image",
+    featured_image: buildProperty({ // The `buildProperty` method is an utility function used for type checking
+        title: "Featured Image",
         dataType: "string",
         config: {
             storageMeta: {
@@ -241,6 +244,48 @@ const projectSchema = buildSchema<Project>({
             }
         }
     }),
+    featured_video: {
+        title: "Featured Video",
+        dataType: "string",
+        validation: { required: false },
+        config: {
+            storageMeta: {
+                mediaType: "video",
+                storagePath: "videos",
+                acceptedFiles: ["video/*"]
+            }
+        }
+    },
+    gallary_images: {
+        dataType: "array",
+        title: "Gallary Images",
+        description: "Gallary of Images",
+        of: {
+            dataType: "string",
+            config: {
+                storageMeta: {
+                    mediaType: "image",
+                    storagePath: "images",
+                    acceptedFiles: ["image/*"]
+                }
+            }
+        }
+    },
+    gallary_videos: {
+        dataType: "array",
+        title: "Gallary Videos",
+        description: "Gallary of Videos",
+        of: {
+            dataType: "string",
+            config: {
+                storageMeta: {
+                    mediaType: "video",
+                    storagePath: "videos",
+                    acceptedFiles: ["video/*"]
+                }
+            }
+        }
+    }
   }
 });
 
@@ -253,24 +298,24 @@ export default function App() {
 
         return ({
             collections: [
-                // buildCollection({
-                //     path: "products",
-                //     schema: productSchema,
-                //     name: "Products",
-                //     permissions: ({ authController }) => ({
-                //         edit: true,
-                //         create: true,
-                //         // we have created the roles object in the navigation builder
-                //         delete: authController.extra.roles.includes("admin")
-                //     }),
-                //     subcollections: [
-                //         buildCollection({
-                //             name: "Locales",
-                //             path: "locales",
-                //             schema: localeSchema
-                //         })
-                //     ]
-                // }),
+                buildCollection({
+                    path: "products",
+                    schema: productSchema,
+                    name: "Products",
+                    permissions: ({ authController }) => ({
+                        edit: true,
+                        create: true,
+                        // we have created the roles object in the navigation builder
+                        delete: authController.extra.roles.includes("admin")
+                    }),
+                    subcollections: [
+                        buildCollection({
+                            name: "Locales",
+                            path: "locales",
+                            schema: localeSchema
+                        })
+                    ]
+                }),
                 buildCollection({
                   path: "projects",
                   schema: projectSchema,
