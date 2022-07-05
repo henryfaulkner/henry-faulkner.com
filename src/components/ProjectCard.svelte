@@ -20,7 +20,7 @@
 
 <div
   class="card"
-  style="--imageUrl: url({imageUrl});"
+  style="--imageUrl: url('{imageUrl}');"
   on:mouseenter={() => {
     hideDescription = false;
   }}
