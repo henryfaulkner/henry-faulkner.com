@@ -25,6 +25,7 @@
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+    flex-grow: 1;
   }
 
   p {
