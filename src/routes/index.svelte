@@ -45,20 +45,30 @@
   <Header />
 
   <div id="content" class="lg:px-44">
-    <TitleDescription title={aboutTitle} description={aboutDescription} />
-    <TitleDescription
-      title={experienceTitle}
-      description={experienceDescription}
-    />
-    <TitleDescription title={skillsTitle} description={skillsDescription} />
+    <div id="about">
+      <TitleDescription title={aboutTitle} description={aboutDescription} />
+    </div>
 
-    <h1 id="title">Project Showcase</h1>
-    <div id="projects">
-      {#each projects as project, i}
-        {#await getStorageUrl(project.featured_image) then imageUrl}
-          <ProjectCard {project} {imageUrl} />
-        {/await}
-      {/each}
+    <div id="experience">
+      <TitleDescription
+        title={experienceTitle}
+        description={experienceDescription}
+      />
+    </div>
+
+    <div id="skills">
+      <TitleDescription title={skillsTitle} description={skillsDescription} />
+    </div>
+
+    <div id="projectShowcase">
+      <h1 id="title">Project Showcase</h1>
+      <div id="projects">
+        {#each projects as project, i}
+          {#await getStorageUrl(project.featured_image) then imageUrl}
+            <ProjectCard {project} {imageUrl} />
+          {/await}
+        {/each}
+      </div>
     </div>
   </div>
 

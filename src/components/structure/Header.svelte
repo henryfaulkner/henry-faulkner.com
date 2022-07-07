@@ -1,4 +1,11 @@
-<script>
+<script context="module">
+  export function scrollIntoView({ target }) {
+    const el = document.querySelector(target.getAttribute("href"));
+    if (!el) return;
+    el.scrollIntoView({
+      behavior: "smooth",
+    });
+  }
 </script>
 
 <div class="header-container">
@@ -6,8 +13,19 @@
     <p class="name-text">MY NAME</p>
   </div>
   <div class="not-name-cont">
-    <p class="about">About</p>
-    <p class="contact-info">Contact Me</p>
+    <a href="#about" class="about" on:click|preventDefault={scrollIntoView}
+      >About</a
+    >
+    <a
+      href="#projectShowcase"
+      class="projects"
+      on:click|preventDefault={scrollIntoView}>Projects</a
+    >
+    <a
+      href="#contact"
+      class="contact-info"
+      on:click|preventDefault={scrollIntoView}>Contact Me</a
+    >
   </div>
 </div>
 
@@ -28,7 +46,7 @@
     flex-grow: 1;
   }
 
-  p {
+  a {
     color: rgb(59, 131, 246);
     font-size: 1em;
     font-weight: 700;
