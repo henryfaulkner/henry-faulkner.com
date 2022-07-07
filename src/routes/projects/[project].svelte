@@ -63,5 +63,6 @@
     height: auto;
     min-height: 800px;
     @apply bg-gradient-to-tr from-blue-700 via-blue-800 to-gray-900;
+    color: rgb(209, 213, 219);
   }
 </style>

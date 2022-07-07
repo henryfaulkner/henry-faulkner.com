@@ -23,3 +23,9 @@
   </a>
   <span>© 2022 My Name. All rights reserved.</span>
 </footer>
+
+<style>
+  footer {
+    color: rgb(31, 41, 55);
+  }
+</style>

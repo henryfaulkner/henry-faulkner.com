@@ -76,6 +76,10 @@
 </div>
 
 <style>
+  #index {
+    color: rgb(209, 213, 219);
+  }
+
   #content {
     background-color: black;
   }
