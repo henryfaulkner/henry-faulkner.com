@@ -9,9 +9,9 @@
 </script>
 
 <div class="header-container">
-  <div class="name-container">
+  <a href="/" class="name-container">
     <p class="name-text">MY NAME</p>
-  </div>
+  </a>
   <div class="not-name-cont">
     <a href="#about" class="about" on:click|preventDefault={scrollIntoView}
       >About</a
