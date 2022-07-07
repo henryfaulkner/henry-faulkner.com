@@ -26,23 +26,52 @@
   import ProjectCard from "../components/ProjectCard.svelte";
   export let projects;
   import Header from "../components/structure/Header.svelte";
+  import TitleDescription from "../components/TitleDescription.svelte";
+
+  let aboutTitle = "About";
+  let aboutDescription =
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborumnumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit, quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos sapiente officiis modi at sunt excepturi expedita sint?";
+
+  let experienceTitle = "Experience";
+  let experienceDescription =
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborumnumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit, quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos sapiente officiis modi at sunt excepturi expedita sint?";
+
+  let skillsTitle = "Skills";
+  let skillsDescription =
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborumnumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit, quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos sapiente officiis modi at sunt excepturi expedita sint?";
 </script>
 
-<Header />
-<h1 id="title">Project Showcase</h1>
-<div id="projects">
-  {#each projects as project, i}
-    {#await getStorageUrl(project.featured_image) then imageUrl}
-      <ProjectCard {project} {imageUrl} />
-    {/await}
-  {/each}
+<div id="index">
+  <Header />
+
+  <div id="content" class="lg:px-44">
+    <TitleDescription title={aboutTitle} description={aboutDescription} />
+    <TitleDescription
+      title={experienceTitle}
+      description={experienceDescription}
+    />
+    <TitleDescription title={skillsTitle} description={skillsDescription} />
+
+    <h1 id="title">Project Showcase</h1>
+    <div id="projects">
+      {#each projects as project, i}
+        {#await getStorageUrl(project.featured_image) then imageUrl}
+          <ProjectCard {project} {imageUrl} />
+        {/await}
+      {/each}
+    </div>
+  </div>
+
+  <Footer />
 </div>
-<Footer />
 
 <style>
+  #content {
+    background-color: black;
+  }
+
   #title {
     padding: 20px;
-    background-color: black;
     font-size: 32px;
   }
   #title:after {
