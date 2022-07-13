@@ -19,6 +19,7 @@
       title="About"
       href="#about"
       className="about"
+      external={false}
       on:click={(event) => {
         event.preventDefault();
         scrollIntoView(event.target);
@@ -28,6 +29,7 @@
       title="Projects"
       href="#projectShowcase"
       className="projects"
+      external={false}
       on:click={(event) => {
         event.preventDefault();
         scrollIntoView(event.target);
@@ -37,6 +39,7 @@
       title="Contact"
       href="#contact"
       className="contact-info"
+      external={false}
       on:click={(event) => {
         event.preventDefault();
         scrollIntoView(event.target);

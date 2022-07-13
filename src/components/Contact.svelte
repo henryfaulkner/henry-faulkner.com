@@ -22,6 +22,7 @@
         className={`px-4 py-2 hover:text-primary hover:bg-primary/30 focus:bg-primary/20`}
         {title}
         href={link}
+        external={true}
       />
     {/each}
   </div>
