@@ -15,7 +15,7 @@
 
   h3 {
     @apply mt-0;
-    @apply font-manrope font-normal text-2xl;
+    @apply text-primary font-manrope font-normal text-2xl;
     @apply mb-16;
   }
 
