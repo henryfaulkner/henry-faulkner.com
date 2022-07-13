@@ -1,5 +1,7 @@
 <script context="module">
-  export function scrollIntoView({ target }) {
+  import Anchor from "../Anchor.svelte";
+
+  export function scrollIntoView(target) {
     const el = document.querySelector(target.getAttribute("href"));
     if (!el) return;
     el.scrollIntoView({
@@ -8,24 +10,38 @@
   }
 </script>
 
-<div class="header-container">
+<div id="header" class="header-container">
   <a href="/" class="name-container">
     <p class="name-text">MY NAME</p>
   </a>
   <div class="not-name-cont">
-    <a href="#about" class="about" on:click|preventDefault={scrollIntoView}
-      >About</a
-    >
-    <a
+    <Anchor
+      title="About"
+      href="#about"
+      className="about"
+      on:click={(event) => {
+        event.preventDefault();
+        scrollIntoView(event.target);
+      }}
+    />
+    <Anchor
+      title="Projects"
       href="#projectShowcase"
-      class="projects"
-      on:click|preventDefault={scrollIntoView}>Projects</a
-    >
-    <a
+      className="projects"
+      on:click={(event) => {
+        event.preventDefault();
+        scrollIntoView(event.target);
+      }}
+    />
+    <Anchor
+      title="Contact"
       href="#contact"
-      class="contact-info"
-      on:click|preventDefault={scrollIntoView}>Contact Me</a
-    >
+      className="contact-info"
+      on:click={(event) => {
+        event.preventDefault();
+        scrollIntoView(event.target);
+      }}
+    />
   </div>
 </div>
 
@@ -46,11 +62,8 @@
     flex-grow: 1;
   }
 
-  a {
-    color: rgb(59, 131, 246);
-    font-size: 1em;
-    font-weight: 700;
-    margin: 10px;
+  .anchor {
+    @apply text-primary text-base font-bold m-3;
     text-align: center;
   }
 

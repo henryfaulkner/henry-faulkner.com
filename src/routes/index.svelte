@@ -27,6 +27,7 @@
   export let projects;
   import Header from "../components/structure/Header.svelte";
   import TitleDescription from "../components/TitleDescription.svelte";
+  import Contact from "../components/Contact.svelte";
 
   let aboutTitle = "About";
   let aboutDescription =
@@ -70,6 +71,10 @@
         {/each}
       </div>
     </div>
+
+    <section id="#contact" class="py-12">
+      <Contact />
+    </section>
   </div>
 
   <Footer />

@@ -36,7 +36,7 @@ module.exports = {
         center: "true",
       },
       colors: {
-        primary: "#ffff00"
+        primary: "#54ddff"
       }
     },
   },
