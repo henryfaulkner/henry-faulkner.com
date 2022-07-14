@@ -60,9 +60,10 @@
             external={true}
           />.
           <br /> <br />
+          I am passionate about manipulating and making the most of large datasets.
           I enjoy working through problems and finding sturdy, lasting solutions
           to solve them. Recently, I have enjoyed digging deeper into cloud platforms
-          to create sleek and effective architecture.
+          to deploy and scale my work.
         </p>
       </TitleDescription>
     </div>
@@ -90,6 +91,17 @@
             title={"Projects section"}
             href={"#projectShowcase"}
             className={"Projects"}
+            external={false}
+            on:click={(event) => {
+              event.preventDefault();
+              scrollIntoView(event.target);
+            }}
+          />
+          below. You can also find my resume linked in the
+          <Anchor
+            title={"Contact section"}
+            href={"#contact"}
+            className={"Contact"}
             external={false}
             on:click={(event) => {
               event.preventDefault();
