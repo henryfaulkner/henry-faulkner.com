@@ -16,7 +16,7 @@
 
 <div id="header" class="header-container">
   <a href="/" class="name-container">
-    <p class="name-text">MY NAME</p>
+    <p class="name-text">Henry Faulkner</p>
   </a>
   <div class="not-name-cont">
     {#each Object.entries(headerLinks) as [title, link]}

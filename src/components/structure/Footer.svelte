@@ -21,7 +21,7 @@
       Back To Top
     </a>
   </div>
-  <span>© 2022 My Name. All rights reserved.</span>
+  <span>© 2022 Henry Faulkner. All rights reserved.</span>
 </footer>
 
 <style>
