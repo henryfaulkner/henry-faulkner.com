@@ -1,11 +1,10 @@
 <script>
   export let title;
-  export let description;
 </script>
 
 <div class="TitleDescription">
   <h3>{title}</h3>
-  <p>{description}</p>
+  <slot name="p-tag" />
 </div>
 
 <style>

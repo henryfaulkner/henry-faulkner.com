@@ -53,7 +53,11 @@
     {/if}
   </div>
 
-  <TitleDescription title={project.title} description={project.description} />
+  <TitleDescription title={project.title}>
+    <p slot="p-tag">
+      {project.description}
+    </p>
+  </TitleDescription>
   <Gallery
     gallery_images={project.gallery_images}
     gallery_videos={project.gallery_videos}
