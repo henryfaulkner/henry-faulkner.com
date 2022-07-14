@@ -10,41 +10,27 @@
   }
 </script>
 
+<script>
+  export let headerLinks;
+</script>
+
 <div id="header" class="header-container">
   <a href="/" class="name-container">
     <p class="name-text">MY NAME</p>
   </a>
   <div class="not-name-cont">
-    <Anchor
-      title="About"
-      href="#about"
-      className="about"
-      external={false}
-      on:click={(event) => {
-        event.preventDefault();
-        scrollIntoView(event.target);
-      }}
-    />
-    <Anchor
-      title="Projects"
-      href="#projectShowcase"
-      className="projects"
-      external={false}
-      on:click={(event) => {
-        event.preventDefault();
-        scrollIntoView(event.target);
-      }}
-    />
-    <Anchor
-      title="Contact"
-      href="#contact"
-      className="contact-info"
-      external={false}
-      on:click={(event) => {
-        event.preventDefault();
-        scrollIntoView(event.target);
-      }}
-    />
+    {#each Object.entries(headerLinks) as [title, link]}
+      <Anchor
+        {title}
+        href={link}
+        className={title}
+        external={false}
+        on:click={(event) => {
+          event.preventDefault();
+          scrollIntoView(event.target);
+        }}
+      />
+    {/each}
   </div>
 </div>
 

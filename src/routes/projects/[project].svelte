@@ -31,7 +31,7 @@
   export let project;
 </script>
 
-<Header />
+<Header headerLinks={{}} />
 <div id="project">
   <div class="curve">
     <div class="block" />

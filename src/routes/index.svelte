@@ -40,10 +40,16 @@
   let skillsTitle = "Skills";
   let skillsDescription =
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborumnumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit, quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos sapiente officiis modi at sunt excepturi expedita sint?";
+
+  let headerLinks = {
+    About: "#about",
+    Projects: "#projectShowcase",
+    Contact: "#contact",
+  };
 </script>
 
 <div id="index">
-  <Header />
+  <Header {headerLinks} />
 
   <div id="content" class="lg:px-44">
     <div id="about">
