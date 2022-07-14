@@ -1,13 +1,19 @@
 <script>
+  import { getStorageUrl } from "$lib/firebase";
   import Anchor from "./Anchor.svelte";
 
-  const links = {
-    Linkedin: "https://www.linkedin.com/in/henry-faulkner/",
-    GitHub: "https://github.com/henryfaulkner",
-    Email: "mailto:hfaulkner27@gmail.com",
-    "Perficient Blogs": "Placeholder",
-    Twitter: "https://twitter.com/HenryFaulknerIO",
-  };
+  async function getLinks() {
+    return {
+      Linkedin: "https://www.linkedin.com/in/henry-faulkner/",
+      GitHub: "https://github.com/henryfaulkner",
+      Email: "mailto:hfaulkner27@gmail.com",
+      "Perficient Blogs": "Placeholder",
+      Twitter: "https://twitter.com/HenryFaulknerIO",
+      Resume: await getStorageUrl(
+        "resumes/Henry Faulkner - Software Engineer Resume (2022) (1).pdf"
+      ),
+    };
+  }
 </script>
 
 <div class="sectionHeader text-center">
@@ -17,14 +23,16 @@
   <div
     class="flex flex-col gap-2 xsm:grid lt-sm:grid-cols-2 sm:grid-cols-4 sm:gap-6 justify-center overflow-x-auto"
   >
-    {#each Object.entries(links) as [title, link]}
-      <Anchor
-        className={`px-4 py-2 hover:text-primary hover:bg-primary/30 focus:bg-primary/20`}
-        {title}
-        href={link}
-        external={true}
-      />
-    {/each}
+    {#await getLinks() then links}
+      {#each Object.entries(links) as [title, link]}
+        <Anchor
+          className={`px-4 py-2 hover:text-primary hover:bg-primary/30 focus:bg-primary/20`}
+          {title}
+          href={link}
+          external={true}
+        />
+      {/each}
+    {/await}
   </div>
 </div>
 
