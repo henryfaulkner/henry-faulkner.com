@@ -49,7 +49,7 @@
     {#if project.featured_video}
       <p>Placeholder for Featured Video implementation.</p>
     {:else if project.featured_image}
-      <p>BRRRR</p>
+      <p>Placeholder for Featured Image implementation.</p>
     {/if}
   </div>
 
