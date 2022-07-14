@@ -19,6 +19,13 @@
       };
     }
   }
+  export function scrollIntoView(target) {
+    const el = document.querySelector(target.getAttribute("href"));
+    if (!el) return;
+    el.scrollIntoView({
+      behavior: "smooth",
+    });
+  }
 </script>
 
 <script>
@@ -51,9 +58,11 @@
             href="https://www.uga.edu/"
             className="UGA"
             external={true}
-          />. \n\n I enjoy working through problems and finding sturdy, lasting
-          solutions to solve them. Recently, I have been enjoying digging deeper
-          into cloud platforms to create sleek and efficient architecture.
+          />.
+          <br /> <br />
+          I enjoy working through problems and finding sturdy, lasting solutions
+          to solve them. Recently, I have enjoyed digging deeper into cloud platforms
+          to create sleek and effective architecture.
         </p>
       </TitleDescription>
     </div>
@@ -61,16 +70,33 @@
     <div id="experience">
       <TitleDescription title="Experience">
         <p slot="p-tag">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-          mollitia, molestiae quas vel sint commodi repudiandae consequuntur
-          voluptatum laborumnumquam blanditiis harum quisquam eius sed odit
-          fugiat iusto fuga praesentium optio, eaque rerum! Provident similique
-          accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut
-          molestias architecto voluptate aliquam nihil, eveniet aliquid culpa
-          officia aut! Impedit sit sunt quaerat, odit, tenetur error, harum
-          nesciunt ipsum debitis quas aliquid. Reprehenderit, quia. Quo neque
-          error repudiandae fuga? Ipsa laudantium molestias eos sapiente
-          officiis modi at sunt excepturi expedita sint?
+          I am currently an Associate Technical Consultant at
+          <Anchor
+            title="Perficient"
+            href="https://www.perficient.com/"
+            className="Perficient"
+            external={true}
+          />
+          where I work on the Sitecore team, creating enterprise-scale websites.
+          My work there entails building data transfer and custom functionality on
+          top of Sitecore's proprietary CMS framework. That framework from the backend
+          is C#/.NET MVC, communicating with a SQL database. I have also needed to
+          work with Azure, REST API, and React during my tenure. I have been staffed
+          at Perficient since February 2021.
+          <br /> <br />
+          My personnel project experience is more varied. You can find out more about
+          those in the
+          <Anchor
+            title={"Projects section"}
+            href={"#projectShowcase"}
+            className={"Projects"}
+            external={false}
+            on:click={(event) => {
+              event.preventDefault();
+              scrollIntoView(event.target);
+            }}
+          />
+          below.
         </p>
       </TitleDescription>
     </div>
@@ -78,11 +104,16 @@
     <div id="skills">
       <TitleDescription title="Skills">
         <p slot="p-tag">
-          Some of the technologies I've work with are C#/.NET, NodeJS, JS/TS,
-          React, Firebase, SQL, Azure, Python, SASS, and Tailwind but I like to
-          be language agnostic and learn what is neccessary for a task. I have
-          experience doing fullstack work but prefer being heads down on the
-          backend, working on the underlying system and architecture.
+          I am a backend software developer. I have experience creating custom
+          functionality, using large datasets and integrating seamlessly into an
+          existing solution. I have experience doing fullstack web development
+          using modern JavaScript frameworks like React/NextJS and
+          Svelte/SvelteKit but prefer being heads down on the backend, working
+          on the underlying system and architecture.
+          <br /> <br />
+          Some of the technologies I've work with are C#/.NET, NodeJS, JS/TS, React/NextJS,
+          Svelte/SvelteKit, No-SQL/SQL, Firebase, Azure, Python, SASS, and Tailwind
+          but tend to be language agnostic and learn what is neccessary for a task.
         </p>
       </TitleDescription>
     </div>
@@ -128,7 +159,6 @@
 
   #projects {
     height: auto;
-    min-height: 800px;
     background-color: black;
     @apply grid sm:grid-cols-2 lg:grid-cols-3 gap-6;
   }
