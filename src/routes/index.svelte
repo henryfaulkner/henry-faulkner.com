@@ -51,8 +51,9 @@
     <div id="about">
       <TitleDescription title="About">
         <p slot="p-tag">
-          Hi, I'm Henry Faulkner. I'm a Web Developer and Software Engineer. I
-          have a Bachelor of Science in Computer Science from the
+          Hi, I'm Henry Faulkner. I'm a .NET and JavaScript web developer and
+          software engineer. I have a Bachelor of Science in Computer Science
+          from the
           <Anchor
             title="University of Georgia"
             href="https://www.uga.edu/"
