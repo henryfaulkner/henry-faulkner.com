@@ -27,5 +27,6 @@
 <style>
   footer {
     color: rgb(31, 41, 55);
+    background-color: rgb(229, 231, 235);
   }
 </style>
