@@ -117,7 +117,7 @@
     <div id="skills">
       <TitleDescription title="Skills">
         <p slot="p-tag">
-          I am a backend software developer. I have experience creating custom
+          I am a fullstack software developer. I have experience creating custom
           functionality, using large datasets and integrating seamlessly into an
           existing solution. I have experience doing fullstack web development
           using modern JavaScript frameworks like React/NextJS and
