@@ -72,7 +72,7 @@
     <div id="experience">
       <TitleDescription title="Experience">
         <p slot="p-tag">
-          I am currently an Associate Technical Consultant at
+          I am currently a Technical Consultant at
           <Anchor
             title="Perficient"
             href="https://www.perficient.com/"
