@@ -26,8 +26,8 @@ module.exports = {
         "xsm": "439px",
         "lt-xsm": { max: "439px" },
 
-        "xxsm": "339px",
-        "lt-xxsm": { max: "339px" },
+        "xxsm": "400px",
+        "lt-xxsm": { max: "400px" },
 
         'coarse': { 'raw': '(pointer: coarse)' },
         'fine': { 'raw': '(pointer: fine)' },
