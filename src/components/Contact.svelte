@@ -19,9 +19,9 @@
 <div class="sectionHeader text-center">
   <h2 id="contact">Contact.</h2>
 </div>
-<div class="container px-3 sm:px-5 max-w-[100ch]">
+<div class="container px-3 sm:px-5 max-w-[40ch] sm:max-w-[100ch]">
   <div
-    class="flex flex-col gap-2 xsm:grid lt-sm:grid-cols-2 sm:grid-cols-4 sm:gap-6 items-center justify-center overflow-x-auto"
+    class="gap-2 grid lt-sm:grid-cols-2 sm:grid-cols-4 sm:gap-6 items-center justify-center overflow-x-auto"
   >
     {#await getLinks() then links}
       {#each Object.entries(links) as [title, link]}
