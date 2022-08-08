@@ -7,11 +7,10 @@
       Linkedin: "https://www.linkedin.com/in/henry-faulkner/",
       GitHub: "https://github.com/henryfaulkner",
       Email: "mailto:hfaulkner27@gmail.com",
-      //"Perficient Blogs": "Placeholder",
-      Twitter: "https://twitter.com/HenryFaulknerIO",
       Resume: await getStorageUrl(
-        "resumes/Henry Faulkner - Software Engineer Resume (2022) (1).pdf"
+        "resumes/Henry Faulkner - Software Engineer Resume (Late 2022).pdf"
       ),
+      Twitter: "https://twitter.com/HenryFaulknerIO",
     };
   }
 </script>
