@@ -47,7 +47,7 @@
   };
 </script>
 
-<div id="index">
+<div id="index" class="scrollSection">
   <Header {headerLinks} />
   <HeroBanner />
 
