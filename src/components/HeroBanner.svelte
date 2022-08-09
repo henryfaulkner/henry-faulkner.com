@@ -23,6 +23,19 @@
 >
   <div class="container" id="index">
     <div class="layout relative">
+      <figure class="z-0 absolute top-1/4 right-4">
+        {#await getStorageUrl("images/HeroImages/Smallest Headshot.png") then imageUrl}
+          <img
+            src={imageUrl}
+            width="400px"
+            height="275px"
+            loading="eager"
+            alt="Henry Faulkner hero"
+            class="heroImage"
+            data-perspective="image"
+          />
+        {/await}
+      </figure>
       <div class="z-10 relative" data-perspective="header">
         <h1
           class="text-6xl mb-3"
@@ -39,19 +52,6 @@
           Software Engineer - Web Developer
         </h2>
       </div>
-      <figure class="z-0 absolute top-1/4 right-4">
-        {#await getStorageUrl("images/HeroImages/Smallest Headshot.png") then imageUrl}
-          <img
-            src={imageUrl}
-            width="400px"
-            height="275px"
-            loading="eager"
-            alt="Henry Faulkner hero"
-            class="heroImage"
-            data-perspective="image"
-          />
-        {/await}
-      </figure>
     </div>
   </div>
 

@@ -183,6 +183,6 @@
   }
 
   .scrollSection {
-    scroll-margin-top: 85px;
+    @apply lt-xsm:scroll-mt-36 xsm:scroll-mt-24;
   }
 </style>
