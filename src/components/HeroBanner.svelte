@@ -3,11 +3,19 @@
   import { RunScript } from "../scripts/index.js";
   import { onMount } from "svelte";
   import Anchor from "./Anchor.svelte";
+  import Icon from "@iconify/svelte";
   onMount(() => {
     setTimeout(() => RunScript(), 300);
   });
   export function scrollIntoView(target) {
     const el = document.querySelector(target.getAttribute("href"));
+    if (!el) return;
+    el.scrollIntoView({
+      behavior: "smooth",
+    });
+  }
+  export function scrollIntoViewHref(href) {
+    const el = document.querySelector(href);
     if (!el) return;
     el.scrollIntoView({
       behavior: "smooth",
@@ -57,15 +65,24 @@
 
   <div class="absolute bottom-20">
     <Anchor
-      title="Content"
+      title="Scroll"
       href={"#about"}
-      className={"Content"}
+      className={"scroll"}
       external={false}
       on:click={(event) => {
         event.preventDefault();
         scrollIntoView(event.target);
       }}
     />
+    <div
+      class="icon-container"
+      on:click={(event) => {
+        event.preventDefault();
+        scrollIntoViewHref("#about");
+      }}
+    >
+      <Icon icon="fluent:chevron-down-24-filled" />
+    </div>
   </div>
 </div>
 
@@ -76,5 +93,9 @@
 
   .heroImage {
     border-radius: 8%;
+  }
+
+  .icon-container {
+    @apply mx-3 text-primary;
   }
 </style>
