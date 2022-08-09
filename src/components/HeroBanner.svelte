@@ -31,7 +31,7 @@
 >
   <div class="container" id="index">
     <div class="layout relative">
-      <figure class="z-0 absolute top-1/4 right-4">
+      <figure class="z-0 absolute top-1/4 right-4 lt-md:hidden">
         {#await getStorageUrl("images/HeroImages/Smallest Headshot.png") then imageUrl}
           <img
             src={imageUrl}
@@ -63,7 +63,7 @@
     </div>
   </div>
 
-  <div class="absolute bottom-20">
+  <div class="absolute bottom-20 justify-center">
     <Anchor
       title="Scroll"
       href={"#about"}
