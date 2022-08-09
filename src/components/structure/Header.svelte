@@ -26,6 +26,7 @@
           href={link}
           className={title}
           external={false}
+          color={"text-primary"}
           on:click={(event) => {
             event.preventDefault();
             scrollIntoView(event.target);

@@ -13,8 +13,6 @@ function RunScript() {
                     y: `${-yscale * (clientRect.height / 2)}px`,
                 };
             case "image":
-                console.log("attr");
-                console.log(attr);
                 return {
                     x: axis("min", "x", 5, (clientRect.width / 6) - 40)(e, clientRect),
                     y: `calc(-50% + ${yscale * (clientRect.height / 6)}px)`,

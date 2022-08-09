@@ -3,9 +3,10 @@
   export let href;
   export let className;
   export let external;
+  export let color;
 </script>
 
-<div class={`anchor ${className}`}>
+<div class={`anchor ${className} ${color} hover:${color}/70`}>
   <a {href} target="_blank" on:click>{title}</a>
   {#if external}
     <svg viewBox="0 0 24 24" astro-icon="fluent:arrow-up-right-24-filled">
@@ -19,7 +20,6 @@
 
 <style>
   .anchor {
-    @apply text-primary;
     text-decoration: 2px solid underline;
     text-underline-offset: 0.2rem;
     display: inline-block;
@@ -27,7 +27,6 @@
   }
   .anchor:hover {
     text-decoration-style: wavy;
-    @apply text-primary/70;
   }
   svg {
     display: inline-block;

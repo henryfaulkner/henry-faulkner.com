@@ -64,6 +64,7 @@
               href="https://www.uga.edu/"
               className="UGA"
               external={true}
+              color={"text-primary"}
             />.
             <br /> <br />
             I am passionate about manipulating and making the most of large datasets.
@@ -83,6 +84,7 @@
               href="https://www.perficient.com/"
               className="Perficient"
               external={true}
+              color={"text-primary"}
             />
             where I work on the Sitecore team, creating enterprise-scale websites.
             My work there entails building data transfer and custom functionality
@@ -98,6 +100,7 @@
               href={"#projectShowcase"}
               className={"Projects"}
               external={false}
+              color={"text-primary"}
               on:click={(event) => {
                 event.preventDefault();
                 scrollIntoView(event.target);
@@ -109,6 +112,7 @@
               href={"#contact"}
               className={"Contact"}
               external={false}
+              color={"text-primary"}
               on:click={(event) => {
                 event.preventDefault();
                 scrollIntoView(event.target);

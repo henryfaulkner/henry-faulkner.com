@@ -29,6 +29,7 @@
           {title}
           href={link}
           external={true}
+          color={"text-primary"}
         />
       {/each}
     {/await}

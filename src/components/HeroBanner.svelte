@@ -64,24 +64,25 @@
   </div>
 
   <div class="absolute bottom-20 scroll-container">
-    <Anchor
-      title="Scroll"
-      href={"#about"}
-      className={"scroll"}
-      external={false}
-      on:click={(event) => {
-        event.preventDefault();
-        scrollIntoView(event.target);
-      }}
-    />
     <div
-      class="icon-container"
+      class="icon-container relative top-4"
       on:click={(event) => {
         event.preventDefault();
         scrollIntoViewHref("#about");
       }}
     >
-      <Icon icon="fluent:chevron-down-24-filled" />
+      <Anchor
+        title="Scroll"
+        href={"#about"}
+        className={"scroll"}
+        external={false}
+        color={"text-white"}
+        on:click={(event) => {
+          event.preventDefault();
+          scrollIntoView(event.target);
+        }}
+      />
+      <Icon class="w-8" icon="fluent:chevron-down-24-filled" />
     </div>
   </div>
 </div>
@@ -96,10 +97,20 @@
   }
 
   .scroll-container {
-    left: 45%;
+    left: 42%;
   }
 
   .icon-container {
-    @apply mx-3 text-primary;
+    @apply mx-3 text-white h-16 w-16;
+    @apply rounded-full bg-primary;
+    @apply transition ease-in-out duration-200;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .icon-container:hover {
+    outline: 4px dashed #ffff006b;
+    @apply hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500;
   }
 </style>
