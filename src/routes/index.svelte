@@ -56,9 +56,9 @@
       <div class="about">
         <TitleDescription title="About">
           <p slot="p-tag">
-            Hi, I'm Henry Faulkner. I'm a .NET and JavaScript web developer and
-            software engineer. I have a Bachelor of Science in Computer Science
-            from the
+            Hi, I'm Henry Faulkner. I'm a C#/.NET and TypeScript web developer
+            and software engineer. I have a Bachelor of Science in Computer
+            Science from the
             <Anchor
               title="University of Georgia"
               href="https://www.uga.edu/"
@@ -163,6 +163,7 @@
 <style>
   #index {
     color: rgb(209, 213, 219);
+    overflow-x: hidden;
   }
 
   #content {

@@ -5,7 +5,7 @@
   import Anchor from "./Anchor.svelte";
   import Icon from "@iconify/svelte";
   onMount(() => {
-    setTimeout(() => RunScript(), 600);
+    RunScript();
   });
   export function scrollIntoView(target) {
     const el = document.querySelector(target.getAttribute("href"));
@@ -32,17 +32,15 @@
   <div class="container" id="index">
     <div class="layout relative">
       <figure class="z-0 absolute top-1/4 right-4 lt-md:hidden">
-        {#await getStorageUrl("images/HeroImages/Smallest Headshot.png") then imageUrl}
-          <img
-            src={imageUrl}
-            width="400px"
-            height="275px"
-            loading="eager"
-            alt="Henry Faulkner hero"
-            class="heroImage"
-            data-perspective="image"
-          />
-        {/await}
+        <img
+          src="HeroHeadshot.png"
+          width="400px"
+          height="275px"
+          loading="eager"
+          alt="Henry Faulkner hero"
+          class="heroImage"
+          data-perspective="image"
+        />
       </figure>
       <div class="z-10 relative" data-perspective="header">
         <h1
