@@ -5,7 +5,7 @@
   import Anchor from "./Anchor.svelte";
   import Icon from "@iconify/svelte";
   onMount(() => {
-    setTimeout(() => RunScript(), 300);
+    setTimeout(() => RunScript(), 600);
   });
   export function scrollIntoView(target) {
     const el = document.querySelector(target.getAttribute("href"));
