@@ -63,7 +63,7 @@
     </div>
   </div>
 
-  <div class="absolute bottom-20 justify-center">
+  <div class="absolute bottom-20 scroll-container">
     <Anchor
       title="Scroll"
       href={"#about"}
@@ -93,6 +93,10 @@
 
   .heroImage {
     border-radius: 8%;
+  }
+
+  .scroll-container {
+    left: 47%;
   }
 
   .icon-container {
