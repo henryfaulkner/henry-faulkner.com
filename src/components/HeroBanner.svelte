@@ -96,7 +96,7 @@
   }
 
   .scroll-container {
-    left: 47%;
+    left: 43%;
   }
 
   .icon-container {
