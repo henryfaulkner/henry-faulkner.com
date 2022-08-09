@@ -14,29 +14,31 @@
   export let headerLinks;
 </script>
 
-<div id="header" class="header-container">
-  <a href="/" class="name-container">
-    <p class="name-text">Henry Faulkner</p>
-  </a>
-  <div class="not-name-cont">
-    {#each Object.entries(headerLinks) as [title, link]}
-      <Anchor
-        {title}
-        href={link}
-        className={title}
-        external={false}
-        on:click={(event) => {
-          event.preventDefault();
-          scrollIntoView(event.target);
-        }}
-      />
-    {/each}
+<nav class="fixed z-20 w-screen backdrop-blur-sm">
+  <div id="header" class="header-container">
+    <a href="/" class="name-container">
+      <p class="name-text">Henry Faulkner</p>
+    </a>
+    <div class="not-name-cont">
+      {#each Object.entries(headerLinks) as [title, link]}
+        <Anchor
+          {title}
+          href={link}
+          className={title}
+          external={false}
+          on:click={(event) => {
+            event.preventDefault();
+            scrollIntoView(event.target);
+          }}
+        />
+      {/each}
+    </div>
   </div>
-</div>
+</nav>
 
 <style type="text/scss">
   .header-container {
-    background-color: black;
+    background-color: rgb(0, 0, 0, 0.7);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
