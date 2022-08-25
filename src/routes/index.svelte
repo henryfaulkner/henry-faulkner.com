@@ -67,10 +67,9 @@
               color={"text-primary"}
             />.
             <br /> <br />
-            I am passionate about manipulating and making the most of large datasets.
-            I enjoy working through problems and finding sturdy, lasting solutions
-            to solve them. Recently, I have enjoyed digging deeper into cloud platforms
-            to deploy and scale my work.
+            I am passionate about software architecture and creating efficient software
+            and developer workflow. I enjoy leveraging cloud platforms, like Azure
+            and Google Cloud, to scale solutions.
           </p>
         </TitleDescription>
       </div>
@@ -86,12 +85,14 @@
               external={true}
               color={"text-primary"}
             />
-            where I work on the Sitecore team, creating enterprise-scale websites.
-            My work there entails building data transfer and custom functionality
-            on top of Sitecore's proprietary CMS framework. That framework from the
-            backend is C#/.NET MVC, communicating with a SQL database. I have also
-            needed to work with Azure, REST API, and React during my tenure. I have
-            been staffed at Perficient since February 2021.
+            where I previously worked on the Sitecore team, creating enterprise-scale
+            websites. My work there entailed building data transfer and custom functionality
+            on top of Sitecore's proprietary CMS framework, which is C#/.NET MVC.
+            I have now transitioned to Perficient's Custom Development team where
+            I work as a .NET developer.
+            <br /> <br />
+            During my tenure, I have also worked with Azure, REST API, React, and
+            SCSS. I have been staffed at Perficient since February 2021.
             <br /> <br />
             My personnel project experience is more varied. You can find out more
             about those in the
@@ -127,7 +128,7 @@
         <TitleDescription title="Skills">
           <p slot="p-tag">
             I am a fullstack software developer. I have experience creating
-            custom functionality, using large datasets and integrating
+            custom functionality, using large datasets and integrating it
             seamlessly into an existing solution. I have experience doing
             fullstack web development using modern JavaScript frameworks like
             React/NextJS and Svelte/SvelteKit but prefer being heads down on the
