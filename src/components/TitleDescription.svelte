@@ -9,18 +9,12 @@
 
 <style>
   .TitleDescription {
-    @apply mx-auto px-6 md:px-12 lg:px-[20%] py-6;
+    @apply mx-auto px-6 md:px-4 lg:px-[5%];
   }
 
   h3 {
     @apply mt-0;
     @apply text-primary font-manrope font-normal text-2xl;
     @apply mb-6;
-  }
-
-  p {
-    @apply lt-xsm:text-base lt-xsm:leading-relaxed;
-    @apply text-base;
-    @apply mb-24;
   }
 </style>

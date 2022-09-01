@@ -55,10 +55,10 @@
     <div id="about" class="scrollSection">
       <div class="about">
         <TitleDescription title="About">
-          <p slot="p-tag">
-            Hi, I'm Henry Faulkner. I'm a C#/.NET and TypeScript web developer
-            and software engineer. I have a Bachelor of Science in Computer
-            Science from the
+          <p slot="p-tag" class="p-tag">
+            Hi, I'm Henry Faulkner. I'm a C#/.NET, React, and TypeScript web
+            developer and software engineer. I have a Bachelor of Science in
+            Computer Science from the
             <Anchor
               title="University of Georgia"
               href="https://www.uga.edu/"
@@ -76,7 +76,7 @@
 
       <div class="about" id="experience">
         <TitleDescription title="Experience">
-          <p slot="p-tag">
+          <p slot="p-tag" class="p-tag">
             I am currently a Technical Consultant at
             <Anchor
               title="Perficient"
@@ -126,7 +126,7 @@
 
       <div class="about" id="skills">
         <TitleDescription title="Skills">
-          <p slot="p-tag">
+          <p slot="p-tag" class="p-tag">
             I am a fullstack software developer. I have experience creating
             custom functionality, using large datasets and integrating it
             seamlessly into an existing solution. I have experience doing
@@ -190,5 +190,11 @@
 
   .scrollSection {
     @apply lt-xsm:scroll-mt-36 xsm:scroll-mt-24;
+  }
+
+  .p-tag {
+    @apply lt-xsm:text-base lt-xsm:leading-relaxed;
+    @apply text-base lg:text-xl;
+    @apply mb-24;
   }
 </style>
