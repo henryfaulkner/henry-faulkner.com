@@ -68,8 +68,8 @@
             />.
             <br /> <br />
             I am passionate about software architecture and creating efficient developer
-            workflows and software. I enjoy leveraging cloud platforms, like Azure
-            and Google Cloud, to scale solutions.
+            workflows. I enjoy leveraging cloud platforms, like Azure and Google
+            Cloud, to scale solutions.
           </p>
         </TitleDescription>
       </div>
