@@ -10,7 +10,9 @@
       Resume: await getStorageUrl(
         "resumes/Henry Faulkner - Software Engineer Resume (Late 2022).pdf"
       ),
+      "Perficient Blogs": "https://blogs.perficient.com/author/hfaulkner",
       Twitter: "https://twitter.com/HenryFaulknerIO",
+      Instagram: "https://www.instagram.com/henryfaulkner_makes/",
     };
   }
 </script>
