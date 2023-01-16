@@ -10,7 +10,7 @@
       Resume: await getStorageUrl(
         "resumes/Henry Faulkner - Software Engineer Resume (Late 2022).pdf"
       ),
-      "Perficient Blogs": "https://blogs.perficient.com/author/hfaulkner",
+      Blogs: "https://blogs.perficient.com/author/hfaulkner",
       Twitter: "https://twitter.com/HenryFaulknerIO",
       Instagram: "https://www.instagram.com/henryfaulkner_makes/",
     };
@@ -27,7 +27,7 @@
     {#await getLinks() then links}
       {#each Object.entries(links) as [title, link]}
         <Anchor
-          className={`px-4 py-2 hover:text-primary hover:bg-primary/30 focus:bg-primary/20`}
+          className={`items-center justify-center inlineFlex px-4 py-2 hover:text-primary hover:bg-primary/30 focus:bg-primary/20`}
           {title}
           href={link}
           external={true}
