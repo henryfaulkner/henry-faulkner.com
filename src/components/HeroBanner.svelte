@@ -47,7 +47,7 @@
           class="text-6xl mb-3"
           style="color: white; -webkit-text-stroke: 1px black;"
         >
-          I am <strong class="text-primary" aria-label="Henry Faulkner"
+          <strong class="text-primary" aria-label="Henry Faulkner"
             >Henry Faulkner.</strong
           >
         </h1>
@@ -61,7 +61,7 @@
     </div>
   </div>
 
-  <div class="absolute bottom-20 scroll-container">
+  <div class="absolute bottom-20 scroll-container cursor-pointer">
     <div
       class="icon-container relative top-4"
       on:click={(event) => {
@@ -71,7 +71,7 @@
     >
       <Anchor
         title="Scroll"
-        href={"#about"}
+        href={"#scroll4"}
         className={"scroll"}
         external={false}
         color={"text-white"}

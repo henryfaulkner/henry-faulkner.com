@@ -41,9 +41,9 @@
   //import LibLoader from "../components/LibLoader.svelte";
 
   let headerLinks = {
-    About: "#about",
-    Projects: "#projectShowcase",
-    Contact: "#contact",
+    Index: "#index",
+    Experience: "#scroll1",
+    Contact: "#scroll3",
   };
 </script>
 
@@ -52,108 +52,118 @@
   <HeroBanner />
 
   <div id="content" class="lg:px-44">
-    <div id="about" class="scrollSection">
-      <div class="about">
-        <TitleDescription title="About">
-          <p slot="p-tag" class="p-tag">
-            Hi, I'm Henry Faulkner. I'm a C#/.NET, React, and TypeScript web
-            developer and software engineer. I have a Bachelor of Science in
-            Computer Science from the
-            <Anchor
-              title="University of Georgia"
-              href="https://www.uga.edu/"
-              className="UGA"
-              external={true}
-              color={"text-primary"}
-            />.
-            <br /> <br />
-            I am passionate about software architecture and creating efficient developer
-            workflows. I enjoy leveraging cloud platforms, like Azure and Google
-            Cloud, to scale solutions.
-          </p>
-        </TitleDescription>
-      </div>
+    <div class="about" id="skills">
+      <div id="scroll4" class="scrollSection" />
+      <TitleDescription title="Skills">
+        <p slot="p-tag" class="p-tag">
+          I am a fullstack web developer and software engineer. I have 3 years
+          of professional experience working with .Net (Framework/Core),
+          TypeScript, T-SQL, Microsoft Azure services, and SCSS. Thoughout my
+          career, I've worked with various frontend frameworks such as: Angular,
+          ASP.Net, Next.js and React.
+        </p>
+      </TitleDescription>
+    </div>
 
-      <div class="about" id="experience">
-        <TitleDescription title="Experience">
-          <p slot="p-tag" class="p-tag">
-            I am currently a Technical Consultant at
-            <Anchor
-              title="Perficient"
-              href="https://www.perficient.com/"
-              className="Perficient"
-              external={true}
-              color={"text-primary"}
-            />
-            where I previously worked on the Sitecore team, creating enterprise-scale
-            websites. My work there entailed building data transfer and custom functionality
-            on top of Sitecore's proprietary CMS framework, which is C#/.NET MVC.
-            I have now transitioned to Perficient's Custom Development team where
-            I work as a .NET developer.
-            <br /> <br />
-            During my tenure, I have also worked with Azure, REST API, React, and
-            SCSS. I have been staffed at Perficient since February 2021.
-            <br /> <br />
-            My personnel project experience is more varied. You can find out more
-            about those in the
-            <Anchor
-              title={"Projects section"}
-              href={"#projectShowcase"}
-              className={"Projects"}
-              external={false}
-              color={"text-primary"}
-              on:click={(event) => {
-                event.preventDefault();
-                scrollIntoView(event.target);
-              }}
-            />
-            below. You can also find my resume linked in the
-            <Anchor
-              title={"Contact section"}
-              href={"#contact"}
-              className={"Contact"}
-              external={false}
-              color={"text-primary"}
-              on:click={(event) => {
-                event.preventDefault();
-                scrollIntoView(event.target);
-              }}
-            />
-            below.
-          </p>
-        </TitleDescription>
-      </div>
+    <div class="about" id="experience">
+      <div id="scroll1" class="scrollSection" />
+      <TitleDescription title="Experience">
+        <p slot="p-tag" class="p-tag">
+          I currently work as a Software Engineer at
+          <Anchor
+            title="Now®"
+            href="https://nowcorp.com/"
+            className="Now"
+            external={true}
+            color={"text-primary"}
+          />. My role at Now is to make major technical upgrades to flagship
+          financial platform, NowAccount. I designed an overhaul to NowAccount's
+          Client Onboarding Journey using Adobe XD, which is being developed and
+          showcased to potential investors. I am currently working on the
+          aforementioned Onboarding Journet, which marks the platform's move
+          from MVC (.Net Framework) to REST APIs (.Net Core) and ASP.Net to
+          Angular. I am the Angular architect for NowAccount's new frontend
+          solution. I played a large role in moving our jobs from running on a
+          virtual machine's task scheduler to Azure Functions on Azure's
+          serverless platform. I have worked at Now since October 2022.
+          <br /> <br />
+          I was formerly a Technical Consultant at
+          <Anchor
+            title="Perficient®"
+            href="https://www.perficient.com/"
+            className="Perficient"
+            external={true}
+            color={"text-primary"}
+          />
+          where I momentarily worked on the Sitecore team, creating enterprise-scale
+          websites. I built data transfer using PowerShell and custom functionality
+          on top of Sitecore's proprietary CMS framework. I later transitioned to
+          Perficient's Custom Development team where I worked as a .NET framework
+          and React developer, where I created smaller-scale web applications. During
+          my tenure, I have worked with Azure, .Net Framework, React, T-SQL, Sitecore,
+          and SCSS. I was staffed at Perficient from February 2021 - October 2022
+          and also interned there.
+          <br /> <br />
+          My personnel project experience is more varied. You can find out more about
+          those in the
+          <Anchor
+            title={"Projects section"}
+            href={"#scroll2"}
+            className={"Projects"}
+            external={false}
+            color={"text-primary"}
+            on:click={(event) => {
+              event.preventDefault();
+              scrollIntoView(event.target);
+            }}
+          />
+          below. You can also find my resume linked in the
+          <Anchor
+            title={"Contact section"}
+            href={"#scroll3"}
+            className={"Contact"}
+            external={false}
+            color={"text-primary"}
+            on:click={(event) => {
+              event.preventDefault();
+              scrollIntoView(event.target);
+            }}
+          />
+          below.
+        </p>
+      </TitleDescription>
+    </div>
 
-      <div class="about" id="skills">
-        <TitleDescription title="Skills">
-          <p slot="p-tag" class="p-tag">
-            I am a fullstack software developer. I have experience creating
-            custom functionality, using large datasets and integrating it
-            seamlessly into an existing solution. I have experience doing
-            fullstack web development using modern JavaScript frameworks like
-            React/NextJS and Svelte/SvelteKit but prefer being heads down on the
-            backend, working on the underlying system and architecture.
-            <br /> <br />
-            Some of the technologies I've work with are C#/.NET, NodeJS, JS/TS, React/NextJS,
-            Svelte/SvelteKit, No-SQL/SQL, Firebase, Azure, Python, SASS, and Tailwind
-            but tend to be language agnostic and learn what is neccessary for a task.
-          </p>
-        </TitleDescription>
-      </div>
+    <div class="about">
+      <TitleDescription title="About">
+        <p slot="p-tag" class="p-tag">
+          Hi, I'm Henry Faulkner. I live in Atlanta, GA, USA. I have a Bachelor
+          of Science in Computer Science from the
+          <Anchor
+            title="University of Georgia"
+            href="https://www.uga.edu/"
+            className="UGA"
+            external={true}
+            color={"text-primary"}
+          />. I am passionate about software architecture and building quality
+          web applications.
+        </p>
+      </TitleDescription>
+    </div>
 
-      <div id="projectShowcase" class="scrollSection">
-        <h1 id="title">Project Showcase</h1>
-        <div id="projects">
-          {#each projects as project, i}
-            {#await getStorageUrl(project.featured_image) then imageUrl}
-              <ProjectCard {project} {imageUrl} />
-            {/await}
-          {/each}
-        </div>
+    <div id="scroll2" class="scrollSection">
+      <h1 id="title">Project Showcase</h1>
+      <div id="projects">
+        {#each projects as project, i}
+          {#await getStorageUrl(project.featured_image) then imageUrl}
+            <ProjectCard {project} {imageUrl} />
+          {/await}
+        {/each}
       </div>
     </div>
 
-    <section id="#contact" class="py-12 scrollSection">
+    <section class="scrollSection pt-6 pb-12">
+      <div id="scroll3" class="scrollSection" />
       <Contact />
     </section>
   </div>
