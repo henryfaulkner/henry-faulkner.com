@@ -38,6 +38,7 @@
   import Contact from "../components/Contact.svelte";
   import Anchor from "../components/Anchor.svelte";
   import HeroBanner from "../components/HeroBanner.svelte";
+  import MediaQuery from "../components/structure/MediaQuery.svelte";
   //import LibLoader from "../components/LibLoader.svelte";
 
   let headerLinks = {
@@ -48,7 +49,9 @@
 </script>
 
 <div id="index" class="scrollSection">
-  <Header {headerLinks} />
+  <div id="header">
+    <Header {headerLinks} />
+  </div>
   <HeroBanner />
 
   <div id="content" class="lg:px-44">
@@ -175,6 +178,12 @@
   #index {
     color: rgb(209, 213, 219);
     overflow-x: hidden;
+  }
+
+  @media (max-width: 768px) {
+    #header {
+      display: none;
+    }
   }
 
   #content {
