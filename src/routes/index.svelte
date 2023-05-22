@@ -53,8 +53,24 @@
   <HeroBanner />
 
   <div id="content" class="lg:px-44">
-    <div class="about" id="skills">
+    <div class="about">
       <div id="scroll4" class="scrollSection" />
+      <TitleDescription title="About">
+        <p slot="p-tag" class="p-tag">
+          Hi, I'm Henry Faulkner. I live in Atlanta, GA, USA. I have a Bachelor
+          of Science in Computer Science from the
+          <Anchor
+            title="University of Georgia"
+            href="https://www.uga.edu/"
+            className="UGA"
+            external={true}
+            color={"text-primary"}
+          />. I build quality software and web applications.
+        </p>
+      </TitleDescription>
+    </div>
+
+    <div class="about" id="skills">
       <TitleDescription title="Skills">
         <p slot="p-tag" class="p-tag">
           I am a fullstack web developer and software engineer. I have 3 years
@@ -131,23 +147,6 @@
             }}
           />
           below.
-        </p>
-      </TitleDescription>
-    </div>
-
-    <div class="about">
-      <TitleDescription title="About">
-        <p slot="p-tag" class="p-tag">
-          Hi, I'm Henry Faulkner. I live in Atlanta, GA, USA. I have a Bachelor
-          of Science in Computer Science from the
-          <Anchor
-            title="University of Georgia"
-            href="https://www.uga.edu/"
-            className="UGA"
-            external={true}
-            color={"text-primary"}
-          />. I am passionate about software architecture and building quality
-          web applications.
         </p>
       </TitleDescription>
     </div>
