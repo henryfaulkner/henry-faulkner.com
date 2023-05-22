@@ -38,8 +38,6 @@
   import Contact from "../components/Contact.svelte";
   import Anchor from "../components/Anchor.svelte";
   import HeroBanner from "../components/HeroBanner.svelte";
-  import MediaQuery from "../components/structure/MediaQuery.svelte";
-  //import LibLoader from "../components/LibLoader.svelte";
 
   let headerLinks = {
     Index: "#index",
