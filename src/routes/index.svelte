@@ -205,6 +205,6 @@
   .p-tag {
     @apply lt-xsm:text-base lt-xsm:leading-relaxed;
     @apply text-base lg:text-xl;
-    @apply mb-24;
+    @apply mb-12;
   }
 </style>
