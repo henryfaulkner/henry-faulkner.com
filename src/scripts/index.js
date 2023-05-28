@@ -3,7 +3,12 @@ function RunScript() {
     let rootEl = document.querySelector("[data-perspective-group]");
     let els = Array.from(rootEl.querySelectorAll("[data-perspective]"));
     let len = els.length;
-    let elAttrs = els.map(el => el.getAttribute("data-perspective"));
+    let headerEl;
+    let elAttrs = els.map(el => {
+        const attr = el.getAttribute("data-perspective");
+        if(attr === 'header') headerEl = el;
+        return attr;
+    });
     let elClientRects = generateClientRects(els);
     function perspectiveCatagory(attr, e, clientRect, yscale) {
         switch (attr) {
@@ -32,11 +37,11 @@ function RunScript() {
             x: axis()(e, clientRect),
             y: axis()(e, clientRect)
         };
-    }
-    ;
+    };
     let height = window.innerHeight;
     let registered = false;
     function onMousemove(e) {
+        if(window.innerWidth < 768) return;
         if (window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
             window.matchMedia("(pointer: coarse)").matches)
             return;
@@ -59,7 +64,9 @@ function RunScript() {
     window.addEventListener("resize", debounce(() => {
         height = window.innerHeight;
         elClientRects = generateClientRects(els);
-    }, 1000), { passive: true });
+        if(window.innerWidth < 768 && headerEl !== null) 
+            headerEl.style.transform = 'none';
+    }, 200), { passive: true });
     setTimeout(() => {
         const html = document.querySelector("html");
         html.classList.add("dom-loaded");

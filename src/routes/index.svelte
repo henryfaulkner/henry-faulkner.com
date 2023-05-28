@@ -96,13 +96,13 @@
           />. My role at Now is to make major technical upgrades to their
           flagship financial platform, NowAccount. I designed an overhaul to
           NowAccount's Client Onboarding Journey using Adobe XD, which is being
-          developed and showcased to potential investors. I am currently working
-          on the aforementioned Onboarding Journey, which marks the platform's
-          move from MVC (.Net Framework) to REST APIs (.Net Core) and ASP.Net to
-          Angular. I am the frontend architect for NowAccount's new Angular
-          solution. I played a large role in moving our jobs from running on a
-          virtual machine's task scheduler to Azure Functions on Azure's
-          serverless platform. I have worked at Now since October 2022.
+          developed and showcased to prospective investors. I am currently
+          working on the aforementioned Onboarding Journey, which marks the
+          platform's move from MVC (.Net Framework) to REST APIs (.Net Core) and
+          ASP.Net to Angular. I am the frontend architect for NowAccount's new
+          Angular solution. I played a large role in moving our jobs from
+          running on a virtual machine's task scheduler to Azure Functions on
+          Azure's serverless platform. I have worked at Now since October 2022.
           <br /> <br />
           I was formerly a Technical Consultant at
           <Anchor
@@ -175,12 +175,6 @@
   #index {
     color: rgb(209, 213, 219);
     overflow-x: hidden;
-  }
-
-  @media (max-width: 768px) {
-    #header {
-      display: none;
-    }
   }
 
   #content {

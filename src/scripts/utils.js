@@ -15,7 +15,14 @@ export const axis = (type = "no-limit", axis = "x", rate = 20, limit = 0) => {
         let mouseAxis = e[`client${axis?.toUpperCase()}`];
         let elRectAxis = clientRect[axis?.toLowerCase()];
         let value = (mouseAxis - elRectAxis) / rate;
-        return (type == "no-limit" ? value : Math[type](value, limit)) + `px`;
+        switch (type) {
+            case "center":
+              return (value - clientRect.width / 2) + `px`;
+            case "no-limit":
+              return value + `px`;
+            default:
+              return Math[type](value, limit) + `px`;
+          }
     };
 };
 /**

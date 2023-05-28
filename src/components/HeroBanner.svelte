@@ -23,12 +23,7 @@
   }
 </script>
 
-<div
-  role="banner"
-  class="hero h-screen"
-  nav-section="index"
-  data-perspective-group
->
+<div role="banner" class="hero" nav-section="index" data-perspective-group>
   <div class="container" id="index">
     <div class="layout relative">
       <figure class="z-0 absolute top-1/4 right-4 lt-md:hidden">
@@ -42,14 +37,14 @@
           data-perspective="image"
         />
       </figure>
-      <div class="z-10 relative" data-perspective="header">
+      <div id="hero-text" class="z-10 relative" data-perspective="header">
         <h1
           class="text-6xl mb-3"
           style="color: white; -webkit-text-stroke: 1px black;"
         >
-          <strong class="text-primary" aria-label="Henry Faulkner"
-            >Henry Faulkner.</strong
-          >
+          <strong class="text-primary" aria-label="Henry Faulkner">
+            Henry Faulkner.
+          </strong>
         </h1>
         <h2
           class="text-2xl"
@@ -61,7 +56,7 @@
     </div>
   </div>
 
-  <div class="absolute bottom-20 scroll-container cursor-pointer">
+  <div class="scroll-container cursor-pointer">
     <div
       class="icon-container relative top-4"
       on:click={(event) => {
@@ -86,16 +81,46 @@
 </div>
 
 <style>
+  .container {
+    border: 1px solid black;
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
   .hero {
     background-color: black;
+    height: 100vh;
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      height: fit-content;
+      padding: 80px 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    #hero-text {
+      text-align: center;
+    }
   }
 
   .heroImage {
     border-radius: 8%;
   }
 
-  .scroll-container {
-    left: 42%;
+  @media (min-width: 768px) {
+    .scroll-container {
+      left: 42%;
+      position: absolute;
+      bottom: 5rem;
+    }
   }
 
   .icon-container {

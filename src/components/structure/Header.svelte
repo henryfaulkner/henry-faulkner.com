@@ -14,7 +14,7 @@
   export let headerLinks;
 </script>
 
-<nav class="fixed z-20 w-screen backdrop-blur-sm">
+<nav class="z-20 w-screen backdrop-blur-sm">
   <div id="header" class="header-container">
     <a href="/" class="name-container">
       <p class="name-text">Henry Faulkner</p>
@@ -38,12 +38,22 @@
 </nav>
 
 <style type="text/scss">
+  @media (min-width: 768px) {
+    nav {
+      @apply fixed;
+    }
+  }
+
   .header-container {
     background-color: rgb(0, 0, 0, 0.7);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+
+    @media (max-width: 768px) {
+      background-color: rgb(0, 0, 0);
+    }
   }
 
   .not-name-cont {
@@ -52,6 +62,13 @@
     justify-content: space-around;
     flex-wrap: wrap;
     flex-grow: 1;
+
+    @media (max-width: 768px) {
+      padding-top: 15px;
+      flex-direction: row;
+      height: 40px;
+      align-items: center;
+    }
   }
 
   .anchor {
@@ -62,6 +79,10 @@
   .name-container {
     padding: 10px;
     @apply lt-xsm:pr-1 lt-xsm:w-3/4;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
   .name-text {
     font-size: 3em;
