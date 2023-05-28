@@ -41,7 +41,7 @@ function RunScript() {
     let height = window.innerHeight;
     let registered = false;
     function onMousemove(e) {
-        if(window.innerWidth < 768) return;
+        if(window.innerWidth < 1080) return;
         if (window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
             window.matchMedia("(pointer: coarse)").matches)
             return;
@@ -64,7 +64,7 @@ function RunScript() {
     window.addEventListener("resize", debounce(() => {
         height = window.innerHeight;
         elClientRects = generateClientRects(els);
-        if(window.innerWidth < 768 && headerEl !== null) 
+        if(window.innerWidth < 1080 && headerEl !== null) 
             headerEl.style.transform = 'none';
     }, 200), { passive: true });
     setTimeout(() => {

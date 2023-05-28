@@ -38,7 +38,7 @@
 </nav>
 
 <style type="text/scss">
-  @media (min-width: 768px) {
+  @media (min-width: 1080px) {
     nav {
       @apply fixed;
     }
@@ -51,7 +51,7 @@
     justify-content: space-around;
     align-items: center;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1080px) {
       background-color: rgb(0, 0, 0);
     }
   }
@@ -63,7 +63,7 @@
     flex-wrap: wrap;
     flex-grow: 1;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1080px) {
       padding-top: 15px;
       flex-direction: row;
       height: 40px;
@@ -80,7 +80,7 @@
     padding: 10px;
     @apply lt-xsm:pr-1 lt-xsm:w-3/4;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1080px) {
       display: none;
     }
   }

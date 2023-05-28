@@ -17,7 +17,7 @@ module.exports = {
 
         "lt-xl": { max: "1279px" },
 
-        "lt-lg": { max: "1023px" },
+        "lt-lg": { max: "1080px" },
 
         "lt-md": { max: "767px" },
 

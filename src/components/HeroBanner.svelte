@@ -26,7 +26,7 @@
 <div role="banner" class="hero" nav-section="index" data-perspective-group>
   <div class="container" id="index">
     <div class="layout relative">
-      <figure class="z-0 absolute top-1/4 right-4 lt-md:hidden">
+      <figure class="z-0 absolute top-1/4 right-4">
         <img
           src="HeroHeadshot.png"
           width="400px"
@@ -85,7 +85,7 @@
     border: 1px solid black;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1080px) {
     .hero {
       display: flex;
       flex-direction: column;
@@ -98,16 +98,18 @@
     height: 100vh;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1080px) {
     .hero {
       height: fit-content;
       padding: 80px 0;
     }
-  }
 
-  @media (max-width: 768px) {
     #hero-text {
       text-align: center;
+    }
+
+    figure {
+      display: none;
     }
   }
 
@@ -115,7 +117,7 @@
     border-radius: 8%;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1081px) {
     .scroll-container {
       left: 42%;
       position: absolute;
