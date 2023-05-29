@@ -16,7 +16,7 @@
 
 <nav class="z-20 w-screen backdrop-blur-sm">
   <div id="header" class="header-container">
-    <a href="/" class="name-container">
+    <a title="Header Name link" href="/" class="name-container">
       <p class="name-text">Henry Faulkner</p>
     </a>
     <div class="not-name-cont">

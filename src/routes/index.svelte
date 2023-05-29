@@ -46,6 +46,14 @@
   };
 </script>
 
+<svelte:head>
+  <title>Henry Faulkner's website</title>
+  <meta
+    name="description"
+    content="The personal website of Henry Faulkner, a software engineer and web developer."
+  />
+</svelte:head>
+
 <div id="index" class="scrollSection">
   <div id="header">
     <Header {headerLinks} />
@@ -115,11 +123,11 @@
           where I momentarily worked on the Sitecore team, creating enterprise-scale
           websites. I built data transfer using PowerShell and custom functionality
           on top of Sitecore's proprietary CMS framework. I later transitioned to
-          Perficient's Custom Development team where I worked as a .NET framework
-          and React developer, where I created smaller-scale web applications. During
-          my tenure, I have worked with Azure, .Net Framework, React, T-SQL, Sitecore,
-          and SCSS. I was staffed at Perficient from February 2021 - October 2022
-          and also interned there.
+          Perficient's Custom Development team as a .NET framework and React developer,
+          where I created smaller-scale web applications. During my tenure, I have
+          worked with Azure, .Net Framework, React, T-SQL, Sitecore, and SCSS. I
+          was staffed at Perficient from February 2021 - October 2022 and also interned
+          there.
           <br /> <br />
           My personnel project experience is more varied. You can find out more about
           those in the
@@ -152,7 +160,7 @@
     </div>
 
     <div id="scroll2" class="scrollSection">
-      <h1 id="title">Project Showcase</h1>
+      <h2 id="title">Project Showcase</h2>
       <div id="projects">
         {#each projects as project, i}
           {#await getStorageUrl(project.featured_image) then imageUrl}

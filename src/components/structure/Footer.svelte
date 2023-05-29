@@ -16,7 +16,12 @@
     of unique visitors.</span
   >
   <div class="flex items-center gap-2">
-    <a href="#index" id="back-to-top" on:click|preventDefault={scrollIntoView}>
+    <a
+      title="Footer link"
+      href="#index"
+      id="back-to-top"
+      on:click|preventDefault={scrollIntoView}
+    >
       <!-- <Icon name="fluent:arrow-up-24-filled" /> -->
       Back To Top
     </a>

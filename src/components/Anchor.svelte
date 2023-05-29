@@ -7,7 +7,7 @@
 </script>
 
 <div class={`anchor ${className} ${color} hover:${color}/70`}>
-  <a {href} target="_blank" on:click>{title}</a>
+  <a title={title + " link"} {href} target="_blank" on:click>{title}</a>
   {#if external}
     <svg viewBox="0 0 24 24" astro-icon="fluent:arrow-up-right-24-filled">
       <path

@@ -29,8 +29,11 @@
   }}
 >
   <CardDropdown {linkObjects} />
-  <!-- <a href={`/projects/${project.DocumentID}`} class="anchor"> -->
-  <a href={project.liveLink ?? project.repoLink} class="anchor">
+  <a
+    title="Project Card link"
+    href={project.liveLink ?? project.repoLink}
+    class="anchor"
+  >
     <div class="card-content">
       <div class="base">
         <p>{project.title}</p>

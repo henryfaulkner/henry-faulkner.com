@@ -10,7 +10,9 @@
   >
     {#each linkObjects as linkObject, i}
       {#if linkObject.link !== undefined}
-        <a href={linkObject.link}>{linkObject.type}</a>
+        <a title="Card Dropdown link" href={linkObject.link}
+          >{linkObject.type}</a
+        >
       {/if}
     {/each}
   </ul>
