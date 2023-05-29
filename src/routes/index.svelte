@@ -102,7 +102,7 @@
           ASP.Net to Angular. I am the frontend architect for NowAccount's new
           Angular solution. I played a large role in moving our jobs from
           running on a virtual machine's task scheduler to Azure Functions on
-          Azure's serverless platform. I have worked at Now since October 2022.
+          Azure's serverless platform. I have working at Now since October 2022.
           <br /> <br />
           I was formerly a Technical Consultant at
           <Anchor
@@ -116,10 +116,9 @@
           websites. I built data transfer using PowerShell and custom functionality
           on top of Sitecore's proprietary CMS framework. I later transitioned to
           Perficient's Custom Development team as a .NET framework and React developer,
-          where I created smaller-scale web applications. During my tenure, I have
-          worked with Azure, .Net Framework, React, T-SQL, Sitecore, and SCSS. I
-          was staffed at Perficient from February 2021 - October 2022 and also interned
-          there.
+          where I created smaller-scale web applications. During my tenure, I worked
+          with Azure, .Net Framework, React, T-SQL, Sitecore, and SCSS. I was staffed
+          at Perficient from February 2021 - October 2022 and also interned there.
           <br /> <br />
           My personnel project experience is more varied. You can find out more about
           those in the
