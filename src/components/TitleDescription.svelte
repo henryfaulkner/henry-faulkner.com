@@ -9,7 +9,7 @@
 
 <style>
   .TitleDescription {
-    @apply mx-auto px-6 md:px-4 lg:px-[5%];
+    @apply mx-auto px-12 lg:px-[5%];
   }
 
   h3 {

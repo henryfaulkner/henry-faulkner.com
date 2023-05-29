@@ -76,10 +76,10 @@ function RunScript() {
         for(let i = 0; i < len; i++) {
             switch (els[i].getAttribute("data-perspective")) {
                 case "header":
-                    els[i].style.transform = `translate(0px, 0px)`;
+                    els[i].style.transform = `translate(100px, 0px)`;
                     break;
                 case "image":
-                    els[i].style.transform = `translate(0px, -150px)`;
+                    els[i].style.transform = `translate(-200px, -150px)`;
                     break
             }
         }

@@ -56,7 +56,7 @@
     </div>
   </div>
 
-  <div class="scroll-container cursor-pointer">
+  <div class="scroll-container cursor-pointer mt-6">
     <div
       class="icon-container relative top-4"
       on:click={(event) => {
@@ -101,7 +101,7 @@
   @media (max-width: 1080px) {
     .hero {
       height: fit-content;
-      padding: 80px 0;
+      padding: 80px 0 60px;
     }
 
     #hero-text {
