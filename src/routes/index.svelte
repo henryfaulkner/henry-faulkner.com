@@ -114,10 +114,10 @@
           />
           where I momentarily worked on the Sitecore team, creating enterprise-scale
           websites. I built data transfer using PowerShell and custom functionality
-          on top of Sitecore's proprietary CMS framework. I later transitioned to
-          Perficient's Custom Development team as a .NET framework and React developer,
-          where I created smaller-scale web applications. During my tenure, I worked
-          with Azure, .Net Framework, React, T-SQL, Sitecore, and SCSS. I was staffed
+          on top of Sitecore's proprietary CMS platform. I later transitioned to
+          Perficient's Custom Development team as a .NET and React developer, where
+          I created smaller-scale web applications. During my tenure, I worked with
+          Azure, .Net Framework, React, T-SQL, Sitecore, and SCSS. I was staffed
           at Perficient from February 2021 - October 2022 and also interned there.
           <br /> <br />
           My personnel project experience is more varied. You can find out more about
