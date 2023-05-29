@@ -75,7 +75,7 @@
         <p slot="p-tag" class="p-tag">
           I am a fullstack web developer and software engineer. I have 3 years
           of professional experience working with .Net (Framework/Core),
-          TypeScript, T-SQL, Microsoft Azure services, and SCSS. Thoughout my
+          TypeScript, T-SQL, Microsoft Azure services, and SCSS. Throughout my
           career, I've worked with various frontend frameworks such as: Angular,
           ASP.Net, Next.js and React.
         </p>
