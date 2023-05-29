@@ -46,14 +46,6 @@
   };
 </script>
 
-<svelte:head>
-  <title>Henry Faulkner's website</title>
-  <meta
-    name="description"
-    content="The personal website of Henry Faulkner, a software engineer and web developer."
-  />
-</svelte:head>
-
 <div id="index" class="scrollSection">
   <div id="header">
     <Header {headerLinks} />
