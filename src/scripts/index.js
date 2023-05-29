@@ -10,6 +10,7 @@ function RunScript() {
         return attr;
     });
     let elClientRects = generateClientRects(els);
+    setInitialLocations();
     function perspectiveCatagory(attr, e, clientRect, yscale) {
         switch (attr) {
             case "header":
@@ -71,6 +72,18 @@ function RunScript() {
         const html = document.querySelector("html");
         html.classList.add("dom-loaded");
     }, 500);
+    function setInitialLocations() {
+        for(let i = 0; i < len; i++) {
+            switch (els[i].getAttribute("data-perspective")) {
+                case "header":
+                    els[i].style.transform = `translate(0px, 0px)`;
+                    break;
+                case "image":
+                    els[i].style.transform = `translate(0px, -150px)`;
+                    break
+            }
+        }
+    }
 }
 export { RunScript };
 //# sourceMappingURL=index.js.map

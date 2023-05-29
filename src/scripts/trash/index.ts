@@ -1,4 +1,4 @@
-import { throttle, debounce, generateClientRects, axis, type Rect } from "./utils";
+import { throttle, debounce, generateClientRects, axis, type Rect } from "../utils";
 
 function RunScript(){
     let rootEl = document.querySelector("[data-perspective-group]") as HTMLElement;
