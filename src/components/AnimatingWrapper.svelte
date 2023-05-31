@@ -16,13 +16,19 @@
   .hiddenNotTW {
     opacity: 0;
     filter: blur(5px);
-    transform: translateX(-100%);
-    transition: all 2s;
+    transform: translateX(-75%);
+    transition: all 1.5s;
   }
 
   @media (prefers-reduced-motion) {
     .hiddenNotTW {
       transition: none;
+    }
+  }
+
+  @media (max-width: 425px) {
+    .hiddenNotTW {
+      transform: translateX(-25%);
     }
   }
 
