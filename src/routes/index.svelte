@@ -38,6 +38,7 @@
   import Contact from "../components/Contact.svelte";
   import Anchor from "../components/Anchor.svelte";
   import HeroBanner from "../components/HeroBanner.svelte";
+  import AnimatingWrapper from "../components/AnimatingWrapper.svelte";
 
   let headerLinks = {
     Index: "#index",
@@ -55,99 +56,106 @@
   <div id="content" class="lg:px-44">
     <div class="about">
       <div id="scroll4" class="scrollSection" />
-      <TitleDescription title="About">
-        <p slot="p-tag" class="p-tag">
-          Hi, I'm Henry Faulkner. I live in Atlanta, GA, USA. I have a Bachelor
-          of Science in Computer Science from the
-          <Anchor
-            title="University of Georgia"
-            href="https://www.uga.edu/"
-            className="UGA"
-            external={true}
-            color={"text-primary"}
-          />. I build quality software and web applications.
-        </p>
-      </TitleDescription>
+      <AnimatingWrapper cssClass="hiddenNotTW">
+        <TitleDescription title="About" slot="animated">
+          <p slot="p-tag" class="p-tag">
+            Hi, I'm Henry Faulkner. I live in Atlanta, GA, USA. I have a
+            Bachelor of Science in Computer Science from the
+            <Anchor
+              title="University of Georgia"
+              href="https://www.uga.edu/"
+              className="UGA"
+              external={true}
+              color={"text-primary"}
+            />. I build quality software and web applications.
+          </p>
+        </TitleDescription>
+      </AnimatingWrapper>
     </div>
 
     <div class="about" id="skills">
-      <TitleDescription title="Skills">
-        <p slot="p-tag" class="p-tag">
-          I am a fullstack web developer and software engineer. I have 3 years
-          of professional experience working with .Net (Framework/Core),
-          TypeScript, T-SQL, Microsoft Azure services, and SCSS. Throughout my
-          career, I've worked with various frontend frameworks such as: Angular,
-          ASP.Net, Next.js and React.
-        </p>
-      </TitleDescription>
+      <AnimatingWrapper cssClass="hiddenNotTW">
+        <TitleDescription title="Skills" slot="animated">
+          <p slot="p-tag" class="p-tag">
+            I am a fullstack web developer and software engineer. I have 3 years
+            of professional experience working with .Net (Framework/Core),
+            TypeScript, T-SQL, Microsoft Azure services, and SCSS. Throughout my
+            career, I've worked with various frontend frameworks such as:
+            Angular, ASP.Net, Next.js and React.
+          </p>
+        </TitleDescription>
+      </AnimatingWrapper>
     </div>
 
     <div class="about" id="experience">
       <div id="scroll1" class="scrollSection" />
-      <TitleDescription title="Experience">
-        <p slot="p-tag" class="p-tag">
-          I currently work as a Software Engineer at
-          <Anchor
-            title="Now®"
-            href="https://nowcorp.com/"
-            className="Now"
-            external={true}
-            color={"text-primary"}
-          />. My role at Now is to make major technical upgrades to their
-          flagship financial platform, NowAccount. I designed an overhaul to
-          NowAccount's Client Onboarding Journey using Adobe XD, which is being
-          developed and showcased to prospective investors. I am currently
-          working on the aforementioned Onboarding Journey, which marks the
-          platform's move from MVC (.Net Framework) to REST APIs (.Net Core) and
-          ASP.Net to Angular. I am the frontend architect for NowAccount's new
-          Angular solution. I played a large role in moving our jobs from
-          running on a virtual machine's task scheduler to Azure Functions on
-          Azure's serverless platform. I have working at Now since October 2022.
-          <br /> <br />
-          I was formerly a Technical Consultant at
-          <Anchor
-            title="Perficient®"
-            href="https://www.perficient.com/"
-            className="Perficient"
-            external={true}
-            color={"text-primary"}
-          />
-          where I momentarily worked on the Sitecore team, creating enterprise-scale
-          websites. I built data transfer using PowerShell and custom functionality
-          on top of Sitecore's proprietary CMS platform. I later transitioned to
-          Perficient's Custom Development team as a .NET and React developer, where
-          I created smaller-scale web applications. During my tenure, I worked with
-          Azure, .Net Framework, React, T-SQL, Sitecore, and SCSS. I was staffed
-          at Perficient from February 2021 - October 2022 and also interned there.
-          <br /> <br />
-          My personnel project experience is more varied. You can find out more about
-          those in the
-          <Anchor
-            title={"Projects section"}
-            href={"#scroll2"}
-            className={"Projects"}
-            external={false}
-            color={"text-primary"}
-            on:click={(event) => {
-              event.preventDefault();
-              scrollIntoView(event.target);
-            }}
-          />
-          below. You can also find my resume linked in the
-          <Anchor
-            title={"Contact section"}
-            href={"#scroll3"}
-            className={"Contact"}
-            external={false}
-            color={"text-primary"}
-            on:click={(event) => {
-              event.preventDefault();
-              scrollIntoView(event.target);
-            }}
-          />
-          below.
-        </p>
-      </TitleDescription>
+      <AnimatingWrapper cssClass="hiddenNotTW">
+        <TitleDescription title="Experience" slot="animated">
+          <p slot="p-tag" class="p-tag">
+            I currently work as a Software Engineer at
+            <Anchor
+              title="Now®"
+              href="https://nowcorp.com/"
+              className="Now"
+              external={true}
+              color={"text-primary"}
+            />. My role at Now is to make major technical upgrades to their
+            flagship financial platform, NowAccount. I designed an overhaul to
+            NowAccount's Client Onboarding Journey using Adobe XD, which is
+            being developed and showcased to prospective investors. I am
+            currently working on the aforementioned Onboarding Journey, which
+            marks the platform's move from MVC (.Net Framework) to REST APIs
+            (.Net Core) and ASP.Net to Angular. I am the frontend architect for
+            NowAccount's new Angular solution. I played a large role in moving
+            our jobs from running on a virtual machine's task scheduler to Azure
+            Functions on Azure's serverless platform. I have working at Now
+            since October 2022.
+            <br /> <br />
+            I was formerly a Technical Consultant at
+            <Anchor
+              title="Perficient®"
+              href="https://www.perficient.com/"
+              className="Perficient"
+              external={true}
+              color={"text-primary"}
+            />
+            where I momentarily worked on the Sitecore team, creating enterprise-scale
+            websites. I built data transfer using PowerShell and custom functionality
+            on top of Sitecore's proprietary CMS platform. I later transitioned to
+            Perficient's Custom Development team as a .NET and React developer, where
+            I created smaller-scale web applications. During my tenure, I worked
+            with Azure, .Net Framework, React, T-SQL, Sitecore, and SCSS. I was staffed
+            at Perficient from February 2021 - October 2022 and also interned there.
+            <br /> <br />
+            My personnel project experience is more varied. You can find out more
+            about those in the
+            <Anchor
+              title={"Projects section"}
+              href={"#scroll2"}
+              className={"Projects"}
+              external={false}
+              color={"text-primary"}
+              on:click={(event) => {
+                event.preventDefault();
+                scrollIntoView(event.target);
+              }}
+            />
+            below. You can also find my resume linked in the
+            <Anchor
+              title={"Contact section"}
+              href={"#scroll3"}
+              className={"Contact"}
+              external={false}
+              color={"text-primary"}
+              on:click={(event) => {
+                event.preventDefault();
+                scrollIntoView(event.target);
+              }}
+            />
+            below.
+          </p>
+        </TitleDescription>
+      </AnimatingWrapper>
     </div>
 
     <div id="scroll2" class="scrollSection">
@@ -155,7 +163,12 @@
       <div id="projects">
         {#each projects as project, i}
           {#await getStorageUrl(project.featured_image) then imageUrl}
-            <ProjectCard {project} {imageUrl} />
+            <AnimatingWrapper
+              cssClass="hiddenNotTW staggerNotTW"
+              style="--order: {i + 1}"
+            >
+              <ProjectCard {project} {imageUrl} slot="animated" />
+            </AnimatingWrapper>
           {/await}
         {/each}
       </div>
@@ -205,5 +218,9 @@
     @apply lt-xsm:text-base lt-xsm:leading-relaxed;
     @apply text-base lg:text-xl;
     @apply mb-12;
+  }
+
+  .about {
+    padding-top: 5px;
   }
 </style>
