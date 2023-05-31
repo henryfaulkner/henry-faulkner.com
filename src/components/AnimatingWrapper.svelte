@@ -32,7 +32,33 @@
     transform: translateX(0);
   }
 
-  .staggerNotTW {
-    transition-delay: calc(100ms * var(--order));
+  @media (max-width: 768px) {
+    .staggerNotTW {
+      transition-delay: calc(40ms);
+    }
+
+    .fastStaggerNotTW {
+      transition-delay: calc(40ms);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .staggerNotTW {
+      transition-delay: calc(40ms * (mod(var(--order), 2)));
+    }
+
+    .fastStaggerNotTW {
+      transition-delay: calc(40ms * (mod(var(--order), 2)));
+    }
+  }
+
+  @media (min-width: 1080px) {
+    .staggerNotTW {
+      transition-delay: calc(100ms * var(--order));
+    }
+
+    .fastStaggerNotTW {
+      transition-delay: calc(20ms * var(--order));
+    }
   }
 </style>

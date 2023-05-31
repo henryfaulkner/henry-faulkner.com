@@ -28,7 +28,7 @@
     {#await getLinks() then links}
       {#each Object.entries(links) as [title, link], i}
         <AnimatingWrapper
-          cssClass="hiddenNotTW staggerNotTW"
+          cssClass="hiddenNotTW fastStaggerNotTW"
           style="--order: {i + 1}"
         >
           <Anchor
