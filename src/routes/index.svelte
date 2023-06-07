@@ -30,16 +30,18 @@
 </script>
 
 <script>
-  import Footer from "../components/structure/Footer.svelte";
-  import ProjectCard from "../components/ProjectCard.svelte";
-  export let projects;
-  import Header from "../components/structure/Header.svelte";
-  import TitleDescription from "../components/TitleDescription.svelte";
-  import Contact from "../components/Contact.svelte";
+  import { Canvas } from "@threlte/core";
   import Anchor from "../components/Anchor.svelte";
-  import HeroBanner from "../components/HeroBanner.svelte";
   import AnimatingWrapper from "../components/AnimatingWrapper.svelte";
+  import Contact from "../components/Contact.svelte";
+  import HeroBanner from "../components/HeroBanner.svelte";
+  import ProjectCard from "../components/ProjectCard.svelte";
+  import ThrelteScene from "../components/ThrelteScene.svelte";
+  import TitleDescription from "../components/TitleDescription.svelte";
+  import Footer from "../components/structure/Footer.svelte";
+  import Header from "../components/structure/Header.svelte";
 
+  let projects = [];
   let headerLinks = {
     Index: "#index",
     Experience: "#scroll1",
@@ -50,6 +52,11 @@
 <div id="index" class="scrollSection">
   <div id="header">
     <Header {headerLinks} />
+  </div>
+  <div style="height: 500px; width: 500px; position: absolute;">
+    <Canvas>
+      <ThrelteScene />
+    </Canvas>
   </div>
   <HeroBanner />
 

@@ -1,9 +1,8 @@
 <script>
-  import { getStorageUrl } from "$lib/firebase";
-  import { RunScript } from "../scripts/index.js";
-  import { onMount } from "svelte";
-  import Anchor from "./Anchor.svelte";
   import Icon from "@iconify/svelte";
+  import { onMount } from "svelte";
+  import { RunScript } from "../scripts/index.js";
+  import Anchor from "./Anchor.svelte";
   onMount(() => {
     RunScript();
   });
