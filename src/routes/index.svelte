@@ -40,8 +40,8 @@
   import TitleDescription from "../components/TitleDescription.svelte";
   import Footer from "../components/structure/Footer.svelte";
   import Header from "../components/structure/Header.svelte";
+  export let projects;
 
-  let projects = [];
   let headerLinks = {
     Index: "#index",
     Experience: "#scroll1",
