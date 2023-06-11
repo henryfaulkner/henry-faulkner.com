@@ -81,7 +81,6 @@
 
 <style>
   .container {
-    border: 1px solid black;
   }
 
   @media (max-width: 1080px) {

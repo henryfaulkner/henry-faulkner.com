@@ -30,16 +30,16 @@
 </script>
 
 <script>
-  import { Canvas } from "@threlte/core";
   import Anchor from "../components/Anchor.svelte";
   import AnimatingWrapper from "../components/AnimatingWrapper.svelte";
   import Contact from "../components/Contact.svelte";
   import HeroBanner from "../components/HeroBanner.svelte";
   import ProjectCard from "../components/ProjectCard.svelte";
-  import ThrelteScene from "../components/ThrelteScene.svelte";
   import TitleDescription from "../components/TitleDescription.svelte";
   import Footer from "../components/structure/Footer.svelte";
   import Header from "../components/structure/Header.svelte";
+  import { Canvas } from "@threlte/core";
+  import ThrelteScene from "../components/ThrelteScene.svelte";
   export let projects;
 
   let headerLinks = {
@@ -53,12 +53,14 @@
   <div id="header">
     <Header {headerLinks} />
   </div>
-  <div style="height: 500px; width: 500px; position: absolute;">
-    <Canvas>
-      <ThrelteScene />
-    </Canvas>
+  <div id="hero">
+    <div class="canvas">
+      <Canvas>
+        <ThrelteScene />
+      </Canvas>
+    </div>
+    <HeroBanner />
   </div>
-  <HeroBanner />
 
   <div id="content" class="lg:px-44">
     <div class="about">
@@ -114,9 +116,9 @@
             marks the platform's move from MVC (.Net Framework) to REST APIs
             (.Net Core) and ASP.Net to Angular. I am the frontend architect for
             NowAccount's new Angular solution. I played a large role in moving
-            our jobs from running on a virtual machine's task scheduler to Azure
-            Functions on Azure's serverless platform. I have working at Now
-            since October 2022.
+            NowAccount's jobs from running on a virtual machine's task scheduler to Azure
+            Functions on Azure's serverless platform. I also integrated Twilio as their mobile 
+            verification platform. I have been working at Now since October 2022.
             <br /> <br />
             I was formerly a Technical Consultant at
             <Anchor
@@ -126,13 +128,14 @@
               external={true}
               color={"text-primary"}
             />
-            where I momentarily worked on the Sitecore team, creating enterprise-scale
-            websites. I built data transfer using PowerShell and custom functionality
+            where I worked on the Sitecore team, creating enterprise
+            websites. I built large data transfer PowerShell scripts and custom functionality
             on top of Sitecore's proprietary CMS platform. I later transitioned to
             Perficient's Custom Development team as a .NET and React developer, where
             I created smaller-scale web applications. During my tenure, I worked
             with Azure, .Net Framework, React, T-SQL, Sitecore, and SCSS. I was staffed
-            at Perficient from February 2021 - October 2022 and also interned there.
+            at Perficient from February 2021 - October 2022 and also interned there during 
+            the summer of 2020.
             <br /> <br />
             My personnel project experience is more varied. You can find out more
             about those in the
@@ -229,5 +232,18 @@
 
   .about {
     padding-top: 5px;
+  }
+
+  .canvas {
+    @apply absolute;
+    width: 75vw;
+    height: 100vh;
+  }
+
+  @media (max-width: 1080px) {
+    .canvas {
+      width: 100vw;
+      height: 50vh;
+    }
   }
 </style>
