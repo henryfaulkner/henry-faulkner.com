@@ -2,7 +2,7 @@
   import { Canvas, T } from "@threlte/core";
   import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
-  // spheres' coordinate array
+  // spheres' coordinate arrays
   export let posXArr = [-10, 3, 0];
   export let posYArr = [-4, 6, 0];
   export let posZArr = [-9, 0, 0];
@@ -53,19 +53,9 @@
   }}
 />
 
-<T.Texture args={"../../static/billy.webp"}></T.Texture>
-
-<T.Mesh position={[posXArr[0], posYArr[0], posZArr[0]]}>
-  <T.SphereGeometry args={[radArr[0], heightArr[0], widthArr[0]]} />
-  <T.MeshBasicMaterial attach="material" wireFrame="true" color="#54ddff" />
-</T.Mesh>
-
-<T.Mesh position={[posXArr[1], posYArr[1], posZArr[1]]}>
-  <T.SphereGeometry args={[radArr[1], heightArr[1], widthArr[1]]} />
-  <T.MeshBasicMaterial attach="material" wireFrame="true" color="#54ddff" />
-</T.Mesh>
-
-<T.Mesh position={[posXArr[2], posYArr[2], posZArr[2]]}>
-  <T.SphereGeometry args={[radArr[2], heightArr[2], widthArr[2]]} />
-  <T.MeshBasicMaterial attach="material" wireFrame="true" color="#54ddff" />
-</T.Mesh>
+{#each {length: 3} as _, i}
+  <T.Mesh position={[posXArr[i], posYArr[0], posZArr[0]]}>
+    <T.SphereGeometry args={[radArr[0], heightArr[0], widthArr[0]]} />
+    <T.MeshBasicMaterial attach="material" wireFrame="true" color="#54ddff" />
+  </T.Mesh>
+{/each}
