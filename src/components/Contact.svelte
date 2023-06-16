@@ -9,7 +9,7 @@
       GitHub: "https://github.com/henryfaulkner",
       Email: "mailto:hfaulkner27@gmail.com",
       Resume: await getStorageUrl(
-        "resumes/Henry Faulkner - Software Engineer Resume (Late 2022).pdf"
+        "resumes/Henry Faulkner - Software Engineer Resume (Mid 2023).pdf"
       ),
       Blogs: "https://blogs.perficient.com/author/hfaulkner",
       Twitter: "https://twitter.com/HenryFaulknerIO",
