@@ -23,7 +23,7 @@
 </div>
 <div class="container px-3 sm:px-5 max-w-[40ch] sm:max-w-[100ch]">
   <div
-    class="gap-2 grid lt-sm:grid-cols-2 sm:grid-cols-4 sm:gap-6 items-center justify-center overflow-x-auto"
+    class="gap-2 grid lt-sm:grid-cols-2 sm:grid-cols-4 sm:gap-6 items-center justify-items-center overflow-x-auto"
   >
     {#await getLinks() then links}
       {#each Object.entries(links) as [title, link], i}
