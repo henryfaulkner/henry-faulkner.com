@@ -59,6 +59,32 @@ type Project = {
   gallery_videos: string[];
 }
 
+type Ingredients = {
+    title: string;
+    ingredients: string[];
+}
+
+type Methods = {
+    title: string;
+    methods: string[];
+}
+
+type Recipe = {
+    title: string;
+    short_description: string;
+    ingredientsList: {
+        title: string,
+        ingredients: string[],
+    };
+    methodsList: {
+        title: string,
+        methods: string[],
+    };
+    categories: string[];
+    tags: string[];
+    createdDate: Date;
+}
+
 const productSchema = buildSchema<Product>({
     name: "Product",
     properties: {
@@ -178,6 +204,129 @@ const productSchema = buildSchema<Product>({
         }
     }
 });
+
+const recipeSchema = buildSchema<Recipe>({
+    name: "Recipe",
+    properties: {
+        title: {
+            title: "Title",
+            validation: { required: true },
+            dataType: "string"
+        }, 
+        short_description: {
+            title: "Short Description",
+            validation: { required: true },
+            dataType: "string"
+        },
+        ingredientsList: {
+            title: "Ingredients",
+            description: "Ingredients array [Free-text]",
+            validation: { required: true },
+            dataType: "map",
+            properties: {
+                title: {
+                    title: "Title",
+                    dataType: "string"
+                },
+                ingredients: {
+                    title: "Ingredients",
+                    dataType: "array",
+                    of: {
+                        dataType: "string",
+
+                    }
+                }
+            }
+        },
+        methodsList: {
+            title: "Methods",
+            description: "Methods array [Free-text]",
+            validation: { required: true },
+            dataType: "map",
+            properties: {
+                title: {
+                    title: "Title",
+                    dataType: "string"
+                },
+                methods: {
+                    title: "Methods",
+                    dataType: "array",
+                    of: {
+                        dataType: "string"
+                    }
+                }
+            }
+        },
+        categories: {
+            title: "Categories",
+            validation: { required: true },
+            dataType: "array",
+            of: {
+                dataType: "string",
+                config: {
+                    enumValues: {
+                        electronics: "Electronics",
+                        books: "Books",
+                        furniture: "Furniture",
+                        clothing: "Clothing",
+                        food: "Food"
+                    }
+                }
+            }
+        },
+        tags: {
+            title: "Tags",
+            description: "Tags [Free-text]",
+            validation: { required: true },
+            dataType: "array",
+            of: {
+                dataType: "string"
+            }
+        },
+        createdDate: {
+            title: "Created Date",
+            dataType: "timestamp"
+        }
+    }
+});
+
+const ingredientsSchema = buildSchema<Ingredients>({
+    name: "Ingredients",
+    properties: {
+        title: {
+            title: "Title",
+            validation: { required: true },
+            dataType: "string"
+        },
+        ingredients: {
+            title: "Ingredients",
+            validation: { required: true },
+            dataType: "array",
+            of: {
+                dataType: "string"
+            }
+        }
+    }
+})
+
+const methodsSchema = buildSchema<Methods>({
+    name: "Methods",
+    properties: {
+        title: {
+            title: "Title",
+            validation: { required: true },
+            dataType: "string"
+        },
+        methods: {
+            title: "Methods",
+            validation: { required: true },
+            dataType: "array",
+            of: {
+                dataType: "string"
+            }
+        }
+    }
+})
 
 const localeSchema = buildSchema({
     customId: locales,
@@ -326,7 +475,29 @@ export default function App() {
                       // we have created the roles object in the navigation builder
                       delete: authController.extra.roles.includes("admin")
                   })
-              })
+                }),
+                buildCollection({
+                    path: "recipes",
+                    schema: recipeSchema,
+                    name: "Recipes",
+                    permissions: ({ authController}) => ({
+                        edit: true,
+                        create: true,
+                        delete: authController.extra.roles.includes("admin")
+                    }),
+                    subcollections: [
+                        buildCollection({
+                            name: "Ingredients",
+                            path: "ingredients",
+                            schema: ingredientsSchema
+                        }),
+                        buildCollection({
+                            name: "Methods",
+                            path: "methods",
+                            schema: methodsSchema
+                        })
+                    ]
+                })
             ]
         });
     };
