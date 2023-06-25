@@ -48,7 +48,7 @@ module.exports = {
           DEFAULT: '#FFF',
           dark: '#FFF',
         },
-        terteiry: {
+        tertiary: {
           light: '',
           DEFAULT: '#D1D5DB',
           dark: '#D1D5DB',
