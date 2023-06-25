@@ -185,7 +185,7 @@
 
 <style>
   #index {
-    @apply text-terteiry;
+    @apply text-tertiary;
     overflow-x: hidden;
   }
 
