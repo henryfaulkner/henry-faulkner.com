@@ -1,12 +1,12 @@
 import { collection, getDocs } from "firebase/firestore";
-import { firestore, postToJSON } from "../../../lib/firebase";
+import { firestore, postToJSON } from "../../../../lib/firebase";
 
-import Project from "../models/Project";
-import * as collectionConstants from "../CollectionConstants";
+import Project from "../../models/Project";
+import * as collectionConstants from "../../CollectionConstants";
 //import * as db from '$lib/database';
  
 /** @type {import('../models/Project').RequestHandler} */
-export async function get() {
+export async function GET() {
     const data = await getDocs(
         collection(firestore, collectionConstants.Projects)
     );
@@ -20,5 +20,5 @@ export async function get() {
         );
     });
 
-    return { body: response};
+    return new Response(JSON.stringify(response));
 }

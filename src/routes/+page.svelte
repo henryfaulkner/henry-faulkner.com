@@ -1,25 +1,26 @@
-<script context="module">
+<script>
   import { getStorageUrl } from "$lib/firebase";
+  //export let projects = [];
 
-  export async function load({ fetch }) {
-    const res = await fetch("/firestore/endpoints/projects.json");
-    const projects = await res.json();
+  // export async function load({ fetch }) {
+  //   const res = await fetch("/firestore/endpoints/projects", {
+  //     method: "GET",
+  //     headers: {
+  //       "content-type": "application/json",
+  //     },
+  //   });
+  //   const projecsJson = await res.json();
+  //   console.log("projects, ", projects);
+  //   console.log("res, ", res);
 
-    if (res.ok) {
-      return {
-        props: {
-          projects,
-        },
-      };
-    } else {
-      console.log("Had an issue fetching projects.");
-      return {
-        props: {
-          projects: "broken",
-        },
-      };
-    }
-  }
+  //   if (res.ok) {
+  //     projects = projecsJson;
+  //   } else {
+  //     console.log("Had an issue fetching projects.");
+  //   }
+  // }
+  /** @type {import('./$types').PageData} */
+  export let data;
   export function scrollIntoView(target) {
     const el = document.querySelector(target.getAttribute("href"));
     if (!el) return;
@@ -27,12 +28,9 @@
       behavior: "smooth",
     });
   }
-</script>
 
-<script>
   import Footer from "../components/structure/Footer.svelte";
   import ProjectCard from "../components/ProjectCard.svelte";
-  export let projects;
   import Header from "../components/structure/Header.svelte";
   import TitleDescription from "../components/TitleDescription.svelte";
   import Contact from "../components/Contact.svelte";
@@ -161,7 +159,7 @@
     <div id="scroll2" class="scrollSection">
       <h2 id="title">Project Showcase</h2>
       <div id="projects">
-        {#each projects as project, i}
+        {#each data.projects as project, i}
           {#await getStorageUrl(project.featured_image) then imageUrl}
             <AnimatingWrapper
               cssClass="hiddenNotTW staggerNotTW"
@@ -190,7 +188,7 @@
   }
 
   #content {
-    @apply bg-primaryBg
+    @apply bg-primaryBg;
   }
 
   #title {
