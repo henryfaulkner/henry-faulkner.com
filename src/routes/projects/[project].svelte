@@ -78,8 +78,7 @@
   #project {
     height: auto;
     min-height: 800px;
-    @apply bg-gradient-to-tr from-blue-700 via-blue-800 to-gray-900;
-    color: rgb(209, 213, 219);
+    @apply text-tertiary bg-gradient-to-tr from-blue-700 via-blue-800 to-gray-900;
     position: relative;
     z-index: -2;
     justify-content: center;

@@ -39,8 +39,8 @@
       </figure>
       <div id="hero-text" class="z-10 relative" data-perspective="header">
         <h1
-          class="text-6xl mb-3"
-          style="color: white; -webkit-text-stroke: 1px black;"
+          class="text-6xl mb-3 text-secondary"
+          style="-webkit-text-stroke: 1px black;"
         >
           <strong class="text-primary" aria-label="Henry Faulkner">
             Henry Faulkner.
@@ -82,7 +82,7 @@
 
 <style>
   .container {
-    border: 1px solid black;
+    
   }
 
   @media (max-width: 1080px) {
@@ -94,8 +94,8 @@
   }
 
   .hero {
-    background-color: black;
     height: 100vh;
+    @apply bg-primaryBg
   }
 
   @media (max-width: 1080px) {
@@ -126,7 +126,7 @@
   }
 
   .icon-container {
-    @apply mx-3 text-white h-16 w-16;
+    @apply mx-3 text-secondary h-16 w-16;
     @apply rounded-full bg-primary;
     @apply transition ease-in-out duration-200;
     display: flex;

@@ -36,8 +36,34 @@ module.exports = {
         center: "true",
       },
       colors: {
-        primary: "#54ddff"
-      }
+        transparent: 'transparent',
+        current: 'currentColor',
+        primary: {
+          light: '',
+          DEFAULT: '#54DDFF',
+          dark: '#54DDFF',
+        },
+        secondary: {
+          light: '',
+          DEFAULT: '#FFF',
+          dark: '#FFF',
+        },
+        terteiry: {
+          light: '',
+          DEFAULT: '#D1D5DB',
+          dark: '#D1D5DB',
+        },
+        primaryBg: {
+          light: '',
+          DEFAULT: '#000',
+          dark: '#000',
+        },
+        footerBg: {
+          light: '',
+          DEFAULT: '#E5E7EB',
+          dark: '#E5E7EB',
+        }
+      },
     },
   },
   plugins: [require("daisyui"), require("@tailwindcss/typography")]

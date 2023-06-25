@@ -45,14 +45,14 @@
   }
 
   .header-container {
-    background-color: rgb(0, 0, 0, 0.7);
+    @apply bg-primaryBg/70;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
 
     @media (max-width: 1080px) {
-      background-color: rgb(0, 0, 0);
+      @apply bg-primaryBg;
     }
   }
 

@@ -185,12 +185,12 @@
 
 <style>
   #index {
-    color: rgb(209, 213, 219);
+    @apply text-terteiry;
     overflow-x: hidden;
   }
 
   #content {
-    background-color: black;
+    @apply bg-primaryBg
   }
 
   #title {
@@ -206,7 +206,6 @@
 
   #projects {
     height: auto;
-    background-color: black;
     @apply grid sm:grid-cols-2 lg:grid-cols-3 gap-6;
   }
 
