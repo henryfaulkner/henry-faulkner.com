@@ -10,15 +10,8 @@ export async function GET() {
     const data = await getDocs(
         collection(firestore, collectionConstants.Projects)
     );
-    
     let response: Project[] = [];
-    data.forEach((doc) => {
-        response.push(
-            new Project(
-                postToJSON(doc)
-            )
-        );
-    });
+    data.forEach((doc) => response.push(new Project(postToJSON(doc))));
 
     return new Response(JSON.stringify(response));
 }

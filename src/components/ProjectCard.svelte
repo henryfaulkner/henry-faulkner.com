@@ -108,7 +108,7 @@
   }
 
   .base {
+    @apply text-primary;
     font-weight: bold;
-    color: rgb(84, 221, 255);
   }
 </style>

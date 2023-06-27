@@ -1,24 +1,5 @@
 <script>
   import { getStorageUrl } from "$lib/firebase";
-  //export let projects = [];
-
-  // export async function load({ fetch }) {
-  //   const res = await fetch("/firestore/endpoints/projects", {
-  //     method: "GET",
-  //     headers: {
-  //       "content-type": "application/json",
-  //     },
-  //   });
-  //   const projecsJson = await res.json();
-  //   console.log("projects, ", projects);
-  //   console.log("res, ", res);
-
-  //   if (res.ok) {
-  //     projects = projecsJson;
-  //   } else {
-  //     console.log("Had an issue fetching projects.");
-  //   }
-  // }
   /** @type {import('./$types').PageData} */
   export let data;
   export function scrollIntoView(target) {

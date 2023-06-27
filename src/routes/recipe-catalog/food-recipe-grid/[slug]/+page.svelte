@@ -1,0 +1,24 @@
+<!-- slug is the category name -->
+<script>
+  import RecipeCard from "../../../../components/RecipeCard.svelte";
+  /** @type {import('./$types').PageData} */
+  export let data;
+</script>
+
+<div id="index">
+  <h1>Food Recipes</h1>
+  <div id="recipe-grid">
+    {#each data.recipes as recipe, i}
+      <RecipeCard {recipe} isFood={true} />
+    {/each}
+  </div>
+</div>
+
+<style lang="scss">
+  #recipe-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+    grid-gap: 10px; /* Adjust the gap between grid items as needed */
+  }
+</style>

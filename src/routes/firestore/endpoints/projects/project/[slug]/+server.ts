@@ -6,11 +6,11 @@ import * as collectionConstants from "../../../../CollectionConstants";
 //import * as db from '$lib/database';
  
 /** @type {import('../models/Project').RequestHandler} */
-export async function POST({params}) {
+export async function GET({params}) {
     const collectionRef = collection(firestore, collectionConstants.Projects);
     const docRef = doc(collectionRef, params.slug);
     const docObj = await getDoc(docRef);
     const response = new Project(postToJSON(docObj));
 
-    return new Response('{ body: response}');
+    return new Response(JSON.stringify(response));
 }

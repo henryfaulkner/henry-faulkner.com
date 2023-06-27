@@ -27,7 +27,7 @@ export default class Recipe implements IFirebaseDocument {
     if (json["ingredientsList"]) this.ingredientsList = json["ingredientsList"];
     if (json["methodsList"]) this.methodsList = json["methodsList"];
     if (json["categories"]) this.categories = json["categories"];
-    if (json["tags"]) this.methodsList = json["tags"];
+    if (json["tags"]) this.tags = json["tags"];
     if (json["createdDate"]) this.createdDate = json["createdDate"];
   }
 
