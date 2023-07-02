@@ -15,6 +15,12 @@
 </div>
 
 <style lang="scss">
+  #index {
+    @apply text-tertiary bg-primaryBg;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
   #recipe-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

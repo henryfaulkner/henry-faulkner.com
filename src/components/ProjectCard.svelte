@@ -57,6 +57,7 @@
     margin: 20px;
     position: relative;
     min-height: 300px;
+    overflow: hidden;
   }
 
   .card:hover,
