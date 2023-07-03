@@ -24,6 +24,9 @@
     Experience: "#scroll1",
     Contact: "#scroll3",
   };
+
+  // Use this component for Light- v. Dark-mode
+  /* https://daisyui.com/components/swap/ */
 </script>
 
 <div id="index" class="scrollSection">

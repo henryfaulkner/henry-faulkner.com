@@ -12,6 +12,9 @@
 
 <script>
   export let headerLinks;
+
+  // Add DaisyUI Drawer
+  /* https://daisyui.com/components/drawer/ */
 </script>
 
 <nav class="z-20 w-screen backdrop-blur-sm">
