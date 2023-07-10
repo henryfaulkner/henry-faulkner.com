@@ -14,11 +14,12 @@ export const foodCategories = [
     {name: 'Party Snacks', imageUrl: '/recipe-catalog/food/charcuterie-board.png'} 
 ];
 export const drinkCategories = [
-    {name: 'All', imageUrl: ''},
-    {name: 'Spring', imageUrl: ''},
-    {name: 'Summer', imageUrl: ''},
-    {name: 'Fall', imageUrl: ''},
-    {name: 'Winter', imageUrl: ''},
+    {name: 'All', imageUrl: '/recipe-catalog/drinks/'},
+    {name: 'Whiskey', imageUrl: '/recipe-catalog/drinks/old-fashoned.png'},
+    {name: 'Gin', imageUrl: '/recipe-catalog/drinks/tea-infused-gin.png'},
+    {name: 'Vodka', imageUrl: '/recipe-catalog/drinks/martini.png'},
+    {name: 'Rum', imageUrl: '/recipe-catalog/drinks/tropical-rum.png'},
+    {name: 'Cognac', imageUrl: '/recipe-catalog/drinks/sidecar.png'},
 ];
 export const foodTags = [
     'Beef',
