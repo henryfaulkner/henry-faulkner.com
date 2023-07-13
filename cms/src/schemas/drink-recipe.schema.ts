@@ -1,4 +1,4 @@
-import { buildSchema } from "@camberi/firecms";
+import { buildProperty, buildSchema } from "@camberi/firecms";
 import { drinkCategories, drinkTags } from "../string-constants";
 import { Recipe } from "../types/recipe.type";
 
@@ -14,6 +14,17 @@ export const drinkRecipeSchema = buildSchema<Recipe>({
             title: "Short Description",
             dataType: "string"
         },
+        featured_image: buildProperty({ // The `buildProperty` method is an utility function used for type checking
+            title: "Featured Image",
+            dataType: "string",
+            config: {
+                storageMeta: {
+                    mediaType: "image",
+                    storagePath: "images",
+                    acceptedFiles: ["image/*"]
+                }
+            }
+        }),
         ingredientsList: {
             title: "Ingredients",
             description: "Ingredients array",
@@ -56,6 +67,22 @@ export const drinkRecipeSchema = buildSchema<Recipe>({
                             dataType: "string"
                         }
                     }
+                }
+            }
+        },
+        timeApproximation: {
+            title: "Time Approximation",
+            description: "Estimate average recipe completion time in hours and minute.",
+            validation: {required: false},
+            dataType: "map",
+            properties: {
+                hours: {
+                    title: "Hours",
+                    dataType: "string",
+                },
+                minutes: {
+                    title: "Minutes",
+                    dataType: "string",
                 }
             }
         },

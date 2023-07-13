@@ -1,6 +1,7 @@
 export type Recipe = {
     title: string;
     short_description: string;
+    featured_image: string;
     ingredientsList: {
         title: string,
         ingredients: string[],
@@ -11,5 +12,9 @@ export type Recipe = {
     }[];
     categories: string[];
     tags: string[];
+    timeApproximation: {
+        hours: string,
+        minutes: string,
+    }
     createdDate: Date;
 }
