@@ -79,6 +79,7 @@
 
   #content {
     margin-top: 115px;
+    padding-bottom: 25px;
   }
 
   h2 {
