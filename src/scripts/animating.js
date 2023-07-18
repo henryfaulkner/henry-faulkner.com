@@ -7,7 +7,7 @@ function RunScript() {
                 entry.target.classList.remove('showNotTW');
                 if (entry.target.classList.contains('open')) {
                     entry.target.classList.remove('open');
-                    entry.target.classList.add('closed');
+                    entry.target.classList.add('closed h-0');
                     entry.target.classList.add('hidden');
                     setTimeout(() => {
                         entry.target.classList.remove('hidden');
