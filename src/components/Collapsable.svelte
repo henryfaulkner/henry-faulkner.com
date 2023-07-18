@@ -1,18 +1,33 @@
 <script>
   export let title;
-  let arrowToggle = "closed";
-  let collapseToggle = "closed h-0";
+  let arrow;
+  let collapsable;
 
   function toggleCollasable() {
-    if (collapseToggle === "closed h-0") {
-      arrowToggle = "open";
-      collapseToggle = "open";
-    } else if (collapseToggle === "open") {
-      arrowToggle = "closed";
-      collapseToggle = "closed";
+    if (arrow.classList.contains("closed")) {
+      arrow.classList.remove("closed");
+      arrow.classList.remove("fa-chevron-right");
+      arrow.classList.add("open");
+      arrow.classList.add("fa-chevron-down");
+    } else if (arrow.classList.contains("open")) {
+      arrow.classList.remove("open");
+      arrow.classList.remove("fa-chevron-down");
+      arrow.classList.add("closed");
+      arrow.classList.add("fa-chevron-right");
+    }
+
+    if (collapsable.classList.contains("closed")) {
+      collapsable.classList.remove("closed");
+      collapsable.classList.remove("h-0");
+      collapsable.classList.add("open");
+      collapsable.classList.add("translate-y-0");
+      collapsable.classList.add("duration-700");
+    } else if (collapsable.classList.contains("open")) {
+      collapsable.classList.remove("open");
+      collapsable.classList.add("closed");
       setTimeout(() => {
-        collapseToggle = "closed h-0";
-      }, 500);
+        collapsable.classList.add("h-0");
+      }, 400);
     }
   }
 </script>
@@ -24,16 +39,18 @@
     on:keydown={() => toggleCollasable()}
   >
     <i
-      class="arrow fa-solid {arrowToggle === 'closed'
-        ? 'fa-chevron-right'
-        : 'fa-chevron-down'} {arrowToggle} toggle-not-tailwind"
+      class="arrow fa-solid fa-chevron-right closed toggle-not-tailwind arrow-toggle"
+      bind:this={arrow}
     />
     <h3 class="select-none">{title}</h3>
     <hr class="select-none" />
   </div>
 
   <div class="collased-content">
-    <div class="toggle-not-tailwind {collapseToggle}">
+    <div
+      class="toggle-not-tailwind closed h-0 collapse-toggle"
+      bind:this={collapsable}
+    >
       <slot />
     </div>
   </div>
@@ -48,7 +65,11 @@
 
   .main-bar {
     display: flex;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
+
+    @media (min-width: 1080px) {
+      margin-bottom: 25px;
+    }
 
     .arrow {
       @apply text-primary text-xl;
@@ -94,8 +115,6 @@
       visibility: visible;
       opacity: 1;
       filter: blur(0);
-      transform: translateY(0);
-      transition: all 1s;
     }
   }
 </style>

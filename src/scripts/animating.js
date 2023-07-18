@@ -5,17 +5,21 @@ function RunScript() {
                 entry.target.classList.add('showNotTW');
             } else {
                 entry.target.classList.remove('showNotTW');
+                
                 if (entry.target.classList.contains('open')) {
                     entry.target.classList.remove('open');
-                    entry.target.classList.add('closed h-0');
-                    entry.target.classList.add('hidden');
-                    setTimeout(() => {
-                        entry.target.classList.remove('hidden');
-                    }, 500); 
-                    if (entry.target.classList.contains('fa-chevron-down')) {
+                    entry.target.classList.add('closed');
+                    if (entry.target.classList.contains('collapse-toggle')){
+                        entry.target.classList.add('h-0');
+                        entry.target.classList.add('hidden');
+                        setTimeout(() => {
+                            entry.target.classList.remove('hidden');
+                        }, 300); 
+                    } else if (entry.target.classList.contains('fa-chevron-down') && entry.target.classList.contains('arrow-toggle')) {
                         entry.target.classList.remove('fa-chevron-down');
                         entry.target.classList.add('fa-chevron-right');
                     }
+                    
                 }
             }
         });
