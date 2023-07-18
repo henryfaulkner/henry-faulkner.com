@@ -82,7 +82,6 @@
 
 <style>
   .container {
-    
   }
 
   @media (max-width: 1080px) {
@@ -95,7 +94,7 @@
 
   .hero {
     height: 100vh;
-    @apply bg-primaryBg
+    @apply bg-primaryBg;
   }
 
   @media (max-width: 1080px) {

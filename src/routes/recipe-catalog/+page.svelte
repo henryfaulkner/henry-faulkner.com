@@ -1,5 +1,6 @@
 <!-- this is the recipe catalog index -->
 <script>
+  import Breadcrumbs from "../../components/Breadcrumbs.svelte";
   import CategoryCard from "../../components/CategoryCard.svelte";
   import Footer from "../../components/structure/Footer.svelte";
   import Header from "../../components/structure/Header.svelte";
@@ -8,10 +9,32 @@
     foodCategories,
   } from "../firestore/CollectionConstants";
 
-  let headerLinks = {
+  export let headerLinks = {
     Food: "#index",
     Drinks: "#scroll2",
   };
+  export const breadcrumbLinks = [
+    { href: "../", name: "Index" },
+    { href: "", name: "Catalog" },
+  ];
+
+  let foodCategoriesCopy = foodCategories;
+  let drinkCategoriesCopy = drinkCategories;
+  function foodInput(event) {
+    foodCategoriesCopy = foodCategories;
+    foodCategoriesCopy = foodCategoriesCopy.filter((foodCategory) =>
+      foodCategory.name.toLowerCase().includes(event.target.value.toLowerCase())
+    );
+  }
+
+  function drinkInput(event) {
+    drinkCategoriesCopy = drinkCategories;
+    drinkCategoriesCopy = drinkCategoriesCopy.filter((drinkCategory) =>
+      drinkCategory.name
+        .toLowerCase()
+        .includes(event.target.value.toLowerCase())
+    );
+  }
 
   // could use this menu component for mobile
   /* https://daisyui.com/components/menu/ */
@@ -23,7 +46,7 @@
 
 <div class="index" id="index">
   <div id="header">
-    <Header {headerLinks} />
+    <Header {headerLinks} {breadcrumbLinks} />
   </div>
 
   <div id="content">
@@ -34,10 +57,11 @@
           <input
             type="text"
             placeholder="Search"
-            class="input input-bordered w-full max-w-xs search"
+            on:input={foodInput}
+            class="input input-bordered input-info w-full max-w-xs search"
           />
           <div class="cards-wrapper">
-            {#each foodCategories as foodCategory, i}
+            {#each foodCategoriesCopy as foodCategory, i}
               <div class="card-wrapper">
                 <CategoryCard category={foodCategory} isFood={true} />
               </div>
@@ -49,10 +73,11 @@
           <input
             type="text"
             placeholder="Search"
-            class="input input-bordered w-full max-w-xs search"
+            on:input={drinkInput}
+            class="input input-bordered input-info w-full max-w-xs search"
           />
           <div class="cards-wrapper">
-            {#each drinkCategories as drinkCategory, i}
+            {#each drinkCategoriesCopy as drinkCategory, i}
               <div class="card-wrapper">
                 <CategoryCard category={drinkCategory} isFood={false} />
               </div>
@@ -67,24 +92,9 @@
 </div>
 
 <style lang="scss">
-  #header {
-    display: block;
-  }
-
-  .index {
-    @apply text-tertiary bg-primaryBg;
-    overflow-x: hidden;
-    min-height: 100vh;
-  }
-
-  #content {
-    margin-top: 115px;
-    padding-bottom: 25px;
-  }
-
   h2 {
     @apply text-primary text-5xl font-semibold tracking-wide;
-    margin: 2.5vh 0 1.5vh;
+    margin: 2.5vh 0 0;
   }
 
   .search {
@@ -105,11 +115,18 @@
   .drink-row {
     min-width: 80vw;
     text-align: center;
+    padding-top: 80px;
   }
   .cards-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-auto-rows: auto;
-    grid-gap: 10px;
+    @apply grid sm:grid-cols-3 lg:grid-cols-4 gap-3;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: bold;
   }
 </style>

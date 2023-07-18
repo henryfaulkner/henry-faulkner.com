@@ -29,9 +29,11 @@
   import TitleDescription from "../../components/TitleDescription.svelte";
 
   export let project;
+  let headerLinks = {};
+  let breadcrumbLinks = [];
 </script>
 
-<Header headerLinks={{}} />
+<Header {headerLinks} {breadcrumbLinks} />
 <div id="project">
   <div class="curve">
     <div class="block" />

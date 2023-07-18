@@ -5,3 +5,18 @@
 h1, h2, h3, h4, h5, h6, p, span, a {
     @apply font-manrope;
 }
+
+#header {
+    display: block;
+}
+
+.index {
+    @apply text-tertiary bg-primaryBg;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+#content {
+    margin-top: 115px;
+    padding-bottom: 25px;
+}

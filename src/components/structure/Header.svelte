@@ -11,7 +11,10 @@
 </script>
 
 <script>
+  import Breadcrumbs from "../Breadcrumbs.svelte";
+
   export let headerLinks;
+  export let breadcrumbLinks;
 
   // Add DaisyUI Drawer
   /* https://daisyui.com/components/drawer/ */
@@ -38,9 +41,14 @@
       {/each}
     </div>
   </div>
+  <Breadcrumbs links={breadcrumbLinks} />
 </nav>
 
 <style type="text/scss">
+  #header {
+    display: flex;
+  }
+
   @media (min-width: 1080px) {
     nav {
       @apply fixed;

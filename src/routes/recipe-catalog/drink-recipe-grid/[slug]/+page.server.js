@@ -1,8 +1,9 @@
 // get drink recipes by category name
 /** @type {import('./$types').PageServerLoad} */
-export async function load({ fetch, params }) {
+export async function load({ fetch, params, cookies }) {
     const res = await fetch(`/firestore/endpoints/recipes/drink-recipe-grid/${params.slug}`);
     const recipes = await res.json();
+    cookies.set('recentCategory', params.slug, { path: '/' });
 
     if (res.ok) {
       return {

@@ -18,12 +18,16 @@
   import Anchor from "../components/Anchor.svelte";
   import HeroBanner from "../components/HeroBanner.svelte";
   import AnimatingWrapper from "../components/AnimatingWrapper.svelte";
+  import Collapsable from "../components/Collapsable.svelte";
 
   let headerLinks = {
     Index: "#index",
-    Experience: "#scroll1",
+    Info: "#scroll1",
+    Projects: "#scroll2",
     Contact: "#scroll3",
   };
+
+  let breadcrumbLinks = [];
 
   // Use this component for Light- v. Dark-mode
   /* https://daisyui.com/components/swap/ */
@@ -31,114 +35,122 @@
 
 <div id="index" class="scrollSection">
   <div id="header">
-    <Header {headerLinks} />
+    <Header {headerLinks} {breadcrumbLinks} />
   </div>
   <HeroBanner />
 
-  <div id="content" class="lg:px-44">
-    <div class="about">
-      <div id="scroll4" class="scrollSection" />
-      <AnimatingWrapper cssClass="hiddenNotTW">
-        <TitleDescription title="About" slot="animated">
-          <p slot="p-tag" class="p-tag">
-            Hi, I'm Henry Faulkner. I live in Atlanta, GA, USA. I have a
-            Bachelor of Science in Computer Science from the
-            <Anchor
-              title="University of Georgia"
-              href="https://www.uga.edu/"
-              className="UGA"
-              external={true}
-              color={"text-primary"}
-            />. I build quality software and web applications.
-          </p>
-        </TitleDescription>
-      </AnimatingWrapper>
-    </div>
+  <div id="main" class="lg:px-32">
+    <div id="scroll1" class="scrollSection" />
+    <AnimatingWrapper cssClass="hiddenNotTW">
+      <Collapsable title="About" slot="animated">
+        <div class="about">
+          <div id="scroll4" class="scrollSection" />
+          <TitleDescription title="">
+            <p slot="p-tag" class="p-tag">
+              Hi, I'm Henry Faulkner. I live in Atlanta, GA, USA. I have a
+              Bachelor of Science in Computer Science from the
+              <Anchor
+                title="University of Georgia"
+                href="https://www.uga.edu/"
+                className="UGA"
+                external={true}
+                color={"text-primary"}
+              />. I build quality software and web applications.
+            </p>
+          </TitleDescription>
+        </div>
+      </Collapsable>
+    </AnimatingWrapper>
 
-    <div class="about" id="skills">
-      <AnimatingWrapper cssClass="hiddenNotTW">
-        <TitleDescription title="Skills" slot="animated">
-          <p slot="p-tag" class="p-tag">
-            I am a fullstack web developer and software engineer. I have 3 years
-            of professional experience working with .Net (Framework/Core),
-            TypeScript, T-SQL, Microsoft Azure services, and SCSS. Throughout my
-            career, I've worked with various frontend frameworks such as:
-            Angular, ASP.Net, Next.js and React.
-          </p>
-        </TitleDescription>
-      </AnimatingWrapper>
-    </div>
+    <AnimatingWrapper cssClass="hiddenNotTW">
+      <Collapsable title="Skills" slot="animated">
+        <div class="about" id="skills">
+          <TitleDescription title="">
+            <p slot="p-tag" class="p-tag">
+              I am a fullstack web developer and software engineer. I have 3
+              years of professional experience working with .Net
+              (Framework/Core), TypeScript, T-SQL, Microsoft Azure services, and
+              SCSS. Throughout my career, I've worked with various frontend
+              frameworks such as: Angular, ASP.Net, Next.js and React.
+            </p>
+          </TitleDescription>
+        </div>
+      </Collapsable>
+    </AnimatingWrapper>
 
-    <div class="about" id="experience">
-      <div id="scroll1" class="scrollSection" />
-      <AnimatingWrapper cssClass="hiddenNotTW">
-        <TitleDescription title="Experience" slot="animated">
-          <p slot="p-tag" class="p-tag">
-            I currently work as a Software Engineer at
-            <Anchor
-              title="Now®"
-              href="https://nowcorp.com/"
-              className="Now"
-              external={true}
-              color={"text-primary"}
-            />. My role at Now is to make major technical upgrades to their
-            flagship financial platform, NowAccount. I designed an overhaul to
-            NowAccount's Client Onboarding Journey using Adobe XD, which is
-            being developed and showcased to prospective investors. I am
-            currently working on the aforementioned Onboarding Journey, which
-            marks the platform's move from MVC (.Net Framework) to REST APIs
-            (.Net Core) and ASP.Net to Angular. I am the frontend architect for
-            NowAccount's new Angular solution. I played a large role in moving
-            our jobs from running on a virtual machine's task scheduler to Azure
-            Functions on Azure's serverless platform. I have working at Now
-            since October 2022.
-            <br /> <br />
-            I was formerly a Technical Consultant at
-            <Anchor
-              title="Perficient®"
-              href="https://www.perficient.com/"
-              className="Perficient"
-              external={true}
-              color={"text-primary"}
-            />
-            where I momentarily worked on the Sitecore team, creating enterprise-scale
-            websites. I built data transfer using PowerShell and custom functionality
-            on top of Sitecore's proprietary CMS platform. I later transitioned to
-            Perficient's Custom Development team as a .NET and React developer, where
-            I created smaller-scale web applications. During my tenure, I worked
-            with Azure, .Net Framework, React, T-SQL, Sitecore, and SCSS. I was staffed
-            at Perficient from February 2021 - October 2022 and also interned there.
-            <br /> <br />
-            My personnel project experience is more varied. You can find out more
-            about those in the
-            <Anchor
-              title={"Projects section"}
-              href={"#scroll2"}
-              className={"Projects"}
-              external={false}
-              color={"text-primary"}
-              on:click={(event) => {
-                event.preventDefault();
-                scrollIntoView(event.target);
-              }}
-            />
-            below. You can also find my resume linked in the
-            <Anchor
-              title={"Contact section"}
-              href={"#scroll3"}
-              className={"Contact"}
-              external={false}
-              color={"text-primary"}
-              on:click={(event) => {
-                event.preventDefault();
-                scrollIntoView(event.target);
-              }}
-            />
-            below.
-          </p>
-        </TitleDescription>
-      </AnimatingWrapper>
-    </div>
+    <AnimatingWrapper cssClass="hiddenNotTW">
+      <Collapsable title="Professional Experience" slot="animated">
+        <div class="about" id="experience">
+          <TitleDescription title="">
+            <p slot="p-tag" class="p-tag">
+              I currently work as a Software Engineer at
+              <Anchor
+                title="Now®"
+                href="https://nowcorp.com/"
+                className="Now"
+                external={true}
+                color={"text-primary"}
+              />. My role at Now is to make major technical upgrades to their
+              flagship financial platform, NowAccount. I designed an overhaul to
+              NowAccount's Client Onboarding Journey using Adobe XD, which is
+              being developed and showcased to prospective investors. I am
+              currently working on the aforementioned Onboarding Journey, which
+              marks the platform's move from MVC (.Net Framework) to REST APIs
+              (.Net Core) and ASP.Net to Angular. I am the frontend architect
+              for NowAccount's new Angular solution. I played a large role in
+              moving our jobs from running on a virtual machine's task scheduler
+              to Azure Functions on Azure's serverless platform. I have working
+              at Now since October 2022.
+              <br /> <br />
+              I was formerly a Technical Consultant at
+              <Anchor
+                title="Perficient®"
+                href="https://www.perficient.com/"
+                className="Perficient"
+                external={true}
+                color={"text-primary"}
+              />
+              where I worked momentarily on the Sitecore team, creating enterprise-scale
+              websites. I built custom functionality on top of Sitecore's proprietary
+              CMS platform using C# and large data transfer using PowerShell. I later
+              transitioned to Perficient's Custom Development team as a .NET and
+              React developer, where I created smaller-scale web applications. At
+              Perficient, I worked with Azure, .Net Framework, React, T-SQL, Sitecore,
+              and SCSS. I was staffed at Perficient from February 2021 through October
+              2022, as well as interned there.
+              <br /> <br />
+              My personnel project experience mostly centers around the C++/.NET
+              Core/TypeScript ecosystems and my personal growth as an engineer. You
+              can find out more about my sidework in the
+              <Anchor
+                title={"Projects section"}
+                href={"#scroll2"}
+                className={"Projects"}
+                external={false}
+                color={"text-primary"}
+                on:click={(event) => {
+                  event.preventDefault();
+                  scrollIntoView(event.target);
+                }}
+              />
+              below. You can also find my resume linked in the
+              <Anchor
+                title={"Contact section"}
+                href={"#scroll3"}
+                className={"Contact"}
+                external={false}
+                color={"text-primary"}
+                on:click={(event) => {
+                  event.preventDefault();
+                  scrollIntoView(event.target);
+                }}
+              />
+              below.
+            </p>
+          </TitleDescription>
+        </div>
+      </Collapsable>
+    </AnimatingWrapper>
 
     <div id="scroll2" class="scrollSection">
       <h2 id="title">Project Showcase</h2>
@@ -171,7 +183,7 @@
     overflow-x: hidden;
   }
 
-  #content {
+  #main {
     @apply bg-primaryBg;
   }
 

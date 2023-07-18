@@ -26,7 +26,7 @@
       Back To Top
     </a>
   </div>
-  <span>© 2022 Henry Faulkner. All rights reserved.</span>
+  <span>© {new Date().getFullYear()} Henry Faulkner. All rights reserved.</span>
 </footer>
 
 <style>

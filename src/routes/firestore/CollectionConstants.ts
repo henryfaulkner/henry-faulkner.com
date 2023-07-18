@@ -14,7 +14,7 @@ export const foodCategories = [
     {name: 'Party Snacks', imageUrl: '/recipe-catalog/food/jpegs/charcuterie-board.jpg'} 
 ];
 export const drinkCategories = [
-    {name: 'All', imageUrl: '/recipe-catalog/drinks/jpegs/'},
+    {name: 'All', imageUrl: '/recipe-catalog/drinks/jpegs/orange-spritz.jpg'},
     {name: 'Whiskey', imageUrl: '/recipe-catalog/drinks/jpegs/old-fashoned.jpg'},
     {name: 'Gin', imageUrl: '/recipe-catalog/drinks/jpegs/tea-infused-gin.jpg'},
     {name: 'Vodka', imageUrl: '/recipe-catalog/drinks/jpegs/martini.jpg'},

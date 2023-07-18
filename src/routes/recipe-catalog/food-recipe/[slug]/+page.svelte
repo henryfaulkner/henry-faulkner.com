@@ -1,38 +1,55 @@
 <!-- slug is the food-recipes.DocumentID -->
 <script>
+  import Breadcrumbs from "../../../../components/Breadcrumbs.svelte";
   import RecipeCard from "../../../../components/RecipeCard.svelte";
+  import Header from "../../../../components/structure/Header.svelte";
   /** @type {import('./$types').PageData} */
   export let data;
+  const headerLinks = {};
+  const breadcrumbLinks = [
+    { href: "../../", name: "Index" },
+    { href: "../", name: "Catalog" },
+    {
+      href: `../food-recipe-grid/${data.recentCategory}`,
+      name: `${data.recentCategory} Recipes`,
+    },
+    { href: "", name: data.recipe.title },
+  ];
 </script>
 
 <div id="index">
-  <h1>{data.recipe.title}</h1>
-  <div id="columns">
-    <div id="ingredients-column">
-      <h2>Ingredients</h2>
-      {#each data.recipe.ingredientsList as ingredients, i}
-        <h4>{ingredients.title}</h4>
-        <ul>
-          {#each ingredients.ingredients as ingredient, i}
-            <li>
-              <span>{ingredient}</span>
-            </li>
-          {/each}
-        </ul>
-      {/each}
-    </div>
-    <div id="methods-column">
-      <h2>Methods</h2>
-      {#each data.recipe.methodsList as methods, i}
-        <h4>{methods.title}</h4>
-        <ol>
-          {#each methods.methods as method, i}
-            <li>
-              <span>{method}</span>
-            </li>
-          {/each}
-        </ol>
-      {/each}
+  <div id="header">
+    <Header {headerLinks} {breadcrumbLinks} />
+  </div>
+  <div id="content">
+    <h1>{data.recipe.title}</h1>
+    <div id="columns">
+      <div id="ingredients-column">
+        <h2>Ingredients</h2>
+        {#each data.recipe.ingredientsList as ingredients, i}
+          <h4>{ingredients.title}</h4>
+          <ul>
+            {#each ingredients.ingredients as ingredient, i}
+              <li>
+                <span>{ingredient}</span>
+              </li>
+            {/each}
+          </ul>
+        {/each}
+      </div>
+      <div id="methods-column">
+        <h2>Methods</h2>
+        {#each data.recipe.methodsList as methods, i}
+          <h4>{methods.title}</h4>
+          <ol>
+            {#each methods.methods as method, i}
+              <li>
+                <span>{method}</span>
+              </li>
+            {/each}
+          </ol>
+        {/each}
+      </div>
     </div>
   </div>
 </div>
