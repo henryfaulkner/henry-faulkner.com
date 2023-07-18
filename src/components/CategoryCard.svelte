@@ -1,6 +1,4 @@
 <script>
-  import Image from "svimg";
-
   export let category;
   export let isFood;
 </script>
