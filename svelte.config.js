@@ -1,6 +1,5 @@
 import adapter from '@sveltejs/adapter-auto';
 import preprocess from 'svelte-preprocess';
-import { imagePreprocessor } from 'svimg';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
