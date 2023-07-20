@@ -97,7 +97,7 @@
               new Client Onboarding Journey using Adobe XD. The onboarding
               journey is being developed and showcased to prospective investors
               at the time of writing this. I played a major role in moving the
-              company to Azure's serverless platform. I have working at Now
+              company to Azure's serverless platform. I have been staffed at Now
               since October 2022.
               <br /> <br />
               I was formerly a Technical Consultant at
@@ -109,7 +109,7 @@
                 color={"text-primary"}
               />
               where I initially worked on the Sitecore team, creating enterprise-scale
-              websites. I built custom functionality on top of Sitecore's proprietary
+              websites and custom functionality on top of Sitecore's proprietary
               CMS platform using C# and large data transfer using PowerShell. I later
               transitioned to Perficient's Custom Development team as a .NET and
               React developer, where I created smaller-scale web applications. At
