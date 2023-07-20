@@ -69,9 +69,9 @@
             <p slot="p-tag" class="p-tag">
               I am a fullstack web developer and software engineer. I have 3
               years of professional experience working with .Net
-              (Framework/Core), TypeScript, T-SQL, Microsoft Azure services, and
-              SCSS. Throughout my career, I've worked with various frontend
-              frameworks such as: Angular, ASP.Net, Next.js and React.
+              (Framework/Core), TypeScript, T-SQL, and Microsoft Azure services.
+              Throughout my career, I've worked with various frontend frameworks
+              such as: Angular, ASP.Net, Next.js and React.
             </p>
           </TitleDescription>
         </div>
@@ -91,13 +91,11 @@
                 external={true}
                 color={"text-primary"}
               />. My role at Now is to make major technical upgrades to their
-              flagship financial platform, NowAccount. I designed an overhaul to
-              NowAccount's Client Onboarding Journey using Adobe XD, which is
-              being developed and showcased to prospective investors. I am
-              currently working on the aforementioned Onboarding Journey, which
-              marks the platform's move from MVC (.Net Framework) to REST APIs
-              (.Net Core) and ASP.Net to Angular. I am the frontend architect
-              for NowAccount's new Angular solution. I played a large role in
+              flagship financial platform, NowAccount. I am the frontend
+              architect for NowAccount's new Angular solution and am a devleoper
+              on their new .NET Core API. I designed an overhaul to NowAccount's
+              Client Onboarding Journey using Adobe XD, which is being developed
+              and showcased to prospective investors. I played a large role in
               moving our jobs from running on a virtual machine's task scheduler
               to Azure Functions on Azure's serverless platform. I have working
               at Now since October 2022.
@@ -110,18 +108,18 @@
                 external={true}
                 color={"text-primary"}
               />
-              where I worked momentarily on the Sitecore team, creating enterprise-scale
+              where I initially worked on the Sitecore team, creating enterprise-scale
               websites. I built custom functionality on top of Sitecore's proprietary
               CMS platform using C# and large data transfer using PowerShell. I later
               transitioned to Perficient's Custom Development team as a .NET and
               React developer, where I created smaller-scale web applications. At
-              Perficient, I worked with Azure, .Net Framework, React, T-SQL, Sitecore,
-              and SCSS. I was staffed at Perficient from February 2021 through October
+              Perficient, I worked with Azure, .Net Framework, React, T-SQL, and
+              Sitecore. I was staffed at Perficient from February 2021 through October
               2022, as well as interned there.
               <br /> <br />
-              My personnel project experience mostly centers around the C++/.NET
-              Core/TypeScript ecosystems and my personal growth as an engineer. You
-              can find out more about my sidework in the
+              My personnel project experience mostly centers around the .NET Core/TypeScript/C++
+              ecosystems and my personal engineering interests. You can find out
+              more about my sidework in the
               <Anchor
                 title={"Projects section"}
                 href={"#scroll2"}
@@ -144,8 +142,7 @@
                   event.preventDefault();
                   scrollIntoView(event.target);
                 }}
-              />
-              below.
+              />.
             </p>
           </TitleDescription>
         </div>
