@@ -91,14 +91,14 @@
                 external={true}
                 color={"text-primary"}
               />. My role at Now is to make major technical upgrades to their
-              flagship financial platform, NowAccount. I am the frontend
-              architect for NowAccount's new Angular solution and am a devleoper
-              on their new .NET Core API. I designed an overhaul to NowAccount's
-              Client Onboarding Journey using Adobe XD, which is being developed
-              and showcased to prospective investors. I played a large role in
-              moving our jobs from running on a virtual machine's task scheduler
-              to Azure Functions on Azure's serverless platform. I have working
-              at Now since October 2022.
+              flagship financial platform, NowAccount. I am the technical
+              architect for NowAccount's new Angular solution and a devleoper on
+              their new .NET Core API. I designed the UX and UI for NowAccount's
+              new Client Onboarding Journey using Adobe XD. The onboarding
+              journey is being developed and showcased to prospective investors
+              at the time of writing this. I played a major role in moving the
+              company to Azure's serverless platform. I have working at Now
+              since October 2022.
               <br /> <br />
               I was formerly a Technical Consultant at
               <Anchor
@@ -117,7 +117,7 @@
               Sitecore. I was staffed at Perficient from February 2021 through October
               2022, as well as interned there.
               <br /> <br />
-              My personnel project experience mostly centers around the .NET Core/TypeScript/C++
+              My personnel project experience mostly centers around the C#/TypeScript/C++
               ecosystems and my personal engineering interests. You can find out
               more about my sidework in the
               <Anchor
