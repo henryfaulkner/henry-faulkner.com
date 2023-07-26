@@ -6,6 +6,10 @@ module.exports = {
       fontFamily: {
         lexend: ["Lexend", "sans-serif"],
         manrope: ["Manrope", "sans-serif"],
+        circe: ["Circe", "sans-serif"],
+        circeExtraLight: ["Circe Extra Light", "sans-serif"],
+        circeLight: ["Circe Light", "sans-serif"],
+        circeBold: ["Circe Bold", "sans-serif"],
 
         sans: ["Manrope", "sans-serif"],
         serif: ["serif"],

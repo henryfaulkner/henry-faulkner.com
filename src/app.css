@@ -20,3 +20,34 @@ h1, h2, h3, h4, h5, h6, p, span, a {
     margin-top: 115px;
     padding-bottom: 25px;
 }
+
+@font-face {
+    font-family: 'Circe';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Circe'), url('/fonts/circe/CRC55.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Circe Extra Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Circe Extra Light'), url('/fonts/circe/CRC25.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Circe Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Circe Light'), url('/fonts/circe/CRC35.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Circe Bold';
+font-style: normal;
+font-weight: normal;
+src: local('Circe Bold'), url('/fonts/circe/CRC65.woff') format('woff');
+}

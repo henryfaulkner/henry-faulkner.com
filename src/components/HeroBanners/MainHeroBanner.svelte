@@ -1,8 +1,8 @@
 <script>
   import { getStorageUrl } from "$lib/firebase";
-  import { RunScript } from "../scripts/index.js";
+  import { RunScript } from "../../scripts/index.js";
   import { onMount } from "svelte";
-  import Anchor from "./Anchor.svelte";
+  import Anchor from "../Anchor.svelte";
   import Icon from "@iconify/svelte";
   onMount(() => {
     RunScript();
@@ -28,7 +28,7 @@
     <div class="layout relative">
       <figure class="z-0 absolute top-1/4 right-4">
         <img
-          src="HeroHeadshot.png"
+          src="/HeroHeadshot.png"
           width="400px"
           height="275px"
           loading="eager"

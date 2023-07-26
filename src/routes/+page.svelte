@@ -16,9 +16,10 @@
   import TitleDescription from "../components/TitleDescription.svelte";
   import Contact from "../components/Contact.svelte";
   import Anchor from "../components/Anchor.svelte";
-  import HeroBanner from "../components/HeroBanner.svelte";
+  import HeroBanner from "../components/HeroBanners/MainHeroBanner.svelte";
   import AnimatingWrapper from "../components/AnimatingWrapper.svelte";
   import Collapsable from "../components/Collapsable.svelte";
+  import MainHeroBanner from "../components/HeroBanners/MainHeroBanner.svelte";
 
   let headerLinks = {
     Index: "#index",
@@ -37,7 +38,7 @@
   <div id="header">
     <Header {headerLinks} {breadcrumbLinks} />
   </div>
-  <HeroBanner />
+  <MainHeroBanner />
 
   <div id="main" class="lg:px-32">
     <div id="scroll1" class="scrollSection" />
