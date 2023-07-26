@@ -8,8 +8,8 @@
   <a
     title="Category Card link"
     href={isFood
-      ? `/recipe-catalog/food-recipe/${recipe.DocumentID}`
-      : `/recipe-catalog/drink-recipe/${recipe.DocumentID}`}
+      ? `/recipe-catalog/recipe/${recipe.DocumentID}?type=food`
+      : `/recipe-catalog/recipe/${recipe.DocumentID}?type=drink`}
     class="anchor"
   >
     <div class="card-content">

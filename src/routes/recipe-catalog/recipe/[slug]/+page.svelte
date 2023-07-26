@@ -18,8 +18,7 @@
     <RecipeHeroBanner
       imgSrc={data.recipe.featured_image}
       topText={data.recipe.title}
-      bottomText="I am a fullstack web developer and software engineer. I have 3
-      years of professional experience working with .Net"
+      bottomText={data.recipe.short_description}
     />
     <div id="columns" class="pt-10">
       <div id="ingredients-column">
