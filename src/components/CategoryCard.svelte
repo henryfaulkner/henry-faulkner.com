@@ -8,8 +8,8 @@
     class="card"
     title={`${category.name} link`}
     href={isFood
-      ? `/recipe-catalog/food-recipe-grid/${category.name}`
-      : `/recipe-catalog/drink-recipe-grid/${category.name}`}
+      ? `/recipe-catalog/recipe-grid/${category.name}?type=food`
+      : `/recipe-catalog/recipe-grid/${category.name}?type=drink`}
     style="--imageUrl: url('{category.imageUrl}');"
   >
     <span class="anchor">

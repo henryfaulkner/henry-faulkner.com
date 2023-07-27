@@ -31,20 +31,27 @@
         </figure>
       {/await}
       <div id="hero-text" class="z-10 relative" data-perspective="header">
-        <h1
-          class="text-6xl mb-3 text-secondary"
-          style="-webkit-text-stroke: 1px black;"
-        >
-          <strong class="text-primary balance text" aria-label="Henry Faulkner">
-            {topText}
-          </strong>
-        </h1>
-        <h2
-          class="text-2xl balance text"
-          style="color: white; -webkit-text-stroke: 1px black;"
-        >
-          {bottomText}
-        </h2>
+        {#if topText}
+          <h1
+            class="text-6xl mb-3 text-secondary"
+            style="-webkit-text-stroke: 1px black;"
+          >
+            <strong
+              class="text-primary balance text"
+              aria-label="Henry Faulkner"
+            >
+              {topText}
+            </strong>
+          </h1>
+        {/if}
+        {#if bottomText}
+          <h2
+            class="text-2xl balance text"
+            style="color: white; -webkit-text-stroke: 1px black;"
+          >
+            {bottomText}
+          </h2>
+        {/if}
       </div>
     </div>
   </div>

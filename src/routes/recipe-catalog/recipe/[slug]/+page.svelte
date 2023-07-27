@@ -7,7 +7,15 @@
   /** @type {import('./$types').PageData} */
   export let data;
   let headerLinks = {};
-  let breadcrumbLinks = [];
+  const breadcrumbLinks = [
+    { href: "../../", name: "Index" },
+    { href: "../", name: "Catalog" },
+    {
+      href: `../recipe-grid/${data.recentCategory}?type=${data.recentType}`,
+      name: `${data.recentCategory} Recipes`,
+    },
+    { href: "", name: data.recipe.title },
+  ];
 </script>
 
 <div id="index">
@@ -26,11 +34,11 @@
           Ingredients
         </h2>
         {#each data.recipe.ingredientsList as ingredients, i}
-          <h4>{ingredients.title}</h4>
+          <h4 class="text-base">{ingredients.title} Ingredients:</h4>
           <ul class="pl-5">
             {#each ingredients.ingredients as ingredient, i}
               <li>
-                <span>{ingredient}</span>
+                <span class="text-base">{ingredient}</span>
               </li>
             {/each}
           </ul>
@@ -40,14 +48,14 @@
         <h2
           class="mb-6 text-6xl font-thin font-circe-extra-light tracking-wider"
         >
-          Methods
+          Method
         </h2>
         {#each data.recipe.methodsList as methods, i}
-          <h4>{methods.title}</h4>
+          <h4 class="text-base">{methods.title}</h4>
           <ol class="pl-5">
             {#each methods.methods as method, i}
               <li>
-                <span>{method}</span>
+                <span class="text-base">{method} Method:</span>
               </li>
             {/each}
           </ol>

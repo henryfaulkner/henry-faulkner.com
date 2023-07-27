@@ -7,6 +7,7 @@
   import Header from "../../../../components/structure/Header.svelte";
   /** @type {import('./$types').PageData} */
   export let data;
+  export const isFood = data.isFood;
   export let headerLinks = {};
   export const { slug } = $page.params;
   export let breadcrumbLinks = [
@@ -25,7 +26,7 @@
   <div id="content">
     <div>
       <div id="rows">
-        <div class="food-row">
+        <div class="row">
           <h2>{slug} Recipes</h2>
           <input
             type="text"
@@ -36,7 +37,7 @@
           <div class="cards-wrapper">
             {#each data.recipes as recipe, i}
               <div class="card-wrapper">
-                <RecipeCard {recipe} isFood={true} />
+                <RecipeCard {recipe} {isFood} />
               </div>
             {/each}
           </div>
@@ -65,11 +66,7 @@
     min-width: 80vw;
     justify-content: center;
   }
-  .food-row {
-    min-width: 80vw;
-    text-align: center;
-  }
-  .drink-row {
+  .row {
     min-width: 80vw;
     text-align: center;
   }

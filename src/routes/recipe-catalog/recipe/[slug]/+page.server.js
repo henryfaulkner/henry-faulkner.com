@@ -14,11 +14,13 @@ export async function load({ fetch, params, cookies, url }) {
   const res = await fetch(`/firestore/endpoints/recipes/${recipeType}/${params.slug}`);
   const recipe = await res.json();
   const recentCategory = cookies.get('recentCategory');
+  const recentType = cookies.get('recentType');
 
   if (res.ok) {
     return {
       recipe,
-      recentCategory
+      recentCategory,
+      recentType
     };
   } else {
     console.log(`Had an issue fetching recipe, documentId: ${params.slug}.`);
