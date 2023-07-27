@@ -10,6 +10,7 @@ export type Recipe = {
         title: string,
         methods: string[],
     }[];
+    variationsList: string[];
     categories: string[];
     tags: string[];
     timeApproximation: {

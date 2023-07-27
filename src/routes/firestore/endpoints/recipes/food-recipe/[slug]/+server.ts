@@ -11,6 +11,6 @@ export async function GET({params}) {
     const docRef = doc(collectionRef, params.slug);
     const docObj = await getDoc(docRef);
     const response = new Recipe(postToJSON(docObj));
-
+    
     return new Response(JSON.stringify(response));
 }

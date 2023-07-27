@@ -17,6 +17,7 @@ export default class Recipe implements IFirebaseDocument {
   public short_description: string;
   public ingredientsList: ingredients[];
   public methodsList: methods[];
+  public variationsList: string[];
   public categories: string[];
   public tags: string[];
   public createdDate: Date;
@@ -28,6 +29,7 @@ export default class Recipe implements IFirebaseDocument {
     if (json["short_description"]) this.short_description = json["short_description"];
     if (json["ingredientsList"]) this.ingredientsList = json["ingredientsList"];
     if (json["methodsList"]) this.methodsList = json["methodsList"];
+    if (json["variationsList"]) this.variationsList = json["variationsList"];
     if (json["categories"]) this.categories = json["categories"];
     if (json["tags"]) this.tags = json["tags"];
     if (json["createdDate"]) this.createdDate = json["createdDate"];

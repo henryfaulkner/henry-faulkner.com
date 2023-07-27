@@ -17,12 +17,15 @@ export const foodCategories = {
     partySnack: 'Party Snacks' 
 }
 
-export const drinkCategories = { 
-    all: 'All',
-    spring: 'Spring',
-    summer: 'Summer',
-    fall: 'Fall',
-    winter: 'Winter',
+export const drinkCategories = {
+    alcoholic: 'Alcoholic',
+    nonAlcoholic: 'Non-Alcoholic',
+    caffinated: 'Caffinated',
+    gin: 'Gin',
+    vodka: 'Vodka',
+    whiskey: 'Whiskey',
+    rum: 'Rum',
+    tequila: 'Tequila',
 }
 
 export const foodTags = {
@@ -35,12 +38,10 @@ export const foodTags = {
     vegan: 'Vegan'
 }
 
-export const drinkTags = {
-    alcoholic: 'Alcoholic',
-    nonAlcoholic: 'Non-Alcoholic',
-    caffinated: 'Caffinated',
-    gin: 'Gin',
-    vodka: 'Vodka',
-    whiskey: 'Whiskey',
-    rum: 'Rum',
+export const drinkTags = { 
+    all: 'All',
+    spring: 'Spring',
+    summer: 'Summer',
+    fall: 'Fall',
+    winter: 'Winter',
 }

@@ -70,6 +70,14 @@ export const foodRecipeSchema = buildSchema<Recipe>({
                 }
             }
         },
+        variationsList: {
+            title: "Variations",
+            validation: { required: false },
+            dataType: "array",
+            of: {
+                dataType: "string",
+            }
+        },
         timeApproximation: {
             title: "Time Approximation",
             description: "Estimate average recipe completion time in hours and minute.",
