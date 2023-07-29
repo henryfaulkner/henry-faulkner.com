@@ -1,44 +1,56 @@
-import { buildProperty, buildSchema } from "@camberi/firecms";
-import { drinkCategories, drinkTags } from "../string-constants";
+import { buildProperty, buildCollection } from "firecms";
+import { ingredientsCollection } from "./ingredients.collection";
+import { methodsCollection } from "./methods.collection";
+import { foodCategories, foodTags } from "../string-constants";
 import { Recipe } from "../types/recipe.type";
 
-export const drinkRecipeSchema = buildSchema<Recipe>({
-    name: "Drink Recipe",
+export const foodRecipeCollection = buildCollection({
+    path: "food-recipes",
+    name: "Food Recipes",
+    // permissions: ({ authController}) => ({
+    //     edit: true,
+    //     create: true,
+    //     delete: authController.extra.roles.includes("admin")
+    // }),
+    subcollections: [
+        ingredientsCollection,
+        methodsCollection
+    ],
     properties: {
         title: {
-            title: "Title",
+            name: "Title",
             validation: { required: true },
             dataType: "string"
         }, 
         short_description: {
-            title: "Short Description",
+            name: "Short Description",
             dataType: "string"
         },
         featured_image: buildProperty({ // The `buildProperty` method is an utility function used for type checking
-            title: "Featured Image",
+            name: "Featured Image",
             dataType: "string",
             config: {
                 storageMeta: {
                     mediaType: "image",
-                    storagePath: "images",
+                    storagePath: "recipe-catalog",
                     acceptedFiles: ["image/*"]
                 }
             }
         }),
         ingredientsList: {
-            title: "Ingredients",
+            name: "Ingredients",
             description: "Ingredients array",
             validation: { required: true },
             dataType: "array",
             of: {
                 dataType: "map",
                 properties: {
-                    title: {
-                        title: "Title",
+                    name: {
+                        name: "Title",
                         dataType: "string"
                     },
                     ingredients: {
-                        title: "Ingredients",
+                        name: "Ingredients",
                         dataType: "array",
                         of: {
                             dataType: "string",
@@ -49,19 +61,19 @@ export const drinkRecipeSchema = buildSchema<Recipe>({
             }
         },
         methodsList: {
-            title: "Methods",
+            name: "Methods",
             description: "Methods array",
             validation: { required: true },
             dataType: "array",
             of: {
                 dataType: "map",
                 properties: {
-                    title: {
-                        title: "Title",
+                    name: {
+                        name: "Title",
                         dataType: "string"
                     },
                     methods: {
-                        title: "Methods",
+                        name: "Methods",
                         dataType: "array",
                         of: {
                             dataType: "string"
@@ -71,7 +83,7 @@ export const drinkRecipeSchema = buildSchema<Recipe>({
             }
         },
         variationsList: {
-            title: "Variations",
+            name: "Variations",
             validation: { required: false },
             dataType: "array",
             of: {
@@ -79,47 +91,43 @@ export const drinkRecipeSchema = buildSchema<Recipe>({
             }
         },
         timeApproximation: {
-            title: "Time Approximation",
+            name: "Time Approximation",
             description: "Estimate average recipe completion time in hours and minute.",
             validation: {required: false},
             dataType: "map",
             properties: {
                 hours: {
-                    title: "Hours",
+                    name: "Hours",
                     dataType: "string",
                 },
                 minutes: {
-                    title: "Minutes",
+                    name: "Minutes",
                     dataType: "string",
                 }
             }
         },
         categories: {
-            title: "Categories",
+            name: "Categories",
             validation: { required: true },
             dataType: "array",
             of: {
                 dataType: "string",
-                config: {
-                    enumValues: drinkCategories
-                }
+                enumValues: foodCategories
             }
         },
         tags: {
-            title: "Tags",
+            name: "Tags",
             description: "Tags",
             dataType: "array",
             of: {
                 dataType: "string",
-                config: {
-                    enumValues: drinkTags
-                }
+                enumValues: foodTags
             }
         },
         createdDate: {
-            title: "Created Date",
-            dataType: "timestamp",
-            validation: { required: true },
+            name: "Created Date",
+            dataType: "date",
+            validation: { required: false },
         }
     }
 });

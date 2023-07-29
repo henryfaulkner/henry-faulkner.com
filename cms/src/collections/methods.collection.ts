@@ -1,16 +1,17 @@
-import { buildSchema } from "@camberi/firecms";
+import { buildCollection } from "firecms";
 import { Methods } from "../types/methods.type";
 
-export const methodsSchema = buildSchema<Methods>({
+export const methodsCollection = buildCollection({
     name: "Methods",
+    path: "methods",
     properties: {
         title: {
-            title: "Title",
+            name: "Title",
             validation: { required: true },
             dataType: "string"
         },
         methods: {
-            title: "Methods",
+            name: "Methods",
             validation: { required: true },
             dataType: "array",
             of: {

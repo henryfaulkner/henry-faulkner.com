@@ -1,16 +1,17 @@
-import { buildSchema } from "@camberi/firecms";
+import { buildCollection } from "firecms";
 import { Ingredients } from "../types/ingredients.type";
 
-export const ingredientsSchema = buildSchema<Ingredients>({
+export const ingredientsCollection = buildCollection({
     name: "Ingredients",
+    path: "ingredients",
     properties: {
         title: {
-            title: "Title",
+            name: "Title",
             validation: { required: true },
             dataType: "string"
         },
         ingredients: {
-            title: "Ingredients",
+            name: "Ingredients",
             validation: { required: true },
             dataType: "array",
             of: {
