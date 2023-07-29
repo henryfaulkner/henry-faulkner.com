@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
 
 import { User as FirebaseUser } from "firebase/auth";
-import { useDataEnhancementPlugin } from "@firecms/data_enhancement";
+//import { useDataEnhancementPlugin } from "@firecms/data_enhancement";
 import { Authenticator, FirebaseCMSApp } from "firecms";
 
 import "typeface-rubik";
@@ -85,16 +85,16 @@ return true;
 }, []);
 
 
-const dataEnhancementPlugin = useDataEnhancementPlugin({
-    // Paths that will be enhanced
-    getConfigForPath: ({ path }) => {
-        return true;
-    }
-});
+// const dataEnhancementPlugin = useDataEnhancementPlugin({
+//     // Paths that will be enhanced
+//     getConfigForPath: ({ path }) => {
+//         return true;
+//     }
+// });
 
     return <FirebaseCMSApp
         name={"My Portfolio's CMS"}
-        plugins={[dataEnhancementPlugin]}
+        //plugins={[dataEnhancementPlugin]}
         authentication={myAuthenticator}
         collections={[foodRecipeCollection, drinkRecipeCollection]}
         firebaseConfig={firebaseConfig}
