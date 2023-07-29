@@ -18,9 +18,7 @@ export const foodCategories = {
 }
 
 export const drinkCategories = {
-    alcoholic: 'Alcoholic',
-    nonAlcoholic: 'Non-Alcoholic',
-    caffinated: 'Caffinated',
+    all: 'All',
     gin: 'Gin',
     vodka: 'Vodka',
     whiskey: 'Whiskey',
@@ -39,9 +37,11 @@ export const foodTags = {
 }
 
 export const drinkTags = { 
-    all: 'All',
     spring: 'Spring',
     summer: 'Summer',
     fall: 'Fall',
     winter: 'Winter',
+    alcoholic: 'Alcoholic',
+    nonAlcoholic: 'Non-Alcoholic',
+    caffinated: 'Caffinated',
 }
