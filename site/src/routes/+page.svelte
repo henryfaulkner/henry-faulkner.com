@@ -48,15 +48,17 @@
           <div id="scroll4" class="scrollSection" />
           <TitleDescription title="">
             <p slot="p-tag" class="p-tag">
-              Hi, I'm Henry Faulkner. I live in Atlanta, GA, USA. I have a
-              Bachelor of Science in Computer Science from the
+              Hey there, I'm Henry Faulkner, and I call Atlanta, GA, USA home.
+              I'm a software developer with a Bachelor of Science in Computer
+              Science from the
               <Anchor
                 title="University of Georgia"
                 href="https://www.uga.edu/"
                 className="UGA"
                 external={true}
                 color={"text-primary"}
-              />. I build quality software and web applications.
+              />. My passion lies in crafting top-notch software and web
+              applications that make a positive impact.
             </p>
           </TitleDescription>
         </div>
@@ -68,11 +70,12 @@
         <div class="about" id="skills">
           <TitleDescription title="">
             <p slot="p-tag" class="p-tag">
-              I am a fullstack web developer and software engineer. I have 3
-              years of professional experience working with .Net
-              (Framework/Core), TypeScript, T-SQL, and Microsoft Azure services.
-              Throughout my career, I've worked with various frontend frameworks
-              such as: Angular, ASP.Net, Next.js and React.
+              I am a fullstack web developer and software engineer with 3 years
+              of professional experience under my belt. My expertise lies in
+              working with .Net (Framework/Core), TypeScript, T-SQL, and
+              Microsoft Azure services. Throughout my career, I've had the
+              opportunity to build UIs with various frontend frameworks, i.e.,
+              Angular, ASP.Net, Next.js, and React.
             </p>
           </TitleDescription>
         </div>
@@ -111,10 +114,10 @@
               />
               where I initially worked on the Sitecore team, creating enterprise-scale
               websites and custom functionality on top of Sitecore's proprietary
-              CMS platform using C# and large data transfer using PowerShell. I later
-              transitioned to Perficient's Custom Development team as a .NET and
-              React developer, where I created smaller-scale web applications. At
-              Perficient, I worked with Azure, .Net Framework, React, T-SQL, and
+              CMS platform using C# and performing large data transfer using PowerShell.
+              I later transitioned to Perficient's Custom Development team as a .NET
+              and React developer, where I created smaller-scale web applications.
+              At Perficient, I worked with Azure, .Net Framework, React, T-SQL, and
               Sitecore. I was staffed at Perficient from February 2021 through October
               2022, as well as interned there.
               <br /> <br />
