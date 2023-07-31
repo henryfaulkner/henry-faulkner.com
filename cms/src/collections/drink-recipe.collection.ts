@@ -122,9 +122,7 @@ export const drinkRecipeCollection = buildCollection<Recipe>(
                 dataType: "array",
                 of: {
                     dataType: "string",
-                    config: {
-                        enumValues: drinkTags
-                    }
+                    enumValues: drinkTags
                 }
             }),
             createdDate: {
