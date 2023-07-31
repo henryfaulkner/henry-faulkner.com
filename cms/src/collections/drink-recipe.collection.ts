@@ -46,7 +46,7 @@ export const drinkRecipeCollection = buildCollection<Recipe>(
                 of: {
                     dataType: "map",
                     properties: {
-                        name: buildProperty({
+                        title: buildProperty({
                             name: "Title",
                             dataType: "string"
                         }),
@@ -69,7 +69,7 @@ export const drinkRecipeCollection = buildCollection<Recipe>(
                 of: {
                     dataType: "map",
                     properties: {
-                        name: buildProperty({
+                        title: buildProperty({
                             name: "Title",
                             dataType: "string"
                         }),
@@ -122,7 +122,9 @@ export const drinkRecipeCollection = buildCollection<Recipe>(
                 dataType: "array",
                 of: {
                     dataType: "string",
-                    enumValues: drinkTags
+                    config: {
+                        enumValues: drinkTags
+                    }
                 }
             }),
             createdDate: {
