@@ -45,7 +45,7 @@ export const foodRecipeCollection = buildCollection({
             of: {
                 dataType: "map",
                 properties: {
-                    name: {
+                    title: {
                         name: "Title",
                         dataType: "string"
                     },
@@ -68,7 +68,7 @@ export const foodRecipeCollection = buildCollection({
             of: {
                 dataType: "map",
                 properties: {
-                    name: {
+                    title: {
                         name: "Title",
                         dataType: "string"
                     },
