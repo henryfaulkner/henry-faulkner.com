@@ -19,10 +19,10 @@
   <div class="container-not-tailwind" id="index">
     <div class="layout relative">
       {#await awaitImg(imgSrc) then src}
-        <figure class="z-0 absolute top-1/4 right-4">
+        <figure class="z-0 absolute right-4">
           <img
             {src}
-            width="275px"
+            width="225px"
             loading="eager"
             alt="Henry Faulkner hero"
             class="heroImage"

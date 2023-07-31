@@ -105,7 +105,7 @@
   }
 
   #ingredients-column {
-    margin-right: 5%;
+    margin-right: 25%;
 
     h4 {
       text-decoration: underline;
@@ -113,8 +113,6 @@
   }
 
   #methods-column {
-    margin-left: 5%;
-
     h4 {
       text-decoration: underline;
     }
@@ -138,5 +136,19 @@
   ol {
     list-style-type: decimal;
     list-style-position: outside;
+  }
+
+  @media (max-width: 780px) {
+    #columns {
+      flex-direction: column;
+
+      > div {
+        margin-top: 50px;
+      }
+    }
+
+    #row {
+      margin: 50px 10vw;
+    }
   }
 </style>

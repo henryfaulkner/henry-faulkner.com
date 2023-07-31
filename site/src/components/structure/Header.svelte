@@ -21,27 +21,39 @@
 </script>
 
 <nav class="z-20 w-screen backdrop-blur-sm">
-  <div id="header" class="header-container">
-    <a title="Header Name link" href="/" class="name-container">
-      <p class="name-text">Henry Faulkner</p>
-    </a>
-    <div class="not-name-cont">
-      {#each Object.entries(headerLinks) as [title, link]}
-        <Anchor
-          {title}
-          href={link}
-          className={title}
-          external={false}
-          color={"text-primary"}
-          on:click={(event) => {
-            event.preventDefault();
-            scrollIntoView(event.target);
-          }}
-        />
-      {/each}
+  {#if Object.keys(headerLinks).length > 0}
+    <div
+      id="header"
+      class="header-container {breadcrumbLinks.length > 0 ? 'pb-8' : ''}"
+    >
+      <a title="Header Name link" href="/" class="name-container">
+        <p class="name-text">Henry Faulkner</p>
+      </a>
+      <div class="not-name-cont">
+        {#each Object.entries(headerLinks) as [title, link]}
+          <Anchor
+            {title}
+            href={link}
+            className={title}
+            external={false}
+            color={"text-primary"}
+            on:click={(event) => {
+              event.preventDefault();
+              scrollIntoView(event.target);
+            }}
+          />
+        {/each}
+      </div>
     </div>
-  </div>
-  <Breadcrumbs links={breadcrumbLinks} />
+    <div id="breadcrumbs" class="absolute left-4 pt-2">
+      <Breadcrumbs links={breadcrumbLinks} />
+    </div>
+  {/if}
+  {#if Object.keys(headerLinks).length === 0}
+    <div id="breadcrumbs" class="absolute left-4 pt-2 bg-primaryBg/70 w-full">
+      <Breadcrumbs links={breadcrumbLinks} />
+    </div>
+  {/if}
 </nav>
 
 <style type="text/scss">
@@ -64,6 +76,10 @@
 
     @media (max-width: 1080px) {
       @apply bg-primaryBg;
+    }
+
+    + #breadcrumbs {
+      @apply left-4 top-20;
     }
   }
 
