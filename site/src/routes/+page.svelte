@@ -20,6 +20,7 @@
   import AnimatingWrapper from "../components/AnimatingWrapper.svelte";
   import Collapsable from "../components/Collapsable.svelte";
   import MainHeroBanner from "../components/HeroBanners/MainHeroBanner.svelte";
+  import ProjectCollapsable from "../components/ProjectCollapsable.svelte";
 
   let headerLinks = {
     Index: "#index",
@@ -153,21 +154,23 @@
       </Collapsable>
     </AnimatingWrapper>
 
-    <div id="scroll2" class="scrollSection">
-      <h2 id="title">Project Showcase</h2>
-      <div id="projects">
-        {#each data.projects as project, i}
-          {#await getStorageUrl(project.featured_image) then imageUrl}
-            <AnimatingWrapper
-              cssClass="hiddenNotTW staggerNotTW"
-              style="--order: {i + 1}"
-            >
-              <ProjectCard {project} {imageUrl} slot="animated" />
-            </AnimatingWrapper>
-          {/await}
-        {/each}
-      </div>
-    </div>
+    <div id="scroll2" class="scrollSection" />
+    <AnimatingWrapper cssClass="hiddenNotTW">
+      <ProjectCollapsable title="Project Showcase" slot="animated">
+        <div id="projects">
+          {#each data.projects as project, i}
+            {#await getStorageUrl(project.featured_image) then imageUrl}
+              <AnimatingWrapper
+                cssClass="hiddenNotTW staggerNotTW"
+                style="--order: {i + 1}"
+              >
+                <ProjectCard {project} {imageUrl} slot="animated" />
+              </AnimatingWrapper>
+            {/await}
+          {/each}
+        </div>
+      </ProjectCollapsable>
+    </AnimatingWrapper>
 
     <section class="scrollSection pt-6 pb-12">
       <div id="scroll3" class="scrollSection" />
@@ -186,17 +189,6 @@
 
   #main {
     @apply bg-primaryBg;
-  }
-
-  #title {
-    padding: 20px;
-    font-size: 32px;
-  }
-  #title:after {
-    content: "";
-    width: 100%;
-    color: orangered;
-    height: 1px;
   }
 
   #projects {

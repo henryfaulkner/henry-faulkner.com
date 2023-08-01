@@ -15,7 +15,9 @@ function RunScript() {
                         setTimeout(() => {
                             entry.target.classList.remove('hidden');
                         }, 300); 
-                    } else if (entry.target.classList.contains('fa-chevron-down') && entry.target.classList.contains('arrow-toggle')) {
+                    } else if (entry.target.classList.contains('fa-chevron-down') 
+                            && entry.target.classList.contains('arrow-toggle')
+                        ) {
                         entry.target.classList.remove('fa-chevron-down');
                         entry.target.classList.add('fa-chevron-right');
                     }
