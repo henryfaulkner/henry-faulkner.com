@@ -22,7 +22,13 @@
       collapsable.classList.remove("closed");
       collapsable.classList.remove("h-0");
       collapsable.classList.add("open");
-      collapsable.classList.add("translate-y-0");
+      if (browser) {
+        if (window.innerWidth > 1080) {
+          collapsable.classList.add("translate-y-0");
+        } else {
+          collapsable.classList.add("translate-y-200");
+        }
+      }
       collapsable.classList.add("duration-700");
       collapsable.classList.remove("h-0");
       collapsableContent.classList.remove("h-0");
@@ -64,8 +70,7 @@
 
   <div class="collased-content" bind:this={collapsableContent}>
     <div
-      class="h-0
-      {!screenSize || screenSize > 780 ? 'open h-fit' : 'closed h-0'}"
+      class={!screenSize || screenSize > 780 ? "open h-fit" : "closed h-0"}
       bind:this={collapsable}
     >
       <slot />
