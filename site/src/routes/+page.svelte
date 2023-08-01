@@ -157,18 +157,16 @@
     <div id="scroll2" class="scrollSection" />
     <AnimatingWrapper cssClass="hiddenNotTW">
       <ProjectCollapsable title="Project Showcase" slot="animated">
-        <div id="projects">
-          {#each data.projects as project, i}
-            {#await getStorageUrl(project.featured_image) then imageUrl}
-              <AnimatingWrapper
-                cssClass="hiddenNotTW staggerNotTW"
-                style="--order: {i + 1}"
-              >
-                <ProjectCard {project} {imageUrl} slot="animated" />
-              </AnimatingWrapper>
-            {/await}
-          {/each}
-        </div>
+        {#each data.projects as project, i}
+          {#await getStorageUrl(project.featured_image) then imageUrl}
+            <AnimatingWrapper
+              cssClass="hiddenNotTW staggerNotTW"
+              style="--order: {i + 1}"
+            >
+              <ProjectCard {project} {imageUrl} slot="animated" />
+            </AnimatingWrapper>
+          {/await}
+        {/each}
       </ProjectCollapsable>
     </AnimatingWrapper>
 
@@ -189,11 +187,6 @@
 
   #main {
     @apply bg-primaryBg;
-  }
-
-  #projects {
-    height: auto;
-    @apply grid sm:grid-cols-2 lg:grid-cols-3 gap-6;
   }
 
   .scrollSection {

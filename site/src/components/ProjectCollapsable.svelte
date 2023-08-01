@@ -4,6 +4,7 @@
   let arrow;
   let collapsable;
   let collapsableContent;
+  let projects;
 
   function toggleCollasable() {
     if (arrow.classList.contains("closed")) {
@@ -21,7 +22,14 @@
     if (collapsable.classList.contains("closed")) {
       collapsable.classList.remove("closed");
       collapsable.classList.remove("h-0");
+      collapsableContent.classList.remove("h-0");
+      projects.classList.remove("hidden");
+
+      collapsable.classList.add("duration-700");
+      collapsable.classList.add("h-fit");
+      collapsableContent.classList.add("h-fit");
       collapsable.classList.add("open");
+      projects.classList.add("grid");
       if (browser) {
         if (window.innerWidth > 1080) {
           collapsable.classList.add("translate-y-0");
@@ -29,11 +37,6 @@
           collapsable.classList.add("translate-y-200");
         }
       }
-      collapsable.classList.add("duration-700");
-      collapsable.classList.remove("h-0");
-      collapsableContent.classList.remove("h-0");
-      collapsable.classList.add("h-fit");
-      collapsableContent.classList.add("h-fit");
     } else if (collapsable.classList.contains("open")) {
       collapsable.classList.remove("open");
       collapsable.classList.add("closed");
@@ -43,6 +46,9 @@
         collapsable.classList.add("h-0");
         collapsableContent.classList.add("h-0");
       }, 400);
+
+      projects.classList.remove("grid");
+      projects.classList.add("hidden");
     }
   }
   let screenSize;
@@ -73,7 +79,13 @@
       class={!screenSize || screenSize > 780 ? "open h-fit" : "closed h-0"}
       bind:this={collapsable}
     >
-      <slot />
+      <div
+        id="projects"
+        class={!screenSize || screenSize > 780 ? "grid" : "hidden"}
+        bind:this={projects}
+      >
+        <slot />
+      </div>
     </div>
   </div>
 </div>
@@ -136,5 +148,10 @@
       opacity: 1;
       filter: blur(0);
     }
+  }
+
+  #projects {
+    height: auto;
+    @apply sm:grid-cols-2 lg:grid-cols-3 gap-6;
   }
 </style>
