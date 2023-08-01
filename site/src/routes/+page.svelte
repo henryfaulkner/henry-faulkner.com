@@ -183,6 +183,7 @@
   #index {
     @apply text-tertiary;
     overflow-x: hidden;
+    overflow-y: hidden;
   }
 
   #main {
