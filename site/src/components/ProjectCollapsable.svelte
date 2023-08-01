@@ -39,13 +39,11 @@
       }
     } else if (collapsable.classList.contains("open")) {
       collapsable.classList.remove("open");
+      collapsableContent.classList.remove("h-fit");
       collapsable.classList.add("closed");
-      setTimeout(() => {
-        collapsable.classList.remove("h-fit");
-        collapsableContent.classList.remove("h-fit");
-        collapsable.classList.add("h-0");
-        collapsableContent.classList.add("h-0");
-      }, 400);
+      collapsableContent.classList.add("h-0");
+      collapsable.classList.remove("h-fit");
+      collapsable.classList.add("h-0");
 
       projects.classList.remove("grid");
       projects.classList.add("hidden");
