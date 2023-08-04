@@ -90,7 +90,7 @@
 
 <style lang="scss">
   #title {
-    padding: 20px;
+    padding: 20px 20px 20px 0;
     font-size: 32px;
   }
   #title:after {
