@@ -122,9 +122,8 @@
               Sitecore. I was staffed at Perficient from February 2021 through October
               2022, as well as interned there.
               <br /> <br />
-              My personnel project experience mostly centers around the C#/TypeScript/C++
-              ecosystems and my personal engineering interests. You can find out
-              more about my sidework in the
+              My personnel project experience focuses on my personal engineering
+              interests. You can find out more about my sidework in the
               <Anchor
                 title={"Projects section"}
                 href={"#scroll2"}
