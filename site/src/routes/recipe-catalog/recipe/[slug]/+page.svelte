@@ -35,13 +35,13 @@
           Ingredients
         </h2>
         {#each data.recipe.ingredientsList as ingredients, i}
-          <h4 class="text-base mt-4 mb-2 underline-offset-4">
+          <h4 class="text-2xl mt-4 mb-2 underline-offset-4">
             {ingredients.title} Ingredients:
           </h4>
           <ul class="pl-5">
             {#each ingredients.ingredients as ingredient, i}
               <li>
-                <span class="text-base">{ingredient}</span>
+                <span class="text-xl">{ingredient}</span>
               </li>
             {/each}
           </ul>
@@ -54,13 +54,13 @@
           Method
         </h2>
         {#each data.recipe.methodsList as methods, i}
-          <h4 class="text-base mt-4 mb-2 underline-offset-4">
+          <h4 class="text-3xl mt-4 mb-2 underline-offset-4">
             {methods.title} Method:
           </h4>
           <ol class="pl-5">
             {#each methods.methods as method, i}
               <li>
-                <span class="text-base">{method}</span>
+                <span class="text-2xl">{method}</span>
               </li>
             {/each}
           </ol>
@@ -93,7 +93,7 @@
 
   #columns {
     display: flex;
-    width: 65vw;
+    width: 80vw;
     margin: 30px 10vw;
     justify-content: space-between;
   }
@@ -105,7 +105,7 @@
   }
 
   #ingredients-column {
-    margin-right: 25%;
+    margin-right: 10%;
 
     h4 {
       text-decoration: underline;
@@ -136,6 +136,10 @@
   ol {
     list-style-type: decimal;
     list-style-position: outside;
+
+    li {
+      @apply pb-4;
+    }
   }
 
   @media (max-width: 780px) {
