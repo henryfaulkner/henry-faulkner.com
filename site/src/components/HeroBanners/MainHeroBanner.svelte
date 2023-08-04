@@ -15,6 +15,7 @@
     });
   }
   export function scrollIntoViewHref(href) {
+    console.log("href, ", href);
     const el = document.querySelector(href);
     if (!el) return;
     el.scrollIntoView({
@@ -56,27 +57,21 @@
     </div>
   </div>
 
-  <div class="scroll-container cursor-pointer mt-6">
-    <div
-      class="icon-container relative top-4"
-      on:click={(event) => {
-        event.preventDefault();
-        scrollIntoViewHref("#about");
-      }}
-    >
-      <Anchor
-        title="Scroll"
-        href={"#scroll4"}
-        className={"scroll"}
-        external={false}
-        color={"text-white"}
-        on:click={(event) => {
-          event.preventDefault();
-          scrollIntoView(event.target);
-        }}
-      />
-      <Icon class="w-8" icon="fluent:chevron-down-24-filled" />
-    </div>
+  <div
+    class="scroll-container cursor-pointer p-6"
+    on:click={(event) => {
+      event.preventDefault();
+      scrollIntoViewHref("#scroll1");
+    }}
+  >
+    <Icon
+      style="height: 50px; width: 50px;"
+      icon="fa-chevron-down"
+      href={"#scroll1"}
+      className={"scroll"}
+      external={false}
+      color={"text-white text-6xl"}
+    />
   </div>
 </div>
 
