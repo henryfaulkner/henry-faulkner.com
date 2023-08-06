@@ -11,6 +11,7 @@ export const foodCategories = {
     indian: 'Indian',
     italian: 'Italian',
     mexican: 'Mexican',
+    texMex: 'Tex-Mex',
     thai: 'Thai',
     salad: 'Salad',
     soup: 'Soup',

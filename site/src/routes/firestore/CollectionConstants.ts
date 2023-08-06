@@ -8,6 +8,7 @@ export const foodCategories = [
     {name: 'Indian', imageUrl: '/recipe-catalog/food/jpegs/chicken-chika-masala.jpg'},
     {name: 'Italian', imageUrl: '/recipe-catalog/food/jpegs/gnocchi.jpg'},
     {name: 'Mexican', imageUrl: '/recipe-catalog/food/jpegs/chiles-rellenos.jpg'},
+    {name: 'Tex-Mex', imageUrl: '/recipe-catalog/food/jpegs/chiles-rellenos.jpg'},
     {name: 'Thai', imageUrl: '/recipe-catalog/food/jpegs/pad-thai.jpg'},
     {name: 'Salad', imageUrl: '/recipe-catalog/food/jpegs/peach-goat-salad.jpg'},
     {name: 'Soup', imageUrl: '/recipe-catalog/food/jpegs/tomato-soup.jpg'},
