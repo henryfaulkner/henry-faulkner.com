@@ -93,8 +93,8 @@
 
   #columns {
     display: flex;
-    width: 80vw;
-    margin: 30px 10vw;
+    width: 90vw;
+    margin: 30px 5vw;
     justify-content: space-between;
   }
 
@@ -105,7 +105,8 @@
   }
 
   #ingredients-column {
-    margin-right: 10%;
+    min-width: 25%;
+    margin-right: 6%;
 
     h4 {
       text-decoration: underline;
