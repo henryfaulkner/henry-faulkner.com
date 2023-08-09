@@ -3,6 +3,7 @@
   import HeroBanner from "../../../../components/HeroBanners/MainHeroBanner.svelte";
   import RecipeHeroBanner from "../../../../components/HeroBanners/RecipeHeroBanner.svelte";
   import RecipeCard from "../../../../components/RecipeCard.svelte";
+  import Footer from "../../../../components/structure/Footer.svelte";
   import Header from "../../../../components/structure/Header.svelte";
   /** @type {import('./$types').PageData} */
   export let data;
@@ -82,6 +83,8 @@
       </div>
     {/if}
   </div>
+
+  <Footer />
 </div>
 
 <style lang="scss">
