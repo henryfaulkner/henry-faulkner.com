@@ -45,7 +45,9 @@
       bind:this={arrow}
     />
     <h3 class="select-none text-primary{`-${$theme}`}">{title}</h3>
-    <hr class="select-none text-tertiary{`-${$theme}`}" />
+    <hr
+      class="select-none bg-tertiary{`-${$theme}`} border-hidden rounded-lg h-0.5"
+    />
   </div>
 
   <div class="collased-content">
