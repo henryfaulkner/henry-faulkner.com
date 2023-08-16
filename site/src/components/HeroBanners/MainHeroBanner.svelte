@@ -45,10 +45,7 @@
         />
       </figure>
       <div id="hero-text" class="z-10 relative" data-perspective="header">
-        <h1
-          class="text-6xl mb-3 text-secondary{`-${$theme}`}"
-          style="-webkit-text-stroke: 1px black;"
-        >
+        <h1 class="text-6xl mb-3">
           <strong
             class="text-primary{`-${$theme}`}"
             aria-label="Henry Faulkner"
@@ -56,10 +53,7 @@
             Henry Faulkner.
           </strong>
         </h1>
-        <h2
-          class="text-2xl"
-          style="color: white; -webkit-text-stroke: 1px black;"
-        >
+        <h2 class="text-2xl text-secondary{`-${$theme}`}">
           Software Engineer - Web Developer
         </h2>
       </div>

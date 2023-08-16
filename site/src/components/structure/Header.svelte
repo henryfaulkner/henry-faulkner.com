@@ -33,10 +33,8 @@
   {#if Object.keys(headerLinks).length > 0}
     <div
       id="header"
-      class="header-container bg-primaryBg-{$theme}/70 {breadcrumbLinks.length >
-      0
-        ? 'pb-8'
-        : ''}"
+      class="header-container bg-primaryBg{`-${$theme}`} lg:bg-primaryBg{`-${$theme}`}/70
+        {breadcrumbLinks.length > 0 ? 'pb-8' : ''}"
     >
       <a title="Header Name link" href="/" class="name-container">
         <p class="name-text">Henry Faulkner</p>
@@ -66,7 +64,10 @@
     </div>
   {/if}
   {#if Object.keys(headerLinks).length === 0}
-    <div id="breadcrumbs" class="absolute left-4 pt-2 bg-primaryBg/70 w-full">
+    <div
+      id="breadcrumbs"
+      class="absolute left-4 pt-2 bg-primaryBg{`-${$theme}`} lg:bg-primaryBg{`-${$theme}`}/70 w-full"
+    >
       <Breadcrumbs links={breadcrumbLinks} />
     </div>
   {/if}
@@ -88,10 +89,6 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-
-    @media (max-width: 1080px) {
-      @apply bg-primaryBg;
-    }
 
     + #breadcrumbs {
       @apply left-4 top-20;
