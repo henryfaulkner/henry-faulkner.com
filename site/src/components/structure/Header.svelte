@@ -1,4 +1,5 @@
 <script context="module">
+  import { onDestroy } from "svelte";
   import { theme } from "../../store/stores";
   import Anchor from "../Anchor.svelte";
 
@@ -18,9 +19,11 @@
   export let headerLinks;
   export let breadcrumbLinks;
 
-  setInterval(function () {
-    console.log("$theme, ", $theme);
+  const interval = setInterval(function () {
+    //console.log("$theme, ", $theme);
   }, 5000);
+
+  onDestroy(() => clearInterval(interval));
 
   // Add DaisyUI Drawer
   /* https://daisyui.com/components/drawer/ */
