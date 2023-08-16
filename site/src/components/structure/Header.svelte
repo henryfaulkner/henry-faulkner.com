@@ -1,4 +1,6 @@
 <script context="module">
+  import { onDestroy } from "svelte";
+  import { theme } from "../../store/stores";
   import Anchor from "../Anchor.svelte";
 
   export function scrollIntoView(target) {
@@ -12,9 +14,16 @@
 
 <script>
   import Breadcrumbs from "../Breadcrumbs.svelte";
+  import ThemeSwap from "../ThemeSwap.svelte";
 
   export let headerLinks;
   export let breadcrumbLinks;
+
+  const interval = setInterval(function () {
+    //console.log("$theme, ", $theme);
+  }, 5000);
+
+  onDestroy(() => clearInterval(interval));
 
   // Add DaisyUI Drawer
   /* https://daisyui.com/components/drawer/ */
@@ -24,7 +33,8 @@
   {#if Object.keys(headerLinks).length > 0}
     <div
       id="header"
-      class="header-container {breadcrumbLinks.length > 0 ? 'pb-8' : ''}"
+      class="header-container bg-primaryBg{`-${$theme}`} lg:bg-primaryBg{`-${$theme}`}/70
+        {breadcrumbLinks.length > 0 ? 'pb-8' : ''}"
     >
       <a title="Header Name link" href="/" class="name-container">
         <p class="name-text">Henry Faulkner</p>
@@ -36,7 +46,7 @@
             href={link}
             className={title}
             external={false}
-            color={"text-primary"}
+            color={`text-primary-${$theme}`}
             on:click={(event) => {
               event.preventDefault();
               scrollIntoView(event.target);
@@ -44,13 +54,20 @@
           />
         {/each}
       </div>
+
+      <div class="mr-12 theme-swap">
+        <ThemeSwap />
+      </div>
     </div>
     <div id="breadcrumbs" class="absolute left-4 pt-2">
       <Breadcrumbs links={breadcrumbLinks} />
     </div>
   {/if}
   {#if Object.keys(headerLinks).length === 0}
-    <div id="breadcrumbs" class="absolute left-4 pt-2 bg-primaryBg/70 w-full">
+    <div
+      id="breadcrumbs"
+      class="absolute left-4 pt-2 bg-primaryBg{`-${$theme}`} lg:bg-primaryBg{`-${$theme}`}/70 w-full"
+    >
       <Breadcrumbs links={breadcrumbLinks} />
     </div>
   {/if}
@@ -68,15 +85,10 @@
   }
 
   .header-container {
-    @apply bg-primaryBg/70;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-
-    @media (max-width: 1080px) {
-      @apply bg-primaryBg;
-    }
 
     + #breadcrumbs {
       @apply left-4 top-20;
@@ -104,7 +116,7 @@
   }
 
   .name-container {
-    padding: 10px;
+    padding: 10px 0 10px 10px;
     @apply lt-xsm:pr-1 lt-xsm:w-3/4;
 
     @media (max-width: 1080px) {
@@ -117,5 +129,11 @@
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
+  }
+
+  .theme-swap {
+    @media (max-width: 1080px) {
+      margin-top: 1rem;
+    }
   }
 </style>

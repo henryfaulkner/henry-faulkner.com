@@ -1,10 +1,9 @@
 <!-- slug is drink-recipes.DocumentId -->
 <script>
-  import HeroBanner from "../../../../components/HeroBanners/MainHeroBanner.svelte";
   import RecipeHeroBanner from "../../../../components/HeroBanners/RecipeHeroBanner.svelte";
-  import RecipeCard from "../../../../components/RecipeCard.svelte";
   import Footer from "../../../../components/structure/Footer.svelte";
   import Header from "../../../../components/structure/Header.svelte";
+  import { theme } from "../../../../store/stores";
   /** @type {import('./$types').PageData} */
   export let data;
   let headerLinks = {};
@@ -17,10 +16,9 @@
     },
     { href: "", name: data.recipe.title },
   ];
-  console.log("data, ", data);
 </script>
 
-<div id="index">
+<div id="index text-tertiary-{$theme} bg-primaryBg-{$theme}">
   <div id="header">
     <Header {headerLinks} {breadcrumbLinks} />
   </div>
@@ -89,7 +87,6 @@
 
 <style lang="scss">
   #index {
-    @apply text-tertiary bg-primaryBg;
     overflow-x: hidden;
     min-height: 100vh;
   }

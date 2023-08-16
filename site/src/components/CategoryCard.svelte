@@ -1,4 +1,6 @@
 <script>
+  import { theme } from "../store/stores";
+
   export let category;
   export let isFood;
 </script>
@@ -14,7 +16,7 @@
   >
     <span class="anchor">
       <div class="card-content">
-        <div class="base">
+        <div class="base text-primary{`-${$theme}`}">
           <p>{category.name}</p>
         </div>
       </div>
@@ -75,7 +77,6 @@
   }
 
   .base {
-    @apply text-primary;
     font-weight: bold;
 
     p {

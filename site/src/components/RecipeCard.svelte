@@ -1,4 +1,6 @@
 <script>
+  import { theme } from "../store/stores";
+
   export let recipe;
   export let isFood;
   recipe.imageUrl = "/recipe-catalog/food/jpegs/high-res-donut.jpg";
@@ -13,7 +15,7 @@
     class="anchor"
   >
     <div class="card-content">
-      <div class="base">
+      <div class="base text-primary-{$theme}">
         <p>{recipe.title}</p>
       </div>
     </div>
@@ -73,7 +75,6 @@
   }
 
   .base {
-    @apply text-primary;
     font-weight: bold;
 
     p {

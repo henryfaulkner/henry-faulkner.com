@@ -1,4 +1,5 @@
 <script>
+  import { theme } from "../store/stores";
   import { browser } from "$app/environment";
   export let title;
   let arrow;
@@ -63,7 +64,7 @@
   >
     <h2 id="title" class="select-none">{title}</h2>
     <i
-      class="arrow fa-solid
+      class="arrow fa-solid text-tertiary{`-${$theme}`}
       {!screenSize || screenSize > 780
         ? 'fa-chevron-down open'
         : 'fa-chevron-right closed'}"
@@ -115,7 +116,7 @@
     }
 
     .arrow {
-      @apply text-tertiary text-2xl;
+      @apply text-2xl;
       margin-right: 10px;
     }
   }

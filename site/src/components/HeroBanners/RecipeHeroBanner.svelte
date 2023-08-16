@@ -1,5 +1,6 @@
 <script>
   import { getStorageUrl } from "$lib/firebase";
+  import { theme } from "../../store/stores";
 
   export let imgSrc;
   async function awaitImg(src) {
@@ -12,7 +13,7 @@
 
 <div
   role="banner"
-  class="hero-not-tailwind"
+  class="hero-not-tailwind bg-primaryBG-{$theme}"
   nav-section="index"
   data-perspective-group
 >
@@ -33,11 +34,11 @@
       <div id="hero-text" class="z-10 relative" data-perspective="header">
         {#if topText}
           <h1
-            class="text-6xl mb-3 text-secondary"
+            class="text-6xl mb-3 text-secondary-{$theme}"
             style="-webkit-text-stroke: 1px black;"
           >
             <strong
-              class="text-primary balance text"
+              class="text-primary-{$theme} balance text"
               aria-label="Henry Faulkner"
             >
               {topText}
@@ -69,7 +70,6 @@
     background-size: cover;
     background-position: center;
     height: 30vh;
-    @apply bg-primaryBg;
   }
 
   .hero > * {

@@ -1,4 +1,5 @@
 <script>
+  import { theme } from "../store/stores";
   import { getStorageUrl } from "$lib/firebase";
   /** @type {import('./$types').PageData} */
   export let data;
@@ -16,7 +17,6 @@
   import TitleDescription from "../components/TitleDescription.svelte";
   import Contact from "../components/Contact.svelte";
   import Anchor from "../components/Anchor.svelte";
-  import HeroBanner from "../components/HeroBanners/MainHeroBanner.svelte";
   import AnimatingWrapper from "../components/AnimatingWrapper.svelte";
   import Collapsable from "../components/Collapsable.svelte";
   import MainHeroBanner from "../components/HeroBanners/MainHeroBanner.svelte";
@@ -35,13 +35,13 @@
   /* https://daisyui.com/components/swap/ */
 </script>
 
-<div id="index" class="scrollSection">
+<div id="index" class="scrollSection text-tertiary{`-${$theme}`}">
   <div id="header">
     <Header {headerLinks} {breadcrumbLinks} />
   </div>
   <MainHeroBanner />
 
-  <div id="main" class="lg:px-32">
+  <div id="main" class="lg:px-32 bg-primaryBg{`-${$theme}`}">
     <div id="scroll1" class="scrollSection" />
     <AnimatingWrapper cssClass="hiddenNotTW">
       <Collapsable title="About" slot="animated">
@@ -57,7 +57,7 @@
                 href="https://www.uga.edu/"
                 className="UGA"
                 external={true}
-                color={"text-primary"}
+                color={`text-primary-${$theme}`}
               />. My passion lies in crafting top-notch software and web
               applications that make a positive impact.
             </p>
@@ -94,7 +94,7 @@
                 href="https://nowcorp.com/"
                 className="Now"
                 external={true}
-                color={"text-primary"}
+                color={`text-primary-${$theme}`}
               />. My role at Now is to make major technical upgrades to their
               flagship financial platform, NowAccount. I am the technical
               architect for NowAccount's new Angular solution and a devleoper on
@@ -111,7 +111,7 @@
                 href="https://www.perficient.com/"
                 className="Perficient"
                 external={true}
-                color={"text-primary"}
+                color={`text-primary-${$theme}`}
               />
               where I initially worked on the Sitecore team, creating enterprise-scale
               websites and custom functionality on top of Sitecore's proprietary
@@ -129,7 +129,7 @@
                 href={"#scroll2"}
                 className={"Projects"}
                 external={false}
-                color={"text-primary"}
+                color={`text-primary-${$theme}`}
                 on:click={(event) => {
                   event.preventDefault();
                   scrollIntoView(event.target);
@@ -141,7 +141,7 @@
                 href={"#scroll3"}
                 className={"Contact"}
                 external={false}
-                color={"text-primary"}
+                color={`text-primary-${$theme}`}
                 on:click={(event) => {
                   event.preventDefault();
                   scrollIntoView(event.target);
@@ -180,13 +180,11 @@
 
 <style>
   #index {
-    @apply text-tertiary;
     overflow-x: hidden;
     overflow-y: hidden;
   }
 
   #main {
-    @apply bg-primaryBg;
   }
 
   .scrollSection {
