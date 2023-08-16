@@ -1,4 +1,6 @@
 <script>
+  import { theme } from "../store/stores";
+
   export let title;
   let arrow;
   let collapsable;
@@ -39,11 +41,11 @@
     on:keydown={() => toggleCollasable()}
   >
     <i
-      class="arrow fa-solid fa-chevron-right closed toggle-not-tailwind arrow-toggle"
+      class="arrow text-primary{`-${$theme}`} fa-solid fa-chevron-right closed toggle-not-tailwind arrow-toggle"
       bind:this={arrow}
     />
-    <h3 class="select-none">{title}</h3>
-    <hr class="select-none" />
+    <h3 class="select-none text-primary{`-${$theme}`}">{title}</h3>
+    <hr class="select-none text-tertiary{`-${$theme}`}" />
   </div>
 
   <div class="collased-content">
@@ -72,18 +74,17 @@
     }
 
     .arrow {
-      @apply text-primary text-xl;
+      @apply text-xl;
       margin-right: 10px;
     }
 
     h3 {
-      @apply text-primary font-manrope font-normal text-2xl;
+      @apply font-manrope font-normal text-2xl;
       white-space: nowrap;
       margin-right: 10px;
     }
 
     hr {
-      @apply text-tertiary;
       width: 100%;
       margin: auto;
       padding-left: 15px;

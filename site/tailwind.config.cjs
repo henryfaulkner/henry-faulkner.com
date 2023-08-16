@@ -43,32 +43,37 @@ module.exports = {
         transparent: 'transparent',
         current: 'currentColor',
         primary: {
-          light: '',
+          light: '#FF0000',
           DEFAULT: '#54DDFF',
           dark: '#54DDFF',
         },
         secondary: {
-          light: '',
+          light: '#00FF00',
           DEFAULT: '#FFF',
           dark: '#FFF',
         },
         tertiary: {
-          light: '',
+          light: '#0000FF',
           DEFAULT: '#D1D5DB',
           dark: '#D1D5DB',
         },
         primaryBg: {
-          light: '',
+          light: '#00FF00',
           DEFAULT: '#000',
           dark: '#000',
         },
         footerBg: {
-          light: '',
+          light: '#DDDDDD',
           DEFAULT: '#E5E7EB',
           dark: '#E5E7EB',
         }
       },
     },
   },
-  plugins: [require("daisyui"), require("@tailwindcss/typography")]
+  plugins: [require("daisyui"), require("@tailwindcss/typography")], 
+  safelist: [
+    {pattern: /bg-(primary|secondary|tertiary|primaryBg|footerBg)-(light|dark)/},
+    {pattern: /text-(primary|secondary|tertiary|primaryBg|footerBg)-(light|dark)/},
+    {pattern: /fill-(primary|secondary|tertiary|primaryBg|footerBg)-(light|dark)/},
+  ]
 }

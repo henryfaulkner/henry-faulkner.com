@@ -1,4 +1,5 @@
 <script>
+  import { theme } from "../store/stores";
   import CardDropdown from "./CardDropdown.svelte";
 
   export let project;
@@ -35,7 +36,7 @@
     class="anchor"
   >
     <div class="card-content">
-      <div class="base">
+      <div class="base text-primary-{$theme}">
         <p>{project.title}</p>
       </div>
       {#if !hideDescription}
@@ -109,7 +110,6 @@
   }
 
   .base {
-    @apply text-primary;
     font-weight: bold;
   }
 </style>

@@ -4,6 +4,7 @@
   import { onMount } from "svelte";
   import Anchor from "../Anchor.svelte";
   import Icon from "@iconify/svelte";
+  import { theme } from "../../store/stores.js";
   onMount(() => {
     RunScript();
   });
@@ -24,7 +25,12 @@
   }
 </script>
 
-<div role="banner" class="hero" nav-section="index" data-perspective-group>
+<div
+  role="banner"
+  class="hero bg-primaryBg-{$theme}"
+  nav-section="index"
+  data-perspective-group
+>
   <div class="container" id="index">
     <div class="layout relative">
       <figure class="z-0 absolute top-1/4 right-4">
@@ -40,10 +46,13 @@
       </figure>
       <div id="hero-text" class="z-10 relative" data-perspective="header">
         <h1
-          class="text-6xl mb-3 text-secondary"
+          class="text-6xl mb-3 text-secondary{`-${$theme}`}"
           style="-webkit-text-stroke: 1px black;"
         >
-          <strong class="text-primary" aria-label="Henry Faulkner">
+          <strong
+            class="text-primary{`-${$theme}`}"
+            aria-label="Henry Faulkner"
+          >
             Henry Faulkner.
           </strong>
         </h1>
@@ -89,7 +98,6 @@
 
   .hero {
     height: 100vh;
-    @apply bg-primaryBg;
   }
 
   @media (max-width: 1080px) {

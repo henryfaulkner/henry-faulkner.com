@@ -1,5 +1,6 @@
 <script>
   import { getStorageUrl } from "$lib/firebase";
+  import { theme } from "../store/stores";
   import Anchor from "./Anchor.svelte";
   import AnimatingWrapper from "./AnimatingWrapper.svelte";
 
@@ -19,7 +20,7 @@
 </script>
 
 <div class="sectionHeader text-center">
-  <h2 id="contact">Contact.</h2>
+  <h2 id="contact text-primary{`-${$theme}`}">Contact.</h2>
 </div>
 <div class="container px-3 sm:px-5 max-w-[40ch] sm:max-w-[100ch]">
   <div
@@ -32,11 +33,11 @@
           style="--order: {i + 1}"
         >
           <Anchor
-            className={`items-center justify-center inlineFlex px-4 py-2 hover:text-primary hover:bg-primary/30 focus:bg-primary/20`}
+            className={`items-center justify-center inlineFlex px-4 py-2 hover:text-primary-${$theme} hover:bg-primary-${$theme}/30 focus:bg-primary-${$theme}/20`}
             {title}
             href={link}
             external={true}
-            color={"text-primary"}
+            color={`text-primary-${$theme}`}
             slot="animated"
           />
         </AnimatingWrapper>
@@ -48,7 +49,7 @@
 <style>
   h1,
   h2 {
-    @apply text-primary font-lexend font-bold text-2xl;
+    @apply font-lexend font-bold text-2xl;
   }
   .sectionHeader {
     @apply mx-auto px-4 py-6;

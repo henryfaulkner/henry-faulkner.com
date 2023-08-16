@@ -1,10 +1,10 @@
 <!-- slug is the category name -->
 <script>
   import { page } from "$app/stores";
-  import Breadcrumbs from "../../../../components/Breadcrumbs.svelte";
   import RecipeCard from "../../../../components/RecipeCard.svelte";
   import Footer from "../../../../components/structure/Footer.svelte";
   import Header from "../../../../components/structure/Header.svelte";
+  import { theme } from "../../../../store/stores";
   /** @type {import('./$types').PageData} */
   export let data;
   export const isFood = data.isFood;
@@ -27,7 +27,7 @@
     <div>
       <div id="rows">
         <div class="row">
-          <h2>{slug} Recipes</h2>
+          <h2 class="text-primary-{$theme}">{slug} Recipes</h2>
           <input
             type="text"
             placeholder="Search"
@@ -51,7 +51,7 @@
 
 <style lang="scss">
   h2 {
-    @apply text-primary text-5xl font-semibold tracking-wide;
+    @apply text-5xl font-semibold tracking-wide;
     margin: 2.5vh 0 1.5vh;
   }
 

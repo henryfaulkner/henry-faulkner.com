@@ -1,9 +1,9 @@
 <!-- this is the recipe catalog index -->
 <script>
-  import Breadcrumbs from "../../components/Breadcrumbs.svelte";
   import CategoryCard from "../../components/CategoryCard.svelte";
   import Footer from "../../components/structure/Footer.svelte";
   import Header from "../../components/structure/Header.svelte";
+  import { theme } from "../../store/stores";
   import {
     drinkCategories,
     foodCategories,
@@ -53,7 +53,7 @@
     <div>
       <div id="rows">
         <div class="food-row">
-          <h2>Food Catalog</h2>
+          <h2 class="text-primary-{$theme}">Food Catalog</h2>
           <input
             type="text"
             placeholder="Search"
@@ -69,7 +69,7 @@
           </div>
         </div>
         <div class="drink-row" id="scroll2">
-          <h2>Drink Catalog</h2>
+          <h2 class="text-primary-{$theme}">Drink Catalog</h2>
           <input
             type="text"
             placeholder="Search"
@@ -93,7 +93,7 @@
 
 <style lang="scss">
   h2 {
-    @apply text-primary text-5xl font-semibold tracking-wide;
+    @apply text-5xl font-semibold tracking-wide;
     margin: 2.5vh 0 0;
   }
 
