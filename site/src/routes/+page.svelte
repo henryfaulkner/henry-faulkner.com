@@ -49,17 +49,16 @@
           <div id="scroll4" class="scrollSection" />
           <TitleDescription title="">
             <p slot="p-tag" class="p-tag">
-              Hey there, I'm Henry Faulkner, and I call Atlanta, GA, USA home.
-              I'm a software developer with a Bachelor of Science in Computer
-              Science from the
+              Hey there, I'm Henry Faulkner. I'm a software developer with a
+              Bachelor of Science in Computer Science from the
               <Anchor
                 title="University of Georgia"
                 href="https://www.uga.edu/"
                 className="UGA"
                 external={true}
                 color={`text-primary-${$theme}`}
-              />. My passion lies in crafting top-notch software and web
-              applications that make a positive impact.
+              /> with 3 years of professional software development experience. My
+              passion lies in designing performant systems and building helpful software.
             </p>
           </TitleDescription>
         </div>
@@ -71,12 +70,12 @@
         <div class="about" id="skills">
           <TitleDescription title="">
             <p slot="p-tag" class="p-tag">
-              I am a fullstack web developer and software engineer with 3 years
-              of professional experience under my belt. My expertise lies in
-              working with .Net (Framework/Core), TypeScript, T-SQL, and
-              Microsoft Azure services. Throughout my career, I've had the
-              opportunity to build UIs with various frontend frameworks, i.e.,
-              Angular, ASP.Net, Next.js, and React.
+              I am a fullstack web developer, a programmer and a software
+              engineer. My expertise lies in working with .Net (Framework/Core),
+              TypeScript, T-SQL, and Microsoft Azure services. Throughout my
+              career, I've had the opportunity to build UIs with various
+              frontend frameworks, i.e., Angular, ASP.Net, Svelte/SvelteKit, and
+              React/Next.js.
             </p>
           </TitleDescription>
         </div>
