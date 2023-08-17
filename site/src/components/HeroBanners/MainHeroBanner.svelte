@@ -118,9 +118,23 @@
       left: 42%;
       position: absolute;
       bottom: 5rem;
+
+      webkit-transition: transform 1s ease-in-out;
+      -moz-transition: transform 1s ease-in-out;
+      transition: transform 1s ease-in-out;
+    }
+
+    .scroll-container:hover,
+    .scroll-container:focus,
+    .scroll-container:focus-visible {
+      -moz-transform: scale(1.2);
+      -webkit-transform: scale(1.2);
+      -o-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
     }
   }
-
   .icon-container {
     @apply mx-3 text-secondary h-16 w-16;
     @apply rounded-full bg-primary;

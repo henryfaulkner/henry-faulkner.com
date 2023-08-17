@@ -55,7 +55,7 @@
         {/each}
       </div>
 
-      <div class="mr-12 theme-swap">
+      <div class="lt-xsm:mr-2 lt-md:mr-6 mr-12 theme-swap">
         <ThemeSwap />
       </div>
     </div>
