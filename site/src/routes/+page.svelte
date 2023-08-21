@@ -70,12 +70,11 @@
         <div class="about" id="skills">
           <TitleDescription title="">
             <p slot="p-tag" class="p-tag">
-              I am a fullstack web developer, a programmer and a software
-              engineer. My expertise lies in working with .Net (Framework/Core),
-              TypeScript, T-SQL, and Microsoft Azure services. Throughout my
-              career, I've had the opportunity to build UIs with various
-              frontend frameworks, i.e., Angular, ASP.Net, Svelte/SvelteKit, and
-              React/Next.js.
+              I am a fullstack web developer and a software engineer. My
+              expertise lies in working with .Net (Framework/Core), TypeScript,
+              T-SQL, and Microsoft Azure services. Throughout my career, I've
+              had the opportunity to build UIs with various frontend frameworks,
+              i.e., Angular, ASP.Net, Svelte/SvelteKit, and React/Next.js.
             </p>
           </TitleDescription>
         </div>
