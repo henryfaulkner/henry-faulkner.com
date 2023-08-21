@@ -11,4 +11,8 @@
   .TitleDescription {
     @apply mx-auto px-6 lg:px-[2.5%];
   }
+
+  .p-tag {
+    text-wrap: balance;
+  }
 </style>
