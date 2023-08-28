@@ -11,6 +11,7 @@ import "@fontsource/ibm-plex-mono";
 // import { projectSchema } from "./schemas/project.schema";
 import { foodRecipeCollection } from "./collections/food-recipe.collection";
 import { drinkRecipeCollection } from "./collections/drink-recipe.collection";
+import { projectCollection } from "./collections/project.collection";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAGXxeddwfauD2jsLN9sClKlW7gcl76kxY",
@@ -96,7 +97,7 @@ return true;
         name={"My Portfolio's CMS"}
         //plugins={[dataEnhancementPlugin]}
         authentication={myAuthenticator}
-        collections={[foodRecipeCollection, drinkRecipeCollection]}
+        collections={[foodRecipeCollection, drinkRecipeCollection, projectCollection]}
         firebaseConfig={firebaseConfig}
     />;
 }
