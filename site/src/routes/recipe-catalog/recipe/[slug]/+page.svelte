@@ -6,8 +6,8 @@
   import { theme } from "../../../../store/stores";
   /** @type {import('./$types').PageData} */
   export let data;
-  let headerLinks = {};
-  const breadcrumbLinks = [
+  export let headerLinks = {};
+  export let breadcrumbLinks = [
     { href: "../../", name: "Index" },
     { href: "../", name: "Catalog" },
     {
@@ -18,7 +18,7 @@
   ];
 </script>
 
-<div id="index text-tertiary-{$theme} bg-primaryBg-{$theme}">
+<div class="index" id="index">
   <div id="header">
     <Header {headerLinks} {breadcrumbLinks} />
   </div>
@@ -86,11 +86,6 @@
 </div>
 
 <style lang="scss">
-  #index {
-    overflow-x: hidden;
-    min-height: 100vh;
-  }
-
   #columns {
     display: flex;
     width: 90vw;

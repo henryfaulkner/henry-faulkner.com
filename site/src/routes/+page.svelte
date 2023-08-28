@@ -35,7 +35,7 @@
   /* https://daisyui.com/components/swap/ */
 </script>
 
-<div id="index" class="scrollSection text-tertiary{`-${$theme}`}">
+<div id="index" class="index scrollSection text-tertiary{`-${$theme}`}">
   <div id="header">
     <Header {headerLinks} {breadcrumbLinks} />
   </div>
@@ -177,11 +177,6 @@
 </div>
 
 <style>
-  #index {
-    overflow-x: hidden;
-    overflow-y: hidden;
-  }
-
   #main {
   }
 
