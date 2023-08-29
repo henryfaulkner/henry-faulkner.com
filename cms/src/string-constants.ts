@@ -8,6 +8,7 @@ export const foodCategories = {
     all: 'All',
     american: 'American',
     baking: 'Baking',
+    basics: 'Basics',
     indian: 'Indian',
     italian: 'Italian',
     mexican: 'Mexican',

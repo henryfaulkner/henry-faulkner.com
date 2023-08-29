@@ -5,6 +5,7 @@ export const foodCategories = [
     {name: 'All', imageUrl: '/recipe-catalog/food/jpegs/high-res-donut.jpg'},
     {name: 'American', imageUrl: '/recipe-catalog/food/jpegs/american-burger.jpg'},
     {name: 'Baking', imageUrl: '/recipe-catalog/food/jpegs/bread.jpg'},
+    {name: 'Basics', imageUrl: '/recipe-catalog/food/jpegs/bread.jpg'},
     {name: 'Indian', imageUrl: '/recipe-catalog/food/jpegs/chicken-chika-masala.jpg'},
     {name: 'Italian', imageUrl: '/recipe-catalog/food/jpegs/gnocchi.jpg'},
     {name: 'Mexican', imageUrl: '/recipe-catalog/food/jpegs/chiles-rellenos.jpg'},

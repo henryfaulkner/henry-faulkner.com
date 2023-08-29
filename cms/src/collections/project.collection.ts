@@ -38,7 +38,7 @@ export const projectCollection = buildCollection<Project>({
               }
           }
       }),
-      featured_video: {
+      featured_video: buildProperty({
           name: "Featured Video",
           dataType: "string",
           validation: { required: false },
@@ -49,8 +49,8 @@ export const projectCollection = buildCollection<Project>({
                   acceptedFiles: ["video/*"]
               }
           }
-      },
-      gallery_images: {
+      }),
+      gallery_images: buildProperty({
           dataType: "array",
           name: "Gallery Images",
           description: "Gallery of Images",
@@ -64,8 +64,8 @@ export const projectCollection = buildCollection<Project>({
                   }
               }
           }
-      },
-      gallery_videos: {
+      }),
+      gallery_videos: buildProperty({
           dataType: "array",
           name: "Gallery Videos",
           description: "Gallery of Videos",
@@ -79,6 +79,6 @@ export const projectCollection = buildCollection<Project>({
                   }
               }
           }
-      }
+      })
     }
   });
