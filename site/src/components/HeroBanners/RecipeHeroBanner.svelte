@@ -33,10 +33,7 @@
       {/await}
       <div id="hero-text" class="z-10 relative" data-perspective="header">
         {#if topText}
-          <h1
-            class="text-6xl mb-3 text-secondary-{$theme}"
-            style="-webkit-text-stroke: 1px black;"
-          >
+          <h1 class="text-6xl mb-3 text-secondary-{$theme}">
             <strong
               class="text-primary-{$theme} balance text"
               aria-label="Henry Faulkner"
@@ -46,10 +43,7 @@
           </h1>
         {/if}
         {#if bottomText}
-          <h2
-            class="text-2xl balance text"
-            style="color: white; -webkit-text-stroke: 1px black;"
-          >
+          <h2 class="text-2xl balance text text-secondary{`-${$theme}`}">
             {bottomText}
           </h2>
         {/if}

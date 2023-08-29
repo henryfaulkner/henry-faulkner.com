@@ -59,16 +59,19 @@
         <ThemeSwap />
       </div>
     </div>
-    <div id="breadcrumbs" class="absolute left-4 pt-2">
+    <div id="breadcrumbs" class="absolute">
       <Breadcrumbs links={breadcrumbLinks} />
     </div>
   {/if}
   {#if Object.keys(headerLinks).length === 0}
     <div
       id="breadcrumbs"
-      class="absolute left-4 pt-2 bg-primaryBg{`-${$theme}`} lg:bg-primaryBg{`-${$theme}`}/70 w-full"
+      class="absolute pl-4 pt-2 bg-primaryBg{`-${$theme}`} lg:bg-primaryBg{`-${$theme}`}/70 w-full"
     >
       <Breadcrumbs links={breadcrumbLinks} />
+    </div>
+    <div class="absolute right-8 top-3">
+      <ThemeSwap />
     </div>
   {/if}
 </nav>

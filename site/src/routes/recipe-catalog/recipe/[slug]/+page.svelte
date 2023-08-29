@@ -18,7 +18,10 @@
   ];
 </script>
 
-<div class="index" id="index">
+<div
+  class="index bg-primaryBg{`-${$theme}`} text-secondary{`-${$theme}`}"
+  id="index"
+>
   <div id="header">
     <Header {headerLinks} {breadcrumbLinks} />
   </div>
