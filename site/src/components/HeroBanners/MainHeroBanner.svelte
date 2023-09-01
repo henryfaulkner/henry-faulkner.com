@@ -31,13 +31,13 @@
   nav-section="index"
   data-perspective-group
 >
-  <div class="container" id="index">
+  <div class="container w-9/12" id="index">
     <div class="layout relative">
       <figure class="z-0 absolute top-1/4 right-4">
         <img
           src="/HeroHeadshot.png"
-          width="400px"
-          height="275px"
+          width="500px"
+          height="350px"
           loading="eager"
           alt="Henry Faulkner hero"
           class="heroImage"
@@ -45,7 +45,7 @@
         />
       </figure>
       <div id="hero-text" class="z-10 relative" data-perspective="header">
-        <h1 class="text-6xl mb-3">
+        <h1 class="text-7xl mb-3">
           <strong
             class="text-primary{`-${$theme}`}"
             aria-label="Henry Faulkner"
@@ -53,7 +53,7 @@
             Henry Faulkner.
           </strong>
         </h1>
-        <h2 class="text-2xl text-secondary{`-${$theme}`}">
+        <h2 class="text-3xl text-secondary{`-${$theme}`}">
           Software Engineer - Web Developer
         </h2>
       </div>
