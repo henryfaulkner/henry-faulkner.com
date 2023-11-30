@@ -73,11 +73,17 @@
             <p slot="p-tag" class="p-tag">
               I am a fullstack web developer and software engineer. My expertise
               lies in working with .Net (Framework/Core), TypeScript, T-SQL, and
-              Microsoft Azure cloud services (in which I hold a professional
-              certificate). I am primarily focus on systems work, though
-              throughout my career, I have had the opportunity to build UIs with
-              various frontend frameworks, i.e., Angular, ASP.Net,
-              React/Next.js, and Svelte/SvelteKit (shoutout jQuery as well).
+              Microsoft Azure cloud services (in which I hold the
+              <Anchor
+                title="Azure Developer Associate cerificate"
+                href="https://randomstoragehenry.blob.core.windows.net/certs/AZ-204.pdf"
+                className="azure-cert"
+                external={true}
+                color={`text-primary-${$theme}`}
+              />). Though I primarily focus on systems engineering, I am
+              well-versed in developing frontend solutions with various frontend
+              frameworks, i.e., Angular, ASP.Net, React/Next.js, SCSS, jQuery,
+              and Svelte/SvelteKit.
             </p>
           </TitleDescription>
         </div>
@@ -96,19 +102,19 @@
                 className="Now"
                 external={true}
                 color={`text-primary-${$theme}`}
-              />. My role at Now is to make massive technical upgrades to their
-              flagship financial platform, NowAccount. I am the technical
-              architect for NowAccount's new Angular solution and a devleoper on
-              their new .NET Core API. I designed the UX and UI for NowAccount's
-              new Client Onboarding Journey using Adobe XD. The onboarding
-              journey has been shipped to production and is a dope milestone for
-              the product's frontend and backend solution. I am responsible for
-              migrating all NowAccount's server jobs (dev, stage, and prod) to
-              Azure Functions, which has improved server performance and aligns
-              with our goal of low-infrastructure maintaince. I am currently
-              overhauling NowAccount's Dashboard and leading development on
-              their new Collections module. I have been working at Now since
-              October 2022.
+              />. My role at Now® is to make massive technical upgrades to
+              their flagship financial platform, NowAccount®. I am the
+              technical architect for NowAccount®'s new Angular solution and a
+              devleoper on their new .NET Core API. I designed the UX and UI for
+              NowAccount®'s new Client Onboarding Journey using Adobe XD. The
+              onboarding journey has been shipped to production and is a
+              milestone for the product's technical trajectory. I am responsible
+              for the migration of NowAccount®'s server jobs (dev, stage, and
+              prod) to Azure Functions, which has improved server performance,
+              streamlined CI/CD for these jobs and lowered our infrastructure
+              maintenance workload. I am currently overhauling NowAccount®'s
+              Dashboard and leading development on its new Collections module. I
+              have been working for Now® since October 2022.
               <br /> <br />
               I was formerly a Technical Consultant at
               <Anchor
@@ -121,16 +127,16 @@
               enterprise-scale websites and custom functionality on top of
               Sitecore's proprietary CMS platform using C# and performing large
               data transfer using PowerShell. I later transitioned to
-              Perficient's Custom Development team as a .NET and React
-              developer, where I created smaller-scale web applications. At
-              Perficient, I worked with Azure, .Net Framework, React, T-SQL, and
-              Sitecore. I worked for Perficient from February 2021 through
-              October 2022, as well as interned there.
+              Perficient®'s Custom Development team as a .NET and React
+              developer, where I created web applications. At Perficient®, I
+              worked with Azure, C#, TypeScript, React, T-SQL, and Sitecore. I
+              worked for Perficient® from February 2021 through October 2022,
+              as well as interned there.
               <br /> <br />
-              My personnel project experience focuses on my personal engineering
-              interests. I enjoy exploring the depth of computing principles, low-level
-              languages, hardware, and hardware peripherals. You can find out more
-              about my sidework in the
+              My personnel project experience reflects my engineering interests.
+              I enjoy exploring the depth of computing principles, software architecture,
+              hardware, and hardware peripherals. You can find out more about my
+              sidework in the
               <Anchor
                 title={"Projects section"}
                 href={"#scroll2"}
@@ -142,7 +148,15 @@
                   scrollIntoView(event.target);
                 }}
               />
-              below. You can also find my resume linked in the
+              below or on my
+              <Anchor
+                title="GitHub page"
+                href="https://github.com/henryfaulkner"
+                className="github-link"
+                external={true}
+                color={`text-primary-${$theme}`}
+              />
+              . You can also find my resume linked in the
               <Anchor
                 title={"Contact section"}
                 href={"#scroll3"}
