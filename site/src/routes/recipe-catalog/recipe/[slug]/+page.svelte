@@ -93,7 +93,7 @@
     display: flex;
     width: 90vw;
     margin: 30px 5vw;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   #row {
