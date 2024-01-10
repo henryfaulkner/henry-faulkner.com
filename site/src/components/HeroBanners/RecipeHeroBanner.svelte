@@ -77,7 +77,6 @@
 
   @media (max-width: 1080px) {
     .hero-not-tailwind {
-      height: 20vh;
       padding: 0;
     }
 
@@ -105,7 +104,7 @@
     }
 
     .text {
-      width: 60%;
+      margin: 20px;
     }
 
     .hero-not-tailwind {
