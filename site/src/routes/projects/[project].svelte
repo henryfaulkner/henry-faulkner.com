@@ -76,7 +76,7 @@
 </div>
 <Footer />
 
-<style>
+<style lang="scss">
   #project {
     height: auto;
     min-height: 800px;

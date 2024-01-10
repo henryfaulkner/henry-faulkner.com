@@ -12,7 +12,7 @@
   <slot name="animated" />
 </div>
 
-<style>
+<style lang="scss">
   .hiddenNotTW {
     opacity: 0;
     filter: blur(5px);

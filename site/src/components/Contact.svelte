@@ -46,7 +46,7 @@
   </div>
 </div>
 
-<style>
+<style lang="scss">
   h1,
   h2 {
     @apply font-lexend font-bold text-2xl;

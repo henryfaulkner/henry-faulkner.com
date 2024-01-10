@@ -7,7 +7,7 @@
   <slot name="p-tag" />
 </div>
 
-<style>
+<style lang="scss">
   .TitleDescription {
     @apply mx-auto px-6 lg:px-[2.5%];
   }

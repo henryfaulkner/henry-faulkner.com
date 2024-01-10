@@ -52,7 +52,7 @@
   </div>
 </div>
 
-<style>
+<style lang="scss">
   .container-not-tailwind {
     width: 70vw;
   }

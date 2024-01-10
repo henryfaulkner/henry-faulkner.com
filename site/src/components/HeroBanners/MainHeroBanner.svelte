@@ -78,7 +78,7 @@
   </div>
 </div>
 
-<style>
+<style lang="scss">
   .container {
   }
 

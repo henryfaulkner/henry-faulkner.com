@@ -18,7 +18,7 @@
   {/if}
 </div>
 
-<style>
+<style lang="scss">
   .anchor {
     text-decoration: 2px solid underline;
     text-underline-offset: 0.2rem;

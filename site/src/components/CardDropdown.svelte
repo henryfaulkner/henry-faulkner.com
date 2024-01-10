@@ -18,7 +18,7 @@
   </ul>
 </div>
 
-<style>
+<style lang="scss">
   .dropdown {
     position: absolute;
     right: 75px;

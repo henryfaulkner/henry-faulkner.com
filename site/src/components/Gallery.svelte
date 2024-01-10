@@ -33,7 +33,7 @@
   {/each}
 </div>
 
-<style>
+<style lang="scss">
   #Gallery {
     @apply grid sm:grid-cols-3 lg:grid-cols-4 gap-6;
     @apply mx-auto px-4 py-6;

@@ -48,7 +48,7 @@
   </a>
 </div>
 
-<style>
+<style lang="scss">
   .card {
     color: hsl(var(--er));
     font-weight: bold;

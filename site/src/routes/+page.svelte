@@ -199,7 +199,7 @@
   <Footer />
 </div>
 
-<style>
+<style lang="scss">
   #main {
   }
 
