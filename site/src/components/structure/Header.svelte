@@ -92,10 +92,10 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+  }
 
-    + #breadcrumbs {
-      @apply left-4 top-20;
-    }
+  .header-container + #breadcrumbs {
+    @apply left-4 top-20;
   }
 
   .not-name-cont {
