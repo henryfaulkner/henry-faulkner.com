@@ -33,7 +33,7 @@
   {#if Object.keys(headerLinks).length > 0}
     <div
       id="header"
-      class="header-container bg-primaryBg{`-${$theme}`} lg:bg-primaryBg{`-${$theme}`}/70
+      class="header-container bg-primaryBg{`-${$theme}`} lg:bg-primaryBg{`-${$theme}`}
         {breadcrumbLinks.length > 0 ? 'pb-8' : ''}"
     >
       <a title="Header Name link" href="/" class="name-container">
@@ -55,7 +55,7 @@
         {/each}
       </div>
 
-      <div class="lt-xsm:mr-2 lt-md:mr-6 mr-12 theme-swap">
+      <div class="lt-xsm:mr-6 lt-md:mr-12 mr-12 theme-swap">
         <ThemeSwap />
       </div>
     </div>
