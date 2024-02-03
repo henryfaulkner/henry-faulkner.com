@@ -72,8 +72,8 @@
           <TitleDescription title="">
             <p slot="p-tag" class="p-tag">
               I am a fullstack web developer and software engineer. My expertise
-              lies in working with .Net (Framework/Core), TypeScript, T-SQL, and
-              Microsoft Azure cloud services (in which I hold the
+              lies in working with .NET/C#, TypeScript, T-SQL, and Microsoft
+              Azure cloud services (in which I hold the
               <Anchor
                 title="Azure Developer Associate cerificate"
                 href="https://randomstoragehenry.blob.core.windows.net/certs/AZ-204.pdf"
@@ -82,7 +82,7 @@
                 color={`text-primary-${$theme}`}
               />). Though I primarily focus on systems engineering, I am
               well-versed in developing frontend solutions with various frontend
-              frameworks, i.e., Angular, ASP.Net, React/Next.js, SCSS, jQuery,
+              frameworks, i.e., Angular, ASP.NET, React/Next.js, SCSS, jQuery,
               and Svelte/SvelteKit.
             </p>
           </TitleDescription>
@@ -105,16 +105,18 @@
               />. My role at Now® is to make massive technical upgrades to
               their flagship financial platform, NowAccount®. I am the
               technical architect for NowAccount®'s new Angular solution and a
-              devleoper on their new .NET Core API. I designed the UX and UI for
-              NowAccount®'s new Client Onboarding Journey using Adobe XD. The
-              onboarding journey has been shipped to production and is a
-              milestone for the product's technical trajectory. I am responsible
-              for the migration of NowAccount®'s server jobs (dev, stage, and
-              prod) to Azure Functions, which has improved server performance,
-              streamlined CI/CD for these jobs and lowered our infrastructure
-              maintenance workload. I am currently overhauling NowAccount®'s
-              Dashboard and leading development on its new Collections module. I
-              have been working for Now® since October 2022.
+              core contributor for NowAccount's new .NET Core APIs. I design UX
+              and UI for NowAccount®'s new features using Adobe XD. I lead
+              development on NowAccount's new onboarding journey, which shipped
+              to production in August 2023. The Onboarding Journey's development
+              is a milestone for NowAccount's technical trajectory, replacing
+              ASP.NET MVC in favor of Angular and .NET Core APIs. I lead
+              development in overhauling NowAccount's Client and Internal
+              dashboards, which display real-time data to increase in-app
+              observability to our clients and internal team members. I was
+              responsible for migrating all jobs to Azure Functions to reduce
+              server load. I have also contributed to the Azure DevOps CI/CD
+              solution. I have been working for Now® since October 2022.
               <br /> <br />
               I was formerly a Technical Consultant at
               <Anchor
