@@ -49,7 +49,7 @@
           <div id="scroll4" class="scrollSection" />
           <TitleDescription title="">
             <p slot="p-tag" class="p-tag">
-              Hey there, I'm Henry Faulkner. I'm a software developer with a
+              Hey there, I'm Henry Faulkner. I am a software engineer with a
               Bachelor of Science in Computer Science from the
               <Anchor
                 title="University of Georgia"
@@ -57,7 +57,7 @@
                 className="UGA"
                 external={true}
                 color={`text-primary-${$theme}`}
-              /> with over 3 years of professional software development experience.
+              /> with 5 years of professional software development experience.
               My passion lies in designing performant systems and maintaining software
               architecture whilst improving behavior.
             </p>
@@ -80,10 +80,15 @@
                 className="azure-cert"
                 external={true}
                 color={`text-primary-${$theme}`}
+              /> and <Anchor
+                title="Azure DevOps Expert cerificate"
+                href="https://randomstoragehenry.blob.core.windows.net/certs/Az400.pdf"
+                className="azure-cert"
+                external={true}
+                color={`text-primary-${$theme}`}
               />). Though I primarily focus on systems engineering, I am
               well-versed in developing frontend solutions with various frontend
-              frameworks, i.e., Angular, ASP.NET, React/Next.js, SCSS, jQuery,
-              and Svelte/SvelteKit.
+              frameworks, i.e., Angular, Blazor, and React.
             </p>
           </TitleDescription>
         </div>
@@ -95,14 +100,25 @@
         <div class="about" id="experience">
           <TitleDescription title="">
             <p slot="p-tag" class="p-tag">
-              I currently work as a Software Engineer at
+              I work as a software engineer at 
+              <Anchor
+                title="DW1®"
+                href="https://dw1.com/"
+                className="DW1"
+                external={true}
+                color={`text-primary-${$theme}`}
+              />. I work as a full-stack engineer on ERP and Payment Processing solutions.
+              The technologies I work with are .NET Core, Blazor, Postgres, Azure DevOps, and Azure.
+              I have been working with DW1® since November 2024.
+              <br /> <br />
+              I was formerly a Software Engineer at 
               <Anchor
                 title="Now®"
                 href="https://nowcorp.com/"
                 className="Now"
                 external={true}
                 color={`text-primary-${$theme}`}
-              />. My role at Now® is to make massive technical upgrades to
+              />. My role at Now® was to make massive technical upgrades to
               their flagship financial platform, NowAccount®. I am the
               technical architect for NowAccount®'s new Angular solution and a
               core contributor for NowAccount's new .NET Core APIs. I design UX
@@ -110,13 +126,13 @@
               development on NowAccount's new onboarding journey, which shipped
               to production in August 2023. The Onboarding Journey's development
               is a milestone for NowAccount's technical trajectory, replacing
-              ASP.NET MVC in favor of Angular and .NET Core APIs. I lead
+              ASP.NET MVC in favor of Angular and .NET Core APIs. I led
               development in overhauling NowAccount's Client and Internal
               dashboards, which display real-time data to increase in-app
               observability to our clients and internal team members. I was
               responsible for migrating all jobs to Azure Functions to reduce
-              server load. I have also contributed to the Azure DevOps CI/CD
-              solution. I have been working for Now® since October 2022.
+              server load. I contributed to the Azure DevOps CI/CD
+              solution. I worked for Now® from October 2022 to November 2024.
               <br /> <br />
               I was formerly a Technical Consultant at
               <Anchor
